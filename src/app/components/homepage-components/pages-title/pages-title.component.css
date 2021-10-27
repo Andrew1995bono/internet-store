@@ -1,0 +1,24 @@
+.page-title {
+  height: 48px;
+  left: 0px;
+  top: 189px;
+  background: #FDFDFD;
+  display: flex;
+  align-items: center;
+  left: 0px;
+  top: 189px;
+}
+
+.page-title a {
+  text-decoration: none;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #A9A9A9;
+}
+
+.page-title img {
+  margin-left: 5px;
+}

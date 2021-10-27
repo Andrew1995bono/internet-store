@@ -1,0 +1,21 @@
+.homepage-content {
+  background-color: dodgerblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+
+
+.homepage-content > label {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  padding-right: 10px;
+}
+
+.homepage-content > label:hover {
+  color: #A9A9A9;
+}

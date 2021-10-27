@@ -1,0 +1,42 @@
+.navbar {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-navbar {
+  display: flex;
+}
+
+.right-navbar {
+  display: flex;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  height: 16px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.left-navbar a {
+  color: #151515;
+  margin-right: 33px;
+}
+
+.left-navbar a:first-child {
+  color: #6A983C;
+}
+
+.right-navbar a {
+  color: #6A983C;
+  margin-left: 38px;
+}
