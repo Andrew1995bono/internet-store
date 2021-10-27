@@ -15,6 +15,7 @@ import { HomepageContentComponent } from './components/homepage-components/homep
 import {MatButtonModule} from '@angular/material/button';
 import { AllProductsComponent } from './components/all-products/all-products.component';
 import { AllProductsTitleComponent } from './components/all-products/all-products-title/all-products-title.component';
+import { SortInputComponent } from './components/all-products/sort-input/sort-input.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { AllProductsTitleComponent } from './components/all-products/all-product
     PagesTitleComponent,
     HomepageContentComponent,
     AllProductsComponent,
-    AllProductsTitleComponent
+    AllProductsTitleComponent,
+    SortInputComponent
   ],
     imports: [
         BrowserModule,
