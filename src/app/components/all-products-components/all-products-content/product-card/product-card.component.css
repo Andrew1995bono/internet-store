@@ -1,0 +1,16 @@
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  width: 869px;
+  height: 280px;
+  background-color: burlywood;
+  margin-top: 81px;
+}
+
+.item-description p {
+  margin: 0;
+}
+
+.item-detail p {
+  margin: 0;
+}
