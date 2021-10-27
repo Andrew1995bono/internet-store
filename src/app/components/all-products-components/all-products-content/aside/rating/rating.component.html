@@ -1,1 +1,12 @@
-<p>rating works!</p>
+<span class="rating">
+    <h2>Rating</h2>
+  <div class="rating-filters">
+    <div *ngFor="let star of stars">
+        <mat-checkbox></mat-checkbox>
+      <div class="star" *ngFor="let item of star">
+        <span *ngIf="item === StarEnums.SolidStar"><img src="../../assets/star-symbol-filled.png" alt="filled-start" width="18" height="18"></span>
+        <span *ngIf="item === StarEnums.EmptyStar"><img src="../../assets/star-symbol-empty.png" alt="empty-star" width="18" height="18"></span>
+      </div>
+    </div>
+  </div>
+</span>

@@ -38,6 +38,10 @@
   color: #151515;
 }
 
+.brands-filters div:last-child {
+  margin-bottom: 0;
+}
+
 mat-checkbox {
   margin-right: 10px;
 }
