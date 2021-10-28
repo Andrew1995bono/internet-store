@@ -23,6 +23,8 @@ import { CategoriesComponent } from './components/all-products-components/all-pr
 import { BrandsComponent } from './components/all-products-components/all-products-content/aside/brands/brands.component';
 import { RatingComponent } from './components/all-products-components/all-products-content/aside/rating/rating.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { SliderComponent } from './components/all-products-components/all-products-content/aside/slider/slider.component';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
 
 @NgModule({
@@ -43,7 +45,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     ProductCardComponent,
     CategoriesComponent,
     BrandsComponent,
-    RatingComponent
+    RatingComponent,
+    SliderComponent
   ],
     imports: [
         BrowserModule,
@@ -51,7 +54,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
         BrowserAnimationsModule,
         MatDividerModule,
         MatButtonModule,
-        MatCheckboxModule
+        MatCheckboxModule,
+        NgxSliderModule
     ],
   providers: [],
   bootstrap: [AppComponent]

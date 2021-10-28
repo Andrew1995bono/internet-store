@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
 html {
-  box-sizing: border-box;
   margin: 0 auto;
   padding: 16px 45px 78px;
   max-width: 1260px;
@@ -13,6 +12,10 @@ html {
 body {
   max-width: 1260px;
   margin: 0 auto;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
 

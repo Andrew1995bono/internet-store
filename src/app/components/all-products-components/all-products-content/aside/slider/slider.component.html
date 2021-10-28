@@ -1,0 +1,24 @@
+<div class="slider-filter">
+  <h2>Price</h2>
+  <div class="slider">
+    <ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="options"></ngx-slider>
+  </div>
+  <div>
+    <div class="values">
+      <div class="min">
+        <h3>Min</h3>
+        <input type="text" placeholder="0">
+      </div>
+      <span class="dash">
+        <img src="../../assets/dash-symbol.png" alt="">
+      </span>
+      <div class="max">
+        <h3>Max</h3>
+        <input type="text" placeholder="000">
+      </div>
+    </div>
+    <div class="reset-button">
+      <button>Reset</button>
+    </div>
+  </div>
+</div>

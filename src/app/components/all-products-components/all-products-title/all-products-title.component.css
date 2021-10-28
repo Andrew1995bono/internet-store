@@ -8,8 +8,6 @@
 .title {
   width: 194px;
   height: 48px;
-  left: 0;
-  top: 0;
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
@@ -28,10 +26,6 @@
 }
 
 .products-quantity p:first-child {
-  left: 25%;
-  right: 25%;
-  top: 0%;
-  bottom: 0%;
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
@@ -49,9 +43,7 @@
 
 .products-quantity p:last-child {
   height: 16px;
-  left: 36px;
-  right: 0px;
-  top: 1px;font-family: Open Sans;
+  font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
