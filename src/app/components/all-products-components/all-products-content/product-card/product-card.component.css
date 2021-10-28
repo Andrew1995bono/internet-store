@@ -4,11 +4,15 @@
   width: 869px;
   height: 280px;
   margin-top: 81px;
+  background: #FFFFFF;
+  border: 1px solid #D1D1D1;
+  border-radius: 12px;
 }
 
 .item-image {
   width: 268px;
-  background-color: burlywood;
+  background-color: dodgerblue;
+  border-radius: 12px;
 }
 
 .item-info {
@@ -21,7 +25,6 @@
 
 .item-description {
   width: 237px;
-  background-color: aquamarine;
 }
 
 .item-description h2 {
@@ -112,7 +115,6 @@
 
 .item-detail {
   width: 172px;
-  background-color: darkkhaki;
 }
 
 .item-detail-title h2 {
