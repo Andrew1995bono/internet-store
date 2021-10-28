@@ -19,3 +19,12 @@
 .homepage-content > label:hover {
   color: #A9A9A9;
 }
+
+
+
+.ngx-slider-pointer-max {
+    background-color: red;
+    color: red;
+  }
+
+

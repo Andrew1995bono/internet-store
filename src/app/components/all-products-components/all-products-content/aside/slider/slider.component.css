@@ -2,7 +2,10 @@
   width: 251px;
   margin-right: 0;
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
 }
+
 
 .slider-filter h2 {
   margin: 0;
@@ -19,7 +22,7 @@
 }
 
 ngx-slider {
-  margin-top: 60px;
+  margin-top: 16px;
 }
 
 .values {
@@ -143,5 +146,51 @@ ngx-slider {
   border: 2px solid #46760A;
   box-sizing: border-box;
   border-radius: 12px;
-
 }
+
+.reset-button button:hover {
+  background-color: green;
+}
+
+
+/deep/ .slider .ngx-slider .ngx-slider-bar {
+  background: #EBEBEB;
+  border-radius: 12px;
+  height: 6px;
+}
+
+/deep/ .slider .ngx-slider .ngx-slider-selection {
+  background: #6A983C;
+}
+
+/deep/ .slider .ngx-slider .ngx-slider-pointer {
+  background: #FFFFFF;
+  border: 1px solid #D1D1D1;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  width: 20px;
+  height: 20px;
+  top: -8px;
+}
+
+/deep/ .slider .ngx-slider .ngx-slider-floor {
+  display: none;
+}
+
+/deep/ .slider .ngx-slider .ngx-slider-model-value {
+  display: none;
+}
+
+/deep/ .slider .ngx-slider .ngx-slider-model-high {
+  display: none;
+}
+
+/deep/ .slider .ngx-slider .ngx-slider-ceil {
+  display: none;
+}
+
+/deep/ .slider .ngx-slider .ngx-slider-pointer:after {
+  display: none;
+}
+
+
+
