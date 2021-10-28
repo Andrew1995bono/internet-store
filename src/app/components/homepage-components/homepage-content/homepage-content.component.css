@@ -1,5 +1,4 @@
 .homepage-content {
-  background-color: dodgerblue;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,11 +19,5 @@
   color: #A9A9A9;
 }
 
-
-
-.ngx-slider-pointer-max {
-    background-color: red;
-    color: red;
-  }
 
 

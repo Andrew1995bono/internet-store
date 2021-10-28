@@ -6,9 +6,6 @@
 .brands h2 {
   margin: 0;
   height: 27px;
-  left: 0px;
-  right: 0px;
-  top: 0px;
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
@@ -25,10 +22,6 @@
   display: flex;
   align-items: center;
   margin-bottom: 16px;
-  left: 19.88%;
-  right: 0%;
-  top: 10.42%;
-  bottom: 10.42%;
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;

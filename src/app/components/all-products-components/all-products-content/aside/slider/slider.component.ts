@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { Options } from "@angular-slider/ngx-slider";
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Options} from "@angular-slider/ngx-slider";
 
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
-  styleUrls: ['./slider.component.css']
+  styleUrls: ['./slider.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class SliderComponent implements OnInit {
   public value: number = 40;

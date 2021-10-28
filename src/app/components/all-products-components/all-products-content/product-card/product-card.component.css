@@ -16,7 +16,6 @@
 }
 
 .item-info {
-  box-sizing: border-box;
   width: 601px;
   padding: 32px;
   display: flex;
@@ -29,8 +28,6 @@
 
 .item-description h2 {
   margin: 0;
-  left: 0px;
-  top: 0px;
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
@@ -40,11 +37,7 @@
 }
 
 .item-description h4 {
-  margin: 0;
-  left: 0%;
-  right: 0%;
-  top: 65.96%;
-  bottom: 0%;
+  margin:0;
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
@@ -76,8 +69,6 @@
 
 .characteristic-property div {
   height: 19px;
-  left: 0px;
-  top: 31px;
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
@@ -93,8 +84,6 @@
 
 .characteristic-value div {
   height: 19px;
-  left: 106px;
-  top: 31px;
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
@@ -120,8 +109,6 @@
 .item-detail-title h2 {
   margin: 0;
   height: 27px;
-  right: 113px;
-  top: 32px;
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
@@ -133,8 +120,6 @@
 .item-detail-title h4 {
   margin: 0;
   height: 18px;
-  right: 169px;
-  top: 59px;
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
@@ -146,8 +131,6 @@
 
 .item-detail-title > p {
   height: 18px;
-  right: 120px;
-  top: 93px;
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
@@ -160,8 +143,6 @@
 .item-detail-title > p:last-child {
   margin-top: 0;
   height: 16px;
-  right: 112px;
-  top: 111px;
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
@@ -182,21 +163,14 @@
   align-items: center;
   width: 164px;
   height: 47px;
-  left: 0px;
-  top: 0px;
   background: #6A983C;
   border: 2px solid #46760A;
-  box-sizing: border-box;
   border-radius: 12px;
 }
 
 .product-detail button {
   border: none;
   background: #6A983C;
-  left: 9.76%;
-  right: 23.17%;
-  top: 25.53%;
-  bottom: 25.53%;
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
@@ -212,17 +186,11 @@
   align-items: center;
   width: 164px;
   height: 36px;
-  left: 0px;
-  top: 59px;
   background: #F5F5F5;
   border-radius: 12px;
 }
 
 .wishlist button {
-  left: 21.95%;
-  right: 7.32%;
-  top: 18.06%;
-  bottom: 18.06%;
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
