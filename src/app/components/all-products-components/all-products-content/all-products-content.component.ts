@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {ProductCard} from "../../../interfaces/product-card";
+
 
 @Component({
   selector: 'app-all-products-content',

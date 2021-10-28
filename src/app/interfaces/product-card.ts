@@ -1,10 +1,21 @@
 export interface ProductCard {
-  productTitle: string;
-  description: string;
-  freshness: string;
-  farm: string;
-  delivery: string;
-  stock: number;
-  priceUsual: number;
-  pricePromotional: number;
+  itemID: string,
+  name: string,
+  pricePromotional: number,
+  priceUsual: number,
+  freshness: string,
+  deliveryFrom: string,
+  stock: number,
+  category: string,
+  farm: string,
+  description: string,
+  rating: number,
+  imgUrl: string,
+  countryCode: number,
+  stockInfo: string,
+  color: string,
+  size: string,
+  buyBuy: string,
+  deliveryTime: string,
+  deliveryArea: string
 }

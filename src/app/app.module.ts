@@ -25,6 +25,10 @@ import { RatingComponent } from './components/all-products-components/all-produc
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { SliderComponent } from './components/all-products-components/all-products-content/aside/slider/slider.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 
 @NgModule({
@@ -55,7 +59,10 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
         MatDividerModule,
         MatButtonModule,
         MatCheckboxModule,
-        NgxSliderModule
+        NgxSliderModule,
+        provideFirebaseApp(() => initializeApp(environment.firebase)),
+        provideAuth(() => getAuth()),
+        provideFirestore(() => getFirestore())
     ],
   providers: [],
   bootstrap: [AppComponent]
