@@ -10,12 +10,14 @@ import {ProductCard} from "../../interfaces/product-card";
 export class AllProductsComponent implements OnInit {
 
   public products: ProductCard[] = [];
+  public productsQuantity?:number;
 
   constructor(private allProductService: AllProductsService) { }
 
   ngOnInit(): void {
     this.allProductService.getProducts().subscribe(data => {
       this.products = data;
+      this.productsQuantity = data.length;
     });
   }
 }

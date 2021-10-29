@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ProductCard} from "../../../interfaces/product-card";
 
 
 @Component({
@@ -11,6 +10,7 @@ export class AllProductsContentComponent implements OnInit {
 
   @Input() products?: any;
   p: number = 3;
+  allProductsQuantity: number = 10;
 
   constructor() { }
 
