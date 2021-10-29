@@ -9,7 +9,8 @@ import {ProductCard} from "../../../interfaces/product-card";
 })
 export class AllProductsContentComponent implements OnInit {
 
-  @Input() products?: ProductCard[];
+  @Input() products?: any;
+  p: number = 3;
 
   constructor() { }
 

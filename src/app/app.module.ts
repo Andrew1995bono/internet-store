@@ -30,6 +30,8 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { PaginationComponent } from './components/all-products-components/pagination/pagination.component';
+import {NgxPaginationModule} from "ngx-pagination";
 
 
 @NgModule({
@@ -51,7 +53,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     CategoriesComponent,
     BrandsComponent,
     RatingComponent,
-    SliderComponent
+    SliderComponent,
+    PaginationComponent
   ],
     imports: [
         BrowserModule,
@@ -62,6 +65,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
         MatCheckboxModule,
         FlexLayoutModule,
         NgxSliderModule,
+        NgxPaginationModule,
         provideFirebaseApp(() => initializeApp(environment.firebase)),
         provideAuth(() => getAuth()),
         provideFirestore(() => getFirestore())

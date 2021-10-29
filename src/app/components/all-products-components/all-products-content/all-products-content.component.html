@@ -1,8 +1,9 @@
 <div class="wrapper-content">
   <app-aside></app-aside>
   <div fxLayout="column" fxLayoutAlign="start start">
-    <div *ngFor="let product of products">
+    <div *ngFor="let product of products | paginate: { itemsPerPage: 10, currentPage: p } ">
       <app-product-card [productData]="product"></app-product-card>
     </div>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
   </div>
 </div>
