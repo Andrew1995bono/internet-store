@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {ProductCard} from "../../../../interfaces/product-card";
 
 
 @Component({
@@ -7,10 +8,12 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./product-card.component.css']
 })
 export class ProductCardComponent implements OnInit {
+
+  @Input() products?: ProductCard[];
+
   constructor() {}
 
   ngOnInit(): void {
-
   }
 
 }

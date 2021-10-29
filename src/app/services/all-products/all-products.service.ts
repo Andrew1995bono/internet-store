@@ -12,8 +12,8 @@ export class AllProductsService {
 
   }
   public getProducts(): Observable<ProductCard[]> {
-    let collection1: any;
-    collection1 = collection(this.firestore, 'products-items');
-    return collectionData(collection1)
+    let collectionProducts: any;
+    collectionProducts = collection(this.firestore, 'products-items');
+    return collectionData(collectionProducts);
   }
 }

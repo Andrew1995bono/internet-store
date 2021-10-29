@@ -8,10 +8,10 @@ import {ProductCard} from "../../interfaces/product-card";
   styleUrls: ['./all-products.component.css']
 })
 export class AllProductsComponent implements OnInit {
-  private products: ProductCard[] = [];
-  constructor(
-    private allProductService: AllProductsService
-  ) { }
+
+  public products: ProductCard[] = [];
+
+  constructor(private allProductService: AllProductsService) { }
 
   ngOnInit(): void {
     this.allProductService.getProducts().subscribe(data => {

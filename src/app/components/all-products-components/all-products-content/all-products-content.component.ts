@@ -9,6 +9,8 @@ import {ProductCard} from "../../../interfaces/product-card";
 })
 export class AllProductsContentComponent implements OnInit {
 
+  @Input() products?: ProductCard[];
+
   constructor() { }
 
   ngOnInit(): void {
