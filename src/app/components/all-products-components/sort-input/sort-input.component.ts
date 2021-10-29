@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+
 
 @Component({
   selector: 'app-sort-input',
@@ -6,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sort-input.component.css']
 })
 export class SortInputComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {

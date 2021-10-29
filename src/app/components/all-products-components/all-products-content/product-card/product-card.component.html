@@ -1,11 +1,12 @@
-<div class="product-item">
+<div *ngFor="let product of products">
+<div class="product-item" >
   <div class="item-image">
-    <img src="" alt="product-image">
+    <img src="{{product.imgUrl}}" alt="product-image">
   </div>
   <span class="item-info">
     <span class="item-description">
-      <h2>Product title</h2>
-      <h4>Space for a small product description</h4>
+      <h2>{{product.name}}</h2>
+      <h4>{{product.description}}</h4>
       <span class="rate-star">
         <div><img src="../../assets/rate-star-filled.png" alt="filled rate star"></div>
         <div><img src="../../assets/rate-star-filled.png" alt="filled rate star"></div>
@@ -21,17 +22,17 @@
         <div>Stock</div>
       </div>
       <div class="characteristic-value">
-        <div>New (Extra fresh)</div>
-        <div>Grocery Farm Fields</div>
-        <div>Europe</div>
-        <div>320pcs</div>
+        <div>{{product.freshness}}</div>
+        <div>{{product.farm}}</div>
+        <div>{{product.deliveryFrom}}</div>
+        <div>{{product.stock}} pcs</div>
       </div>
     </div>
     </span>
     <span class="item-detail">
       <div class="item-detail-title">
-        <h2>36.99 USD</h2>
-        <h4>48.56</h4>
+        <h2>{{product.priceUsual}} USD</h2>
+        <h4>{{product.pricePromotional}}</h4>
         <p>Free Shipping</p>
         <p>Delivery in 1 day</p>
       </div>
@@ -47,4 +48,5 @@
       </div>
     </span>
   </span>
+</div>
 </div>

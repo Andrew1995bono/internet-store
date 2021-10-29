@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "freshnesecom-app": {
+      "hosting": {
+        "internet-store": [
+          "freshnesecom-app"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "freshnesecom-app"
+  }
+}
