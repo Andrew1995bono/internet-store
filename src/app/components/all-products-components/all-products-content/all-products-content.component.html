@@ -1,4 +1,8 @@
 <div class="wrapper-content">
   <app-aside></app-aside>
-  <app-product-card [products]="products"></app-product-card>
+  <div fxLayout="column" fxLayoutAlign="start start">
+    <div *ngFor="let product of products">
+      <app-product-card [productData]="product"></app-product-card>
+    </div>
+  </div>
 </div>

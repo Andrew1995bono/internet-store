@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/homepage-components/header/header.component';
 import { HeaderInfoComponent } from './components/homepage-components/header/header-info/header-info.component';
-import {MatDividerModule} from "@angular/material/divider";
+import { MatDividerModule } from "@angular/material/divider";
 import { NavbarComponent } from './components/homepage-components/navbar/navbar.component';
 import { InputFieldComponent } from './components/homepage-components/navbar/input-field/input-field.component';
 import { SelectFieldComponent } from './components/homepage-components/navbar/select-field/select-field.component';
@@ -22,13 +22,14 @@ import { ProductCardComponent } from './components/all-products-components/all-p
 import { CategoriesComponent } from './components/all-products-components/all-products-content/aside/categories/categories.component';
 import { BrandsComponent } from './components/all-products-components/all-products-content/aside/brands/brands.component';
 import { RatingComponent } from './components/all-products-components/all-products-content/aside/rating/rating.component';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { SliderComponent } from './components/all-products-components/all-products-content/aside/slider/slider.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 
 @NgModule({
@@ -59,6 +60,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
         MatDividerModule,
         MatButtonModule,
         MatCheckboxModule,
+        FlexLayoutModule,
         NgxSliderModule,
         provideFirebaseApp(() => initializeApp(environment.firebase)),
         provideAuth(() => getAuth()),

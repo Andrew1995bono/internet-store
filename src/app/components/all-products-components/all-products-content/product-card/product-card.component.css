@@ -3,11 +3,13 @@
   justify-content: space-between;
   width: 869px;
   height: 280px;
-  margin-top: 81px;
+  /*margin-top: 81px;*/
+  margin-bottom: 32px;
   background: #FFFFFF;
   border: 1px solid #D1D1D1;
   border-radius: 12px;
 }
+
 
 .item-image {
   width: 268px;

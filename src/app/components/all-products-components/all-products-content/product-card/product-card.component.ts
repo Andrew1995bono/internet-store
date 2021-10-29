@@ -9,7 +9,11 @@ import {ProductCard} from "../../../../interfaces/product-card";
 })
 export class ProductCardComponent implements OnInit {
 
-  @Input() products?: ProductCard[];
+  @Input() set productData(product: ProductCard) {
+    this.product = product;
+  };
+
+  public product = {} as ProductCard;
 
   constructor() {}
 
