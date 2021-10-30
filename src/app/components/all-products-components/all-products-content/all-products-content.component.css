@@ -11,6 +11,29 @@ app-aside {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 0;
+}
+
+pagination-controls pagination-template .ngx-pagination li a {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #151515;
+}
+
+pagination-controls pagination-template .ngx-pagination li.pagination-previous {
+  display: none;
+}
+
+pagination-controls pagination-template .ngx-pagination li.pagination-next {
+  display: none;
+}
+
+pagination-controls pagination-template .ngx-pagination li.current  {
+  color: #6A983C;
+  background-color: white;
 }
 
 .show-more-products {
