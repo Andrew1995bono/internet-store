@@ -11,8 +11,22 @@ app-aside {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 0;
   margin-top: 18px;
+}
+
+.page-control {
+  display: flex;
+  align-items: center;
+}
+
+.page-control p {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #A9A9A9;
+  margin: 0 5px 0 0;
 }
 
 pagination-controls pagination-template .ngx-pagination li a {
@@ -25,28 +39,23 @@ pagination-controls pagination-template .ngx-pagination li a {
   padding: 0 3px;
 }
 
-pagination-controls pagination-template .ngx-pagination li.pagination-previous a {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 16px;
-  color: #A9A9A9;
+
+pagination-controls pagination-template .ngx-pagination li.pagination-previous.disabled {
+  padding: 0;
+  margin: 0;
 }
-
-
-pagination-controls pagination-template .ngx-pagination li a::before {
-  visibility: hidden;
-}
-
 
 
 pagination-controls pagination-template ul.ngx-pagination {
   padding-left: 0;
 }
 
-pagination-controls pagination-template .ngx-pagination li.pagination-next {
-  display: none;
+
+pagination-controls pagination-template {
+  .ngx-pagination li.pagination-previous a, .ngx-pagination li.pagination-previous.disabled::before,
+  .ngx-pagination li.pagination-previous.disabled span, .ngx-pagination li.pagination-next {
+    display: none;
+  }
 }
 
 pagination-controls pagination-template .ngx-pagination li.current  {
@@ -58,7 +67,9 @@ pagination-controls pagination-template .ngx-pagination li.current  {
   font-size: 12px;
   line-height: 16px;
   padding: 0 3px;
+  margin-right: 0;
 }
+
 
 .show-more-products {
   display: flex;
