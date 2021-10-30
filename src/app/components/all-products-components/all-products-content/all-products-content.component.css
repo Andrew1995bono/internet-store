@@ -12,6 +12,7 @@ app-aside {
   justify-content: space-between;
   align-items: center;
   padding-left: 0;
+  margin-top: 18px;
 }
 
 pagination-controls pagination-template .ngx-pagination li a {
@@ -21,10 +22,27 @@ pagination-controls pagination-template .ngx-pagination li a {
   font-size: 12px;
   line-height: 16px;
   color: #151515;
+  padding: 0 3px;
 }
 
-pagination-controls pagination-template .ngx-pagination li.pagination-previous {
-  display: none;
+pagination-controls pagination-template .ngx-pagination li.pagination-previous a {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #A9A9A9;
+}
+
+
+pagination-controls pagination-template .ngx-pagination li a::before {
+  visibility: hidden;
+}
+
+
+
+pagination-controls pagination-template ul.ngx-pagination {
+  padding-left: 0;
 }
 
 pagination-controls pagination-template .ngx-pagination li.pagination-next {
@@ -34,6 +52,12 @@ pagination-controls pagination-template .ngx-pagination li.pagination-next {
 pagination-controls pagination-template .ngx-pagination li.current  {
   color: #6A983C;
   background-color: white;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 0 3px;
 }
 
 .show-more-products {
