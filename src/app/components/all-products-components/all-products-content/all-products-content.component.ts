@@ -11,7 +11,6 @@ export class AllProductsContentComponent implements OnInit {
 
   @Input() products?: any;
   p: number = 3;
-
   constructor() { }
 
   ngOnInit(): void {
