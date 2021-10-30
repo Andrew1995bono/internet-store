@@ -10,7 +10,6 @@ export class AllProductsContentComponent implements OnInit {
 
   @Input() products?: any;
   p: number = 3;
-  allProductsQuantity: number = 10;
 
   constructor() { }
 

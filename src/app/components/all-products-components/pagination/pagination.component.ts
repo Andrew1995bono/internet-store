@@ -7,7 +7,6 @@ import {ProductCard} from "../../../interfaces/product-card";
   styleUrls: ['./pagination.component.scss']
 })
 export class PaginationComponent implements OnInit {
-  public p: number = 3;
   constructor() { }
 
   ngOnInit(): void {
