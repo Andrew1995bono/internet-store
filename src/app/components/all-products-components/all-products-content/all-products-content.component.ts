@@ -1,4 +1,5 @@
 import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
+import {ProductCard} from "../../../interfaces/product-card";
 
 
 @Component({
@@ -8,7 +9,7 @@ import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class AllProductsContentComponent implements OnInit {
-  @Input() products?: any;
+  @Input() products: ProductCard[] = [];
   @Input() productsQuantity?:number;
   p: number = 3;
 
