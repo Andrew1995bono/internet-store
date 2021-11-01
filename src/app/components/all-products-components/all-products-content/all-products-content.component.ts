@@ -8,9 +8,10 @@ import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class AllProductsContentComponent implements OnInit {
-
   @Input() products?: any;
+  @Input() productsQuantity?:number;
   p: number = 3;
+
   constructor() { }
 
   ngOnInit(): void {
