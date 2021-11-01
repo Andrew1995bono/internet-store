@@ -1,8 +1,0 @@
-.wrapper-content {
-  display: flex;
-  justify-content: space-between;
-}
-
-app-aside {
-  margin-right: 32px;
-}
