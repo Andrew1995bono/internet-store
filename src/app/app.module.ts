@@ -30,7 +30,6 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { FlexLayoutModule } from "@angular/flex-layout";
-import { PaginationComponent } from './components/all-products-components/pagination/pagination.component';
 import {NgxPaginationModule} from "ngx-pagination";
 
 
@@ -54,7 +53,6 @@ import {NgxPaginationModule} from "ngx-pagination";
     BrandsComponent,
     RatingComponent,
     SliderComponent,
-    PaginationComponent
   ],
     imports: [
         BrowserModule,
