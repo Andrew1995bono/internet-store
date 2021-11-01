@@ -11,6 +11,8 @@ import {ProductCardComponent} from "./all-products-content/product-card/product-
 export class AllProductsComponent implements OnInit {
   public products: ProductCard[] = [];
   public productsQuantity?:number;
+  public fruitsArr: ProductCard[] = [];
+  public fruitsQuantity?: number;
 
   constructor(private allProductService: AllProductsService) {
 
@@ -21,6 +23,8 @@ export class AllProductsComponent implements OnInit {
     this.allProductService.getProducts().subscribe(data => {
       this.products = data;
       this.productsQuantity = data.length;
+      this.fruitsArr = data.filter((item:ProductCard) => item.category === "Fruits");
+      this.fruitsQuantity = this.fruitsArr.length;
     });
   }
 }
