@@ -46,12 +46,12 @@ h2 {
   margin-top: 48px;
 }
 
-.first-row {
+.row {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.first-row p {
+.row p {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -67,26 +67,6 @@ h2 {
   margin: 16px 16px 0 0;
 }
 
-.second-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.second-row p {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 4px 10px;
-  background: #F5F5F5;
-  border-radius: 12px;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 18px;
-  color: #151515;
-  margin: 16px 16px 0 0;
-}
 
 .footer-copyright {
   margin-top: 48px;

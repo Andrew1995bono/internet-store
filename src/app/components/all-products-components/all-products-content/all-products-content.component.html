@@ -1,7 +1,7 @@
 <div class="wrapper-content">
   <app-aside></app-aside>
   <div fxLayout="column" fxLayoutAlign="start start">
-    <div *ngFor="let product of products | paginate: { itemsPerPage: 5, currentPage: p } ">
+    <div *ngFor="let product of products | paginate: { itemsPerPage: itemsPerPage, currentPage: p } ">
       <app-product-card [productData]="product"></app-product-card>
     </div>
   </div>

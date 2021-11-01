@@ -10,13 +10,12 @@ import {ProductCard} from "../../../interfaces/product-card";
 })
 export class AllProductsContentComponent implements OnInit {
   @Input() products: ProductCard[] = [];
-  @Input() fruitsQuantity?: number;
   @Input() productsQuantity?:number;
-  p: number = 3;
+  public p: number = 3;
+  public itemsPerPage: number = 5;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

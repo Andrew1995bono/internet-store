@@ -33,7 +33,6 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import {NgxPaginationModule} from "ngx-pagination";
 import { FooterComponent } from './components/all-products-components/footer/footer.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
