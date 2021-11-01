@@ -38,6 +38,16 @@
       </ul>
     </div>
   </div>
-  <div class="footer-tags"></div>
-  <div class="footer-copyright"></div>
+  <div class="footer-tags">
+    <h2>Product tags</h2>
+    <div class="first-row">
+      <p *ngFor="let tag of firstRowTags">{{tag}}</p>
+    </div>
+    <div class="second-row">
+      <p *ngFor="let tag of secondRowTags">{{tag}}</p>
+    </div>
+  </div>
+  <div class="footer-copyright">
+  <p>Copyright &copy; 2020 amatseliukh.com</p>
+  </div>
 </div>
