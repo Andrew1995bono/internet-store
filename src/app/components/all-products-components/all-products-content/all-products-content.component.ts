@@ -16,7 +16,7 @@ export class AllProductsContentComponent implements OnInit {
   @Input() productsQuantity: number;
   public p: number = 3;
   public itemsPerPage: number = 5;
-  public farmValue: string = '';
+  public farmValue: string[] = [];
   public filteredItems: ProductCard[] = [];
 
 
@@ -26,23 +26,35 @@ export class AllProductsContentComponent implements OnInit {
   }
 
   getFarmValue(event: MatCheckboxChange): void {
-    this.farmValue = event.source.value;
-    this.filteredItems = this.products;
     this.products = this.sortByFarm(event);
   }
 
   sortByFarm(event: MatCheckboxChange): any {
     if (event.checked) {
-      this.filteredItems = this.products.filter((item: ProductCard) => {
-        if (item.farm === this.farmValue && event.checked) {
+      this.farmValue.push(event.source.value);
+      this.filteredItems = this.filtersService.products.value.filter((item: ProductCard) => {
+        if (this.farmValue.includes(item.farm)) {
           return true;
         }
       });
-      this.products = this.filteredItems;
       this.p = 1;
-      return this.products;
+      return this.filteredItems;
     } else if (!event.checked) {
-      return this.products = this.filtersService.products.value;
+      this.farmValue = this.farmValue.filter((item: string) => {
+        if (item === event.source.value) {
+          return false;
+        } else {
+          return true;
+        }
+      });
+      this.filteredItems = this.filtersService.products.value.filter((item: ProductCard) => {
+        if (this.farmValue.includes(item.farm)) {
+          return true;
+        } else if (this.farmValue.length === 0) {
+          return this.filteredItems;
+        }
+      });
+      return this.filteredItems;
     }
   }
 }
