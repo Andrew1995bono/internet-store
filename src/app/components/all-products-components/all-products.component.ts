@@ -1,7 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {AllProductsService} from "../../services/all-products/all-products.service";
-import {ProductCard} from "../../interfaces/product-card";
-import {FiltersService} from "../../services/all-products/filters/filters.service";
+import { Component, OnInit } from '@angular/core';
+import { ProductCard } from '../../interfaces/product-card';
+import { AllProductsService } from '../../services/all-products/all-products.service';
+import { FiltersService } from '../../services/all-products/filters/filters.service';
 
 @Component({
   selector: 'app-all-products',
@@ -9,8 +9,9 @@ import {FiltersService} from "../../services/all-products/filters/filters.servic
   styleUrls: ['./all-products.component.css']
 })
 export class AllProductsComponent implements OnInit {
+
   public products: ProductCard[] = [];
-  public productsQuantity?:number;
+  public productsQuantity?: number;
 
   constructor(private allProductService: AllProductsService, private filtersService: FiltersService) {
 
