@@ -20,7 +20,6 @@
 }
 
 .first-label {
-  font-family: Poppins;
   font-weight: 700;
   font-size: 15px;
   line-height: 22px;
@@ -47,12 +46,13 @@
   height: 19px;
   display: flex;
   align-self: center;
+  font-family: "Open Sans";
+
 }
 
 .second-label input {
   border: none;
   width: 262px;
-  font-family: "Open Sans";
   font-size: 14px;
   line-height: 19px;
   background-color: #F9F9F9;

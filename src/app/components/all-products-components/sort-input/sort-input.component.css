@@ -11,10 +11,7 @@
 }
 
 .first-label {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 19px;
   color: #151515;
   width: 47px;
@@ -29,7 +26,6 @@
 
 .second-label {
   font-family: Poppins;
-  font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: 18px;

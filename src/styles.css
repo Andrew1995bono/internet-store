@@ -4,8 +4,7 @@ html {
   margin: 0 auto;
   padding: 16px 45px 78px;
   max-width: 1260px;
-  /*height: 100vh;*/
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Open Sans", Poppins, "Helvetica Neue", sans-serif;
   border: 1px solid red;
 }
 
