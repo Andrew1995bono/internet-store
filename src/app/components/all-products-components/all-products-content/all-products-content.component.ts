@@ -1,5 +1,6 @@
-import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
-import {ProductCard} from "../../../interfaces/product-card";
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { MatCheckboxChange } from '@angular/material/checkbox';
+import { ProductCard } from '../../../interfaces/product-card';
 
 
 @Component({
@@ -11,25 +12,33 @@ import {ProductCard} from "../../../interfaces/product-card";
 export class AllProductsContentComponent implements OnInit {
 
   @Input() products: ProductCard[] = [];
-  @Input() productsQuantity?:number;
+  @Input() productsQuantity: number;
   public p: number = 3;
   public itemsPerPage: number = 5;
   public farmValue: string = '';
+  public filteredItems: ProductCard[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  getFarmValue($event:any):void {
-    this.farmValue = $event.source.value;
-    console.log($event.source.value);
-    this.sortByFarm();
+  getFarmValue(event: MatCheckboxChange): void {
+    this.farmValue = event.source.value;
+    this.filteredItems = this.products;
+    this.sortByFarm(event);
   }
 
-  sortByFarm():void {
-    this.products = this.products.filter((item:ProductCard) => item.farm === this.farmValue);
+  sortByFarm($event: MatCheckboxChange): void {
+
+    this.filteredItems = this.products.filter((item: ProductCard) => {
+      if (item.farm === this.farmValue && $event.checked === true) {
+        return true;
+      }
+    });
     this.p = 1;
   }
 
 }
+
+

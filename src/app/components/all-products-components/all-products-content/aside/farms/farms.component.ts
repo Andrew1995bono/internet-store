@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {FiltersService} from "../../../../../services/all-products/filters/filters.service";
-import {Output, EventEmitter} from "@angular/core";
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { MatCheckboxChange } from '@angular/material/checkbox';
+import { FiltersService } from '../../../../../services/all-products/filters/filters.service';
 
 @Component({
   selector: 'app-farms',
@@ -10,7 +10,7 @@ import {Output, EventEmitter} from "@angular/core";
 export class FarmsComponent implements OnInit {
 
   public farmNames: string[] = [];
-  @Output() farmValue = new EventEmitter<string>();
+  @Output() farmValue = new EventEmitter<MatCheckboxChange>();
 
   constructor(private filtersService: FiltersService) {}
 
@@ -20,12 +20,12 @@ export class FarmsComponent implements OnInit {
 
   getFarmsName(): void {
     this.filtersService.products.subscribe(data => {
-      this.farmNames = (data.map(el => el.farm) as string[]).filter((item,i,arr) => arr.indexOf(item) === i);
-    })
+      this.farmNames = (data.map(el => el.farm) as string[]).filter((item, i, arr) => arr.indexOf(item) === i);
+    });
   }
 
-  getFarmValue($event: any):void {
-    this.farmValue.emit($event);
+  getFarmValue(event: MatCheckboxChange): void {
+    this.farmValue.emit(event);
   }
 
 }
