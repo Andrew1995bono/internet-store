@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatCheckboxChange } from '@angular/material/checkbox';
 import { ProductCard } from '../../../interfaces/product-card';
+=======
+import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
+import {ProductCard} from "../../../interfaces/product-card";
+>>>>>>> footer
 
 
 @Component({
@@ -10,6 +15,7 @@ import { ProductCard } from '../../../interfaces/product-card';
   encapsulation: ViewEncapsulation.None
 })
 export class AllProductsContentComponent implements OnInit {
+<<<<<<< HEAD
 
   @Input() products: ProductCard[] = [];
   @Input() productsQuantity: number;
@@ -17,6 +23,11 @@ export class AllProductsContentComponent implements OnInit {
   public itemsPerPage: number = 5;
   public farmValue: string = '';
   public filteredItems: ProductCard[] = [];
+=======
+  @Input() products: ProductCard[] = [];
+  @Input() productsQuantity?:number;
+  p: number = 3;
+>>>>>>> footer
 
   constructor() { }
 

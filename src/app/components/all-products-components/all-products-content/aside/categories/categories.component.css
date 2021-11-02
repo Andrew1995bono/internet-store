@@ -9,7 +9,6 @@
   margin: 0;
   height: 27px;
   font-family: Poppins;
-  font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 27px;
@@ -31,9 +30,6 @@
 .category-filters span {
   margin-bottom: 12px;
   height: 19px;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 19px;
   color: #151515;
@@ -51,7 +47,6 @@
 .category-items span {
   margin-bottom: 12px;
   font-family: Poppins;
-  font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: 18px;

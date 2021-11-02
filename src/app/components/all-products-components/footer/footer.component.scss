@@ -16,9 +16,6 @@ ul {
 
 ul li {
   list-style: none;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 19px;
   color: #6A983C;
@@ -32,7 +29,6 @@ ul li:last-child {
 h2 {
   margin: 0;
   font-family: Poppins;
-  font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 27px;
@@ -59,7 +55,6 @@ h2 {
   background: #F5F5F5;
   border-radius: 12px;
   font-family: Poppins;
-  font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: 18px;
@@ -67,15 +62,34 @@ h2 {
   margin: 16px 16px 0 0;
 }
 
+<<<<<<< HEAD
+=======
+.second-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.second-row p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px 10px;
+  background: #F5F5F5;
+  border-radius: 12px;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #151515;
+  margin: 16px 16px 0 0;
+}
+>>>>>>> footer
 
 .footer-copyright {
   margin-top: 48px;
 }
 
 .footer-copyright p {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 19px;
   color: #151515;
