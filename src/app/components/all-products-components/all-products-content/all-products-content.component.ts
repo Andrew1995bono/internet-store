@@ -23,6 +23,12 @@ export class AllProductsContentComponent implements OnInit {
   constructor(private filtersService: FiltersService) {}
 
   ngOnInit(): void {
+    this.sendItemsPerPage();
+  }
+
+
+  sendItemsPerPage(): void {
+    this.filtersService.itemsPerPage.next(this.itemsPerPage);
   }
 
   getFarmValue(event: MatCheckboxChange): void {

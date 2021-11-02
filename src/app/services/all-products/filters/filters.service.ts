@@ -9,6 +9,7 @@ import { ProductCard } from '../../../interfaces/product-card';
 export class FiltersService {
 
   public products: BehaviorSubject<ProductCard[]> = new BehaviorSubject([new ProductCard()]);
+  public itemsPerPage: BehaviorSubject<number> = new BehaviorSubject(0);
 
   constructor() {
   }
