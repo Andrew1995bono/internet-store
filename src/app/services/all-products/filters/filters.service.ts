@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {ProductCard} from "../../../interfaces/product-card";
-import {BehaviorSubject} from "rxjs";
+import { BehaviorSubject } from 'rxjs';
+import { ProductCard } from '../../../interfaces/product-card';
 
 @Injectable({
   providedIn: 'root'
@@ -12,5 +12,6 @@ export class FiltersService {
 
   constructor() {
   }
+
 
 }

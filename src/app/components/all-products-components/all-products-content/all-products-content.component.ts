@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatCheckboxChange } from '@angular/material/checkbox';
 import { ProductCard } from '../../../interfaces/product-card';
+import { FiltersService } from '../../../services/all-products/filters/filters.service';
 
 
 @Component({
@@ -19,7 +20,7 @@ export class AllProductsContentComponent implements OnInit {
   public filteredItems: ProductCard[] = [];
 
 
-  constructor() { }
+  constructor(private filtersService: FiltersService) {}
 
   ngOnInit(): void {
   }
@@ -27,19 +28,22 @@ export class AllProductsContentComponent implements OnInit {
   getFarmValue(event: MatCheckboxChange): void {
     this.farmValue = event.source.value;
     this.filteredItems = this.products;
-    this.sortByFarm(event);
+    this.products = this.sortByFarm(event);
   }
 
-  sortByFarm($event: MatCheckboxChange): void {
-
-    this.filteredItems = this.products.filter((item: ProductCard) => {
-      if (item.farm === this.farmValue && $event.checked) {
-        return true;
-      }
-    });
-    this.p = 1;
+  sortByFarm(event: MatCheckboxChange): any {
+    if (event.checked) {
+      this.filteredItems = this.products.filter((item: ProductCard) => {
+        if (item.farm === this.farmValue && event.checked) {
+          return true;
+        }
+      });
+      this.products = this.filteredItems;
+      this.p = 1;
+      return this.products;
+    } else if (!event.checked) {
+      return this.products = this.filtersService.products.value;
+    }
   }
-
 }
-
 
