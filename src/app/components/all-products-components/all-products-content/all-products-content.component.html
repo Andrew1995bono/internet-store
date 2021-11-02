@@ -1,5 +1,5 @@
 <div class="wrapper-content">
-  <app-aside></app-aside>
+  <app-aside (farmValue)="getFarmValue($event)"></app-aside>
   <div fxLayout="column" fxLayoutAlign="start start">
     <div *ngFor="let product of products | paginate: { itemsPerPage: itemsPerPage, currentPage: p } ">
       <app-product-card [productData]="product"></app-product-card>

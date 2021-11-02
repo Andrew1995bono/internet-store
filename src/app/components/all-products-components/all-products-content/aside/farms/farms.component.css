@@ -1,9 +1,9 @@
-.brands {
+.farms {
   width: 268px;
   margin-top: 48px;
 }
 
-.brands h2 {
+.farms h2 {
   margin: 0;
   height: 27px;
   font-family: Poppins;
@@ -14,11 +14,11 @@
   color: #151515;
 }
 
-.brands-filters {
+.farms-filters {
   margin-top: 18px;
 }
 
-.brands-filters div {
+.farms-filters div {
   display: flex;
   align-items: center;
   margin-bottom: 16px;
@@ -30,7 +30,7 @@
   color: #151515;
 }
 
-.brands-filters div:last-child {
+.farms-filters div:last-child {
   margin-bottom: 0;
 }
 

@@ -20,7 +20,7 @@ import { AllProductsContentComponent } from './components/all-products-component
 import { AsideComponent } from './components/all-products-components/all-products-content/aside/aside.component';
 import { ProductCardComponent } from './components/all-products-components/all-products-content/product-card/product-card.component';
 import { CategoriesComponent } from './components/all-products-components/all-products-content/aside/categories/categories.component';
-import { BrandsComponent } from './components/all-products-components/all-products-content/aside/brands/brands.component';
+import { FarmsComponent } from './components/all-products-components/all-products-content/aside/farms/farms.component';
 import { RatingComponent } from './components/all-products-components/all-products-content/aside/rating/rating.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { SliderComponent } from './components/all-products-components/all-products-content/aside/slider/slider.component';
@@ -50,7 +50,7 @@ import { FooterComponent } from './components/all-products-components/footer/foo
     AsideComponent,
     ProductCardComponent,
     CategoriesComponent,
-    BrandsComponent,
+    FarmsComponent,
     RatingComponent,
     SliderComponent,
     FooterComponent,

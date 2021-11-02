@@ -1,0 +1,21 @@
+<div class="farms">
+    <h2>Farms</h2>
+  <div class="farms-filters">
+    <div *ngFor="let farm of farmNames"><mat-checkbox value="{{farm}}" (change)="getFarmValue($event)"></mat-checkbox>Filter by {{farm}}</div>
+<!--    <div>-->
+<!--      <mat-checkbox id="cargill"></mat-checkbox>Filter by Cargill-->
+<!--    </div>-->
+<!--    <div>-->
+<!--      <mat-checkbox id="basf"></mat-checkbox>Filter by BASF-->
+<!--    </div>-->
+<!--    <div>-->
+<!--      <mat-checkbox id="nutrien"></mat-checkbox>Filter by Nutrien-->
+<!--    </div>-->
+<!--    <div>-->
+<!--      <mat-checkbox id="dupont"></mat-checkbox>Filter by DuPont-->
+<!--    </div>-->
+<!--    <div>-->
+<!--      <mat-checkbox id="john-deere"></mat-checkbox>Filter by John Deere-->
+<!--    </div>-->
+  </div>
+</div>

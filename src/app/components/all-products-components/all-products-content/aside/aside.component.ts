@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-aside',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AsideComponent implements OnInit {
 
+  @Output() farmValue = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  getFarmValue($event:any):void {
+    this.farmValue.emit($event);
+  }
 }
