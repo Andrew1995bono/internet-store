@@ -20,9 +20,6 @@ app-aside {
 }
 
 .page-control p {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 16px;
   color: #A9A9A9;
@@ -30,9 +27,6 @@ app-aside {
 }
 
 pagination-controls pagination-template .ngx-pagination li a {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 16px;
   color: #151515;
@@ -58,12 +52,9 @@ pagination-controls pagination-template {
   }
 }
 
-pagination-controls pagination-template .ngx-pagination li.current  {
+pagination-controls pagination-template .ngx-pagination li.current {
   color: #6A983C;
   background-color: white;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 16px;
   padding: 0 3px;
@@ -85,7 +76,6 @@ pagination-controls pagination-template .ngx-pagination li.current  {
   background: #6A983C;
   border: none;
   font-family: Poppins;
-  font-style: normal;
   font-weight: bold;
   font-size: 15px;
   line-height: 22px;
@@ -108,7 +98,6 @@ pagination-controls pagination-template .ngx-pagination li.current  {
 
 .all-products-quantity p:first-child {
   font-family: Poppins;
-  font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: 18px;
@@ -124,9 +113,6 @@ pagination-controls pagination-template .ngx-pagination li.current  {
 
 .all-products-quantity p:last-child {
   height: 16px;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 16px;
   color: #A9A9A9;

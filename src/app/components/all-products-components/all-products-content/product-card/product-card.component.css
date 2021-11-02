@@ -3,7 +3,6 @@
   justify-content: space-between;
   width: 869px;
   height: 280px;
-  /*margin-top: 81px;*/
   margin-bottom: 32px;
   background: #FFFFFF;
   border: 1px solid #D1D1D1;
@@ -37,7 +36,6 @@
 .item-description h2 {
   margin: 0;
   font-family: Poppins;
-  font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 27px;
@@ -45,14 +43,11 @@
 }
 
 .item-description h4 {
-  margin:0;
-  font-family: Open Sans;
-  font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 16px;
   color: #575757;
-  margin-top: 4px;
+  margin: 4px 0 0;
 }
 
 .rate-star {
@@ -77,9 +72,6 @@
 
 .characteristic-property div {
   height: 19px;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 19px;
   color: #A9A9A9;
@@ -92,9 +84,6 @@
 
 .characteristic-value div {
   height: 19px;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 19px;
   color: #A9A9A9;
@@ -118,7 +107,6 @@
   margin: 0;
   height: 27px;
   font-family: Poppins;
-  font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 27px;
@@ -129,7 +117,6 @@
   margin: 0;
   height: 18px;
   font-family: Poppins;
-  font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: 18px;
@@ -140,7 +127,6 @@
 .item-detail-title > p {
   height: 18px;
   font-family: Poppins;
-  font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: 18px;
@@ -151,8 +137,6 @@
 .item-detail-title > p:last-child {
   margin-top: 0;
   height: 16px;
-  font-family: Open Sans;
-  font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 16px;
@@ -179,7 +163,6 @@
   background: #6A983C;
   border: none;
   font-family: Poppins;
-  font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 22px;
@@ -203,7 +186,6 @@
 
 .wishlist button {
   font-family: Poppins;
-  font-style: normal;
   font-weight: bold;
   font-size: 15px;
   line-height: 22px;
