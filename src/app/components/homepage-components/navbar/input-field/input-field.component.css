@@ -20,9 +20,8 @@
 }
 
 .first-label {
-  font-family: Poppins;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 22px;
   color: #151515;
   padding-left: 16px;
@@ -47,14 +46,13 @@
   height: 19px;
   display: flex;
   align-self: center;
+  font-family: "Open Sans";
+
 }
 
 .second-label input {
   border: none;
-  top: 11px;
-  left: 194px;
   width: 262px;
-  font-family: "Open Sans";
   font-size: 14px;
   line-height: 19px;
   background-color: #F9F9F9;
@@ -73,6 +71,3 @@ input::placeholder {
   margin-right: 7px;
 }
 
-.add-item {
-  /*margin-right: 20px;*/
-}

@@ -1,0 +1,42 @@
+.rating {
+  display: flex;
+  flex-direction: column;
+  margin-top: 51px;
+  width: 268px;
+}
+
+.rating h2 {
+  margin: 0;
+  height: 27px;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #151515;
+}
+
+.rating-filters {
+  display: flex;
+  flex-direction: column;
+  margin-top: 18px;
+}
+
+.rating-filters div {
+  display: flex;
+  height: 20px;
+  margin-bottom: 16px;
+}
+
+.rating div.rating-filters div > div {
+  margin-left: 10px;
+}
+
+.rating .rating-filters div:last-child {
+  margin-bottom: 0;
+}
+
+
+mat-checkbox ::ng-deep .mat-checkbox-inner-container {
+  width: 20px;
+  height: 20px;
+}

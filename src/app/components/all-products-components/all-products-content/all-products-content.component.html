@@ -1,0 +1,22 @@
+<div class="wrapper-content">
+  <app-aside></app-aside>
+  <div fxLayout="column" fxLayoutAlign="start start">
+    <div *ngFor="let product of products | paginate: { itemsPerPage: 5, currentPage: p } ">
+      <app-product-card [productData]="product"></app-product-card>
+    </div>
+  </div>
+</div>
+<div class="pagination">
+  <div class="page-control">
+    <p>Page:</p>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+  <div class="show-more-products">
+    <a href="/showMoreProducts"><button>Show more products</button></a>
+    <img src="../../assets/arrow-down-white.png" alt="arrow-down">
+  </div>
+  <div class="all-products-quantity">
+    <p>{{productsQuantity}}</p>
+    <p>Products</p>
+  </div>
+</div>

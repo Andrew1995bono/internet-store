@@ -1,0 +1,143 @@
+.slider-filter {
+  width: 251px;
+  margin-right: 0;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.slider-filter h2 {
+  margin: 0;
+  height: 27px;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #151515;
+}
+
+ngx-slider {
+  margin-top: 16px;
+}
+
+.values {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.min {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.min h3 {
+  margin: 0;
+  height: 18px;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #151515;
+}
+
+.min input {
+  background: #F9F9F9;
+  border: 1px solid #D1D1D1;
+  border-radius: 12px;
+  width: 109px;
+  height: 42px;
+}
+
+.min input::placeholder {
+  height: 19px;
+  font-size: 14px;
+  line-height: 19px;
+  color: #A9A9A9;
+  padding-left: 18px;
+}
+
+.max {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.max h3 {
+  margin: 0;
+  height: 18px;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #151515;
+}
+
+.max input {
+  background: #F9F9F9;
+  border: 1px solid #D1D1D1;
+  border-radius: 12px;
+  width: 109px;
+  height: 42px;
+}
+
+.max input::placeholder {
+  height: 19px;
+  font-size: 14px;
+  line-height: 19px;
+  color: #A9A9A9;
+  padding-left: 18px;
+}
+
+.reset-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.reset-button button {
+  font-family: Poppins;
+  font-size: 12px;
+  line-height: 22px;
+  color: #FFFFFF;
+  background: #6A983C;
+  border: 2px solid #46760A;
+  border-radius: 12px;
+}
+
+.reset-button button:hover {
+  background-color: green;
+  cursor: pointer;
+}
+
+.slider .ngx-slider .ngx-slider-bar {
+  background: #EBEBEB;
+  border-radius: 12px;
+  height: 6px;
+}
+
+.slider .ngx-slider .ngx-slider-selection {
+  background: #6A983C;
+}
+
+.slider .ngx-slider .ngx-slider-pointer {
+  background: #FFFFFF;
+  border: 1px solid #D1D1D1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  width: 20px;
+  height: 20px;
+  top: -8px;
+}
+
+
+.slider .ngx-slider {
+  .ngx-slider-floor, .ngx-slider-model-value, .ngx-slider-model-high, .ngx-slider-combined, .ngx-slider-ceil, .ngx-slider-pointer:after {
+    display: none;
+  }
+}
+
+
+

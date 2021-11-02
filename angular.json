@@ -100,8 +100,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "internet-store:build:production",
+            "firebaseProject": "freshnesecom-app",
+            "firebaseHostingSite": "freshnesecom-app"
+          }
         }
       }
+    }
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "scss"
     }
   },
   "defaultProject": "internet-store"
