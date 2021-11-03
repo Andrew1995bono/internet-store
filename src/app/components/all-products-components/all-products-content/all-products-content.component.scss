@@ -72,6 +72,7 @@ pagination-controls pagination-template .ngx-pagination li.current {
   border-radius: 12px;
 }
 
+
 .show-more-products button {
   background: #6A983C;
   border: none;
@@ -80,6 +81,10 @@ pagination-controls pagination-template .ngx-pagination li.current {
   font-size: 15px;
   line-height: 22px;
   color: #FFFFFF;
+}
+
+.show-more-products button:hover {
+  cursor: pointer;
 }
 
 .show-more-products img {

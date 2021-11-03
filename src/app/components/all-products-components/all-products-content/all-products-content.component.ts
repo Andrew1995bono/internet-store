@@ -100,5 +100,10 @@ export class AllProductsContentComponent implements OnInit {
 
   }
 
+  showMoreProducts($event: PointerEvent): void {
+    $event.preventDefault();
+    this.filtersService.itemsPerPage.next(this.itemsPerPage += 5);
+  }
+
 }
 
