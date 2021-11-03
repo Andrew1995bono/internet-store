@@ -1,52 +1,52 @@
 <div class="product-card">
-<div class="product-item" >
-  <div class="item-image">
-    <img src="{{product.imgUrl}}" alt="product-image">
-  </div>
-  <div class="item-info">
-    <div class="item-description">
-      <h2>{{product.name}}</h2>
-      <h4>{{product.description}}</h4>
-      <div class="rate-star">
-        <div><img src="../../assets/rate-star-filled.png" alt="filled rate star"></div>
-        <div><img src="../../assets/rate-star-filled.png" alt="filled rate star"></div>
-        <div><img src="../../assets/rate-star-filled.png" alt="filled rate star"></div>
-        <div><img src="../../assets/rate-star-filled.png" alt="filled rate star"></div>
-        <div><img src="../../assets/rate-star.png" alt="rate star"></div>
-      </div>
-      <div class="characteristics">
-      <div class="characteristic-property">
-        <div>Freshness</div>
-        <div>Farm</div>
-        <div>Delivery</div>
-        <div>Stock</div>
-      </div>
-      <div class="characteristic-value">
-        <div>{{product.freshness}}</div>
-        <div>{{product.farm}}</div>
-        <div>{{product.deliveryFrom}}</div>
-        <div>{{product.stock}} pcs</div>
-      </div>
+  <div class="product-item">
+    <div class="item-image">
+      <img src="{{product.imgUrl}}" alt="product-image">
     </div>
-    </div>
-    <div class="item-detail">
-      <div class="item-detail-title">
-        <h2>{{product.pricePromotional}} USD</h2>
-        <h4>{{product.priceUsual}}</h4>
-        <p>Free Shipping</p>
-        <p>Delivery in 1 day</p>
-      </div>
-      <div class="item-order">
-        <div class="product-detail">
-          <a href="/productDetail"><button>Product Detail</button></a>
-          <img src="../../assets/arrow-right.png" alt="arrow-right" width="15">
+    <div class="item-info">
+      <div class="item-description">
+        <h2>{{product.name}}</h2>
+        <h4>{{product.description}}</h4>
+        <div class="rate-star">
+          <!--                    <div><img src="../../assets/rate-star-filled.png" alt="filled rate star"></div>-->
+          <!--                    <div><img src="../../assets/rate-star.png" alt="rate star"></div>-->
+          {{product.rating}}
         </div>
-        <div class="wishlist">
-          <img src="../../assets/wishlist-icon.png" alt="wishlist-icon">
-           <button>Add to wish list</button>
+        <div class="characteristics">
+          <div class="characteristic-property">
+            <div>Freshness</div>
+            <div>Farm</div>
+            <div>Delivery</div>
+            <div>Stock</div>
+          </div>
+          <div class="characteristic-value">
+            <div>{{product.freshness}}</div>
+            <div>{{product.farm}}</div>
+            <div>{{product.deliveryFrom}}</div>
+            <div>{{product.stock}} pcs</div>
+          </div>
         </div>
       </div>
+      <div class="item-detail">
+        <div class="item-detail-title">
+          <h2>{{product.pricePromotional}} USD</h2>
+          <h4>{{product.priceUsual}}</h4>
+          <p>Free Shipping</p>
+          <p>Delivery in 1 day</p>
+        </div>
+        <div class="item-order">
+          <div class="product-detail">
+            <a href="/productDetail">
+              <button>Product Detail</button>
+            </a>
+            <img src="../../assets/arrow-right.png" alt="arrow-right" width="15">
+          </div>
+          <div class="wishlist">
+            <img src="../../assets/wishlist-icon.png" alt="wishlist-icon">
+            <button>Add to wish list</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 </div>

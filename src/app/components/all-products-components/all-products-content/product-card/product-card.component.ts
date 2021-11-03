@@ -1,5 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {ProductCard} from "../../../../interfaces/product-card";
+import { Component, Input, OnInit } from '@angular/core';
+import { ProductCard } from '../../../../interfaces/product-card';
+import { FiltersService } from '../../../../services/all-products/filters/filters.service';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class ProductCardComponent implements OnInit {
 
   public product = {} as ProductCard;
 
-  constructor() {}
+  constructor(private filtersService: FiltersService) {}
 
   ngOnInit(): void {
   }
