@@ -15,10 +15,18 @@ export class ProductCardComponent implements OnInit {
   };
 
   public product = {} as ProductCard;
+  public starArr: string[] = ['', '', '', '', ''];
 
   constructor(private filtersService: FiltersService) {}
 
   ngOnInit(): void {
+    this.setRating(this.product);
+  }
+
+  setRating(product: ProductCard): void {
+    this.starArr.fill('../../assets/rate-star-filled.png', 0, (product.rating));
+    this.starArr.fill('../../assets/rate-star.png', product.rating, 5);
   }
 
 }
+
