@@ -11,6 +11,7 @@ enum StarEnum {
   templateUrl: './rating.component.html',
   styleUrls: ['./rating.component.css']
 })
+
 export class RatingComponent implements OnInit {
 
   @Output() rateValue = new EventEmitter<MatCheckboxChange>();
@@ -22,6 +23,7 @@ export class RatingComponent implements OnInit {
   public values: number[] = [5, 4, 3, 2, 1];
 
   ngOnInit(): void {
+
   }
 
   getCheckboxRate(event: MatCheckboxChange): void {

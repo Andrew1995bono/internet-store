@@ -5,7 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pages-title.component.html',
   styleUrls: ['./pages-title.component.css']
 })
+
 export class PagesTitleComponent implements OnInit {
+
+  public titleState: boolean = false;
 
   constructor() { }
 

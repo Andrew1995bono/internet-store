@@ -8,14 +8,13 @@ import { FiltersService } from '../../services/all-products/filters/filters.serv
   templateUrl: './all-products.component.html',
   styleUrls: ['./all-products.component.css']
 })
+
 export class AllProductsComponent implements OnInit {
 
   public products: ProductCard[] = [];
-  public productsQuantity?: number;
+  public productsQuantity: number;
 
-  constructor(private allProductService: AllProductsService, private filtersService: FiltersService) {
-
-  }
+  constructor(private allProductService: AllProductsService, private filtersService: FiltersService) { }
 
   ngOnInit(): void {
     this.allProductService.getProducts().subscribe(data => {
@@ -24,4 +23,5 @@ export class AllProductsComponent implements OnInit {
       this.filtersService.products.next(data);
     });
   }
+
 }

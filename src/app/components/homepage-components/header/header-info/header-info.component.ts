@@ -5,11 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './header-info.component.html',
   styleUrls: ['./header-info.component.css']
 })
+
 export class HeaderInfoComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

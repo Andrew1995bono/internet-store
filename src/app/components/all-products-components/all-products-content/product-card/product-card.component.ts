@@ -8,6 +8,7 @@ import { FiltersService } from '../../../../services/all-products/filters/filter
   templateUrl: './product-card.component.html',
   styleUrls: ['./product-card.component.css']
 })
+
 export class ProductCardComponent implements OnInit {
 
   @Input() set productData(product: ProductCard) {

@@ -7,6 +7,7 @@ import { FiltersService } from '../../../services/all-products/filters/filters.s
   templateUrl: './all-products-title.component.html',
   styleUrls: ['./all-products-title.component.css']
 })
+
 export class AllProductsTitleComponent implements OnInit {
 
   public itemsPerPage: BehaviorSubject<number>;

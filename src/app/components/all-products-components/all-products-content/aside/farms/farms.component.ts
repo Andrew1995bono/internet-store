@@ -7,6 +7,7 @@ import { FiltersService } from '../../../../../services/all-products/filters/fil
   templateUrl: './farms.component.html',
   styleUrls: ['./farms.component.css']
 })
+
 export class FarmsComponent implements OnInit {
 
   @Output() farmValue = new EventEmitter<MatCheckboxChange>();

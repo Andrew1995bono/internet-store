@@ -5,11 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './homepage-content.component.html',
   styleUrls: ['./homepage-content.component.css']
 })
+
 export class HomepageContentComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
+
 
 }

@@ -19,6 +19,5 @@ export class ProductCard {
   deliveryTime: string;
   deliveryArea: string;
 
-  constructor() {
-  }
+  constructor() { }
 }
