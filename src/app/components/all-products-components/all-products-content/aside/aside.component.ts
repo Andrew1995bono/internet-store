@@ -9,6 +9,7 @@ import { MatCheckboxChange } from '@angular/material/checkbox';
 export class AsideComponent implements OnInit {
 
   @Output() farmValue = new EventEmitter<MatCheckboxChange>();
+  @Output() rateValue = new EventEmitter<MatCheckboxChange>();
 
   constructor() { }
 
@@ -18,4 +19,9 @@ export class AsideComponent implements OnInit {
   getFarmValue(event: MatCheckboxChange): void {
     this.farmValue.emit(event);
   }
+
+  getRateValue(event: MatCheckboxChange): void {
+    this.rateValue.emit(event);
+  }
+
 }

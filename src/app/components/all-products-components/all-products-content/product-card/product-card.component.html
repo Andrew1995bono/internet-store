@@ -8,9 +8,6 @@
         <h2>{{product.name}}</h2>
         <h4>{{product.description}}</h4>
         <div class="rate-star">
-          <!--                    <div><img src="../../assets/rate-star-filled.png" alt="filled rate star"></div>-->
-          <!--                    <div><img src="../../assets/rate-star.png" alt="rate star"></div>-->
-          {{product.rating}}
           <div *ngFor="let star of starArr"><img src="{{star}}" alt="star"></div>
         </div>
         <div class="characteristics">

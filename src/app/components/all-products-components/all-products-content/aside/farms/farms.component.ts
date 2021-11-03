@@ -9,8 +9,8 @@ import { FiltersService } from '../../../../../services/all-products/filters/fil
 })
 export class FarmsComponent implements OnInit {
 
-  public farmNames: string[] = [];
   @Output() farmValue = new EventEmitter<MatCheckboxChange>();
+  public farmNames: string[] = [];
 
   constructor(private filtersService: FiltersService) {}
 

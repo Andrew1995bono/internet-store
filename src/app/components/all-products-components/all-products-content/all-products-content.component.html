@@ -1,5 +1,5 @@
 <div class="wrapper-content">
-  <app-aside (farmValue)="getFarmValue($event)"></app-aside>
+  <app-aside (farmValue)="getFarmValue($event)" (rateValue)="getRateValue($event)"></app-aside>
   <div fxLayout="column" fxLayoutAlign="start start">
     <div *ngFor="let product of products | paginate: { itemsPerPage: itemsPerPage, currentPage: p } ">
       <app-product-card [productData]="product"></app-product-card>
@@ -12,7 +12,9 @@
     <pagination-controls (pageChange)="p = $event"></pagination-controls>
   </div>
   <div class="show-more-products">
-    <a href="/showMoreProducts"><button>Show more products</button></a>
+    <a href="/showMoreProducts">
+      <button>Show more products</button>
+    </a>
     <img src="../../assets/arrow-down-white.png" alt="arrow-down">
   </div>
   <div class="all-products-quantity">

@@ -17,7 +17,9 @@ export class AllProductsContentComponent implements OnInit {
   public p: number = 3;
   public itemsPerPage: number = 5;
   public farmValue: string[] = [];
-  public filteredItems: ProductCard[] = [];
+  public rateValue: number[] = [];
+  public filteredByFarmItems: ProductCard[] = [];
+  public filteredByRateItems: ProductCard[] = [];
 
 
   constructor(private filtersService: FiltersService) {}
@@ -35,16 +37,20 @@ export class AllProductsContentComponent implements OnInit {
     this.products = this.sortByFarm(event);
   }
 
+  getRateValue(event: MatCheckboxChange): void {
+    this.products = this.sortByRate(event);
+  }
+
   sortByFarm(event: MatCheckboxChange): any {
     if (event.checked) {
       this.farmValue.push(event.source.value);
-      this.filteredItems = this.filtersService.products.value.filter((item: ProductCard) => {
+      this.filteredByFarmItems = this.filtersService.products.value.filter((item: ProductCard) => {
         if (this.farmValue.includes(item.farm)) {
           return true;
         }
       });
       this.p = 1;
-      return this.filteredItems;
+      return this.filteredByFarmItems;
     } else if (!event.checked) {
       this.farmValue = this.farmValue.filter((item: string) => {
         if (item === event.source.value) {
@@ -53,15 +59,46 @@ export class AllProductsContentComponent implements OnInit {
           return true;
         }
       });
-      this.filteredItems = this.filtersService.products.value.filter((item: ProductCard) => {
+      this.filteredByFarmItems = this.filtersService.products.value.filter((item: ProductCard) => {
         if (this.farmValue.includes(item.farm)) {
           return true;
         } else if (this.farmValue.length === 0) {
-          return this.filteredItems;
+          return this.filteredByFarmItems;
         }
       });
-      return this.filteredItems;
+      return this.filteredByFarmItems;
     }
   }
+
+  sortByRate(event: MatCheckboxChange): any {
+    if (event.checked) {
+      this.rateValue.push(Number(event.source.value));
+      this.filteredByRateItems = this.filtersService.products.value.filter((item: ProductCard) => {
+        if (this.rateValue.includes(item.rating)) {
+          return true;
+        }
+      });
+      this.p = 1;
+      return this.filteredByRateItems;
+    } else if (!event.checked) {
+      this.rateValue = this.rateValue.filter((item: number) => {
+        if (item === Number(event.source.value)) {
+          return false;
+        } else {
+          return true;
+        }
+      });
+      this.filteredByRateItems = this.filtersService.products.value.filter((item: ProductCard) => {
+        if (this.rateValue.includes(item.rating)) {
+          return true;
+        } else if (this.rateValue.length === 0) {
+          return this.filteredByRateItems;
+        }
+      });
+      return this.filteredByRateItems;
+    }
+
+  }
+
 }
 
