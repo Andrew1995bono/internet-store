@@ -102,11 +102,6 @@ export class AllProductsContentComponent implements OnInit {
 
   showMoreProducts($event: MouseEvent): void {
     $event.preventDefault();
-    if (this.products.length > 5) {
-      this.filtersService.itemsPerPage.next(this.itemsPerPage += 5);
-    } else {
-      this.filtersService.itemsPerPage.next(this.itemsPerPage += this.products.length);
-    }
   }
 
 }
