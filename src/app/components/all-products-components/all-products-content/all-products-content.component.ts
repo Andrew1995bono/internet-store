@@ -54,11 +54,7 @@ export class AllProductsContentComponent implements OnInit {
         return productsArr;
       }
       this.p = 1;
-      return productsArr.filter((item: ProductCard) => {
-        if (this.farmValue.includes(item.farm)) {
-          return true;
-        }
-      });
+      return productsArr.filter((item: ProductCard) => this.farmValue.includes(item.farm));
     } else if (!event.checked) {
       this.p = 1;
       this.farmValue = this.farmValue.filter((item: string) => item !== event.source.value);
@@ -80,14 +76,10 @@ export class AllProductsContentComponent implements OnInit {
       if (!this.rateValue.length) {
         return productsArr;
       }
-      return productsArr.filter((item: ProductCard) => {
-        if (this.rateValue.includes(item.rating)) {
-          return true;
-        }
-      });
+      return productsArr.filter((item: ProductCard) => this.rateValue.includes(item.rating));
     } else if (!event.checked) {
       this.p = 1;
-      this.rateValue = this.rateValue.filter((item: number) => item !== Number(event.source.value));
+      this.rateValue = this.rateValue.filter((item: number) => item !== +event.source.value);
       this.filteredByRateItems = productsArr.filter((item: ProductCard) => {
         if (this.rateValue.includes(item.rating)) {
           return true;
