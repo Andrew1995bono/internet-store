@@ -34,6 +34,7 @@ mat-checkbox {
   margin-right: 10px;
 }
 
+
 /deep/ .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
   background-color: #6A983C;
   width: 20px;
@@ -43,4 +44,8 @@ mat-checkbox {
 mat-checkbox ::ng-deep .mat-checkbox-inner-container {
   width: 20px;
   height: 20px;
+}
+
+/deep/ .mat-checkbox-inner-container:hover {
+  cursor: pointer;
 }

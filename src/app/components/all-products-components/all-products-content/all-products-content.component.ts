@@ -28,67 +28,66 @@ export class AllProductsContentComponent implements OnInit {
     this.sendItemsPerPage();
   }
 
-
   private sendItemsPerPage(): void {
     this.filtersService.itemsPerPage.next(this.itemsPerPage);
   }
 
   public getFarmValue(event: MatCheckboxChange): void {
-    this.products = this.sortByFarm(event, this.filtersService.products.value);
+    this.farmValue.push(event.source.value);
+    this.products = this.filter(event);
   }
 
   public getRateValue(event: MatCheckboxChange): void {
-    this.products = this.sortByRate(event, this.filtersService.products.value);
+    this.rateValue.push(+event.source.value);
+    this.products = this.filter(event);
   }
+
+  private filter(event: MatCheckboxChange): ProductCard[] {
+    const sortedByRate = this.sortByRate(event, this.filtersService.products.value);
+    return this.sortByFarm(event, sortedByRate);
+  }
+
 
   private sortByFarm(event: MatCheckboxChange, productsArr: ProductCard[]): ProductCard[] {
     if (event.checked) {
-      this.farmValue.push(event.source.value);
-      this.filteredByFarmItems = productsArr.filter((item: ProductCard) => {
+      if (!this.farmValue.length) {
+        return productsArr;
+      }
+      this.p = 1;
+      return productsArr.filter((item: ProductCard) => {
         if (this.farmValue.includes(item.farm)) {
           return true;
         }
       });
-      this.p = 1;
-      return this.filteredByFarmItems;
     } else if (!event.checked) {
-      this.farmValue = this.farmValue.filter((item: string) => {
-        if (item === event.source.value) {
-          return false;
-        } else {
-          return true;
-        }
-      });
-      this.filteredByFarmItems = productsArr.filter((item: ProductCard) => {
+      this.p = 1;
+      this.farmValue = this.farmValue.filter((item: string) => item !== event.source.value);
+
+      return productsArr.filter((item: ProductCard) => {
         if (this.farmValue.includes(item.farm)) {
           return true;
         } else if (this.farmValue.length === 0) {
           return this.filteredByFarmItems;
         }
       });
-      return this.filteredByFarmItems;
     }
     return [new ProductCard()];
   }
 
   private sortByRate(event: MatCheckboxChange, productsArr: ProductCard[]): ProductCard[] {
     if (event.checked) {
-      this.rateValue.push(Number(event.source.value));
-      this.filteredByRateItems = productsArr.filter((item: ProductCard) => {
+      this.p = 1;
+      if (!this.rateValue.length) {
+        return productsArr;
+      }
+      return productsArr.filter((item: ProductCard) => {
         if (this.rateValue.includes(item.rating)) {
           return true;
         }
       });
-      this.p = 1;
-      return this.filteredByRateItems;
     } else if (!event.checked) {
-      this.rateValue = this.rateValue.filter((item: number) => {
-        if (item === Number(event.source.value)) {
-          return false;
-        } else {
-          return true;
-        }
-      });
+      this.p = 1;
+      this.rateValue = this.rateValue.filter((item: number) => item !== Number(event.source.value));
       this.filteredByRateItems = productsArr.filter((item: ProductCard) => {
         if (this.rateValue.includes(item.rating)) {
           return true;
@@ -107,6 +106,5 @@ export class AllProductsContentComponent implements OnInit {
     this.filtersService.itemsPerPage.next(this.itemsPerPage);
     this.p = 1;
   }
-
 }
 
