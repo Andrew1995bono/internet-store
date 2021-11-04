@@ -18,11 +18,11 @@ export class AsideComponent implements OnInit {
 
   }
 
-  getFarmValue(event: MatCheckboxChange): void {
+  public getFarmValue(event: MatCheckboxChange): void {
     this.farmValue.emit(event);
   }
 
-  getRateValue(event: MatCheckboxChange): void {
+  public getRateValue(event: MatCheckboxChange): void {
     this.rateValue.emit(event);
   }
 

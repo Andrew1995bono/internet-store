@@ -18,7 +18,7 @@ export class AllProductsTitleComponent implements OnInit {
     this.getItemsPerPage();
   }
 
-  getItemsPerPage(): void {
+  private getItemsPerPage(): void {
     this.itemsPerPage = this.filtersService.itemsPerPage;
   }
 

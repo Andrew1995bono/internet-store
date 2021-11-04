@@ -23,7 +23,7 @@ export class SliderComponent implements OnInit {
 
   }
 
-  resetSliderValue($event: MouseEvent): void {
+  public resetSliderValue($event: MouseEvent): void {
     this.value = 40;
     this.highValue = 60;
   }

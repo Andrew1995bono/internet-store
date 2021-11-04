@@ -16,10 +16,10 @@ export class AllProductsContentComponent implements OnInit {
   @Input() productsQuantity: number;
   public p: number = 3;
   public itemsPerPage: number = 5;
-  public farmValue: string[] = [];
-  public rateValue: number[] = [];
-  public filteredByFarmItems: ProductCard[] = [];
-  public filteredByRateItems: ProductCard[] = [];
+  private farmValue: string[] = [];
+  private rateValue: number[] = [];
+  private filteredByFarmItems: ProductCard[] = [];
+  private filteredByRateItems: ProductCard[] = [];
 
 
   constructor(private filtersService: FiltersService) {}
@@ -29,22 +29,22 @@ export class AllProductsContentComponent implements OnInit {
   }
 
 
-  sendItemsPerPage(): void {
+  private sendItemsPerPage(): void {
     this.filtersService.itemsPerPage.next(this.itemsPerPage);
   }
 
-  getFarmValue(event: MatCheckboxChange): void {
-    this.products = this.sortByFarm(event);
+  public getFarmValue(event: MatCheckboxChange): void {
+    this.products = this.sortByFarm(event, this.filtersService.products.value);
   }
 
-  getRateValue(event: MatCheckboxChange): void {
-    this.products = this.sortByRate(event);
+  public getRateValue(event: MatCheckboxChange): void {
+    this.products = this.sortByRate(event, this.filtersService.products.value);
   }
 
-  sortByFarm(event: MatCheckboxChange): any {
+  private sortByFarm(event: MatCheckboxChange, productsArr: ProductCard[]): ProductCard[] {
     if (event.checked) {
       this.farmValue.push(event.source.value);
-      this.filteredByFarmItems = this.filtersService.products.value.filter((item: ProductCard) => {
+      this.filteredByFarmItems = productsArr.filter((item: ProductCard) => {
         if (this.farmValue.includes(item.farm)) {
           return true;
         }
@@ -59,7 +59,7 @@ export class AllProductsContentComponent implements OnInit {
           return true;
         }
       });
-      this.filteredByFarmItems = this.filtersService.products.value.filter((item: ProductCard) => {
+      this.filteredByFarmItems = productsArr.filter((item: ProductCard) => {
         if (this.farmValue.includes(item.farm)) {
           return true;
         } else if (this.farmValue.length === 0) {
@@ -68,12 +68,13 @@ export class AllProductsContentComponent implements OnInit {
       });
       return this.filteredByFarmItems;
     }
+    return [new ProductCard()];
   }
 
-  sortByRate(event: MatCheckboxChange): any {
+  private sortByRate(event: MatCheckboxChange, productsArr: ProductCard[]): ProductCard[] {
     if (event.checked) {
       this.rateValue.push(Number(event.source.value));
-      this.filteredByRateItems = this.filtersService.products.value.filter((item: ProductCard) => {
+      this.filteredByRateItems = productsArr.filter((item: ProductCard) => {
         if (this.rateValue.includes(item.rating)) {
           return true;
         }
@@ -88,7 +89,7 @@ export class AllProductsContentComponent implements OnInit {
           return true;
         }
       });
-      this.filteredByRateItems = this.filtersService.products.value.filter((item: ProductCard) => {
+      this.filteredByRateItems = productsArr.filter((item: ProductCard) => {
         if (this.rateValue.includes(item.rating)) {
           return true;
         } else if (this.rateValue.length === 0) {
@@ -97,10 +98,10 @@ export class AllProductsContentComponent implements OnInit {
       });
       return this.filteredByRateItems;
     }
-
+    return [new ProductCard()];
   }
 
-  showMoreProducts($event: MouseEvent): void {
+  public showMoreProducts($event: MouseEvent): void {
     $event.preventDefault();
     this.itemsPerPage += 5;
     this.filtersService.itemsPerPage.next(this.itemsPerPage);

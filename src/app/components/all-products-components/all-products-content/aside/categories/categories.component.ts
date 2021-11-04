@@ -22,7 +22,7 @@ export class CategoriesComponent implements OnInit {
     this.getItemsQuantity();
   }
 
-  getItemsQuantity(): void {
+  private getItemsQuantity(): void {
     this.filtersService.products.subscribe(data => {
       this.fruitsQuantity = data.filter((item: ProductCard) => item.category === 'Fruits').length;
       this.vegetableQuantity = data.filter((item: ProductCard) => item.category === 'Vegetables').length;

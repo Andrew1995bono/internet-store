@@ -19,13 +19,13 @@ export class FarmsComponent implements OnInit {
     this.getFarmsName();
   }
 
-  getFarmsName(): void {
+  private getFarmsName(): void {
     this.filtersService.products.subscribe(data => {
       this.farmNames = (data.map(el => el.farm) as string[]).filter((item, i, arr) => arr.indexOf(item) === i);
     });
   }
 
-  getFarmValue(event: MatCheckboxChange): void {
+  private getFarmValue(event: MatCheckboxChange): void {
     this.farmValue.emit(event);
   }
 
