@@ -72,29 +72,34 @@ input::placeholder {
   background-color: #F9F9F9;
 }
 
-.first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix {
+.first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
+.mat-form-field-infix {
   height: 20px;
   padding-right: 15px;
   width: 140px;
   padding-bottom: 20px;
   background-color: #F9F9F9;
-  margin-right: 5px;
+  margin-right: 9px;
 }
 
-.first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .mat-select .mat-select-trigger .mat-select-value {
+.first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
+.mat-form-field-infix .mat-select .mat-select-trigger .mat-select-value {
   padding-bottom: 20px;
 }
 
-.first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .mat-select .mat-select-trigger .mat-select-arrow-wrapper {
+.first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
+.mat-form-field-infix .mat-select .mat-select-trigger .mat-select-arrow-wrapper {
   padding-top: 5px;
 }
 
 .first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
-.mat-form-field-infix .mat-select .mat-select-trigger .mat-select-arrow-wrapper .mat-select-arrow {
+.mat-form-field-infix .mat-select .mat-select-trigger .mat-select-arrow-wrapper
+.mat-select-arrow {
   color: #6A983C;
 }
 
-.first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .mat-form-field-label-wrapper .mat-form-field-label {
+.first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
+.mat-form-field-infix .mat-form-field-label-wrapper .mat-form-field-label {
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;

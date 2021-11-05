@@ -31,7 +31,8 @@
   width: 100%;
 }
 
-.sort-input .mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .mat-select .mat-select-trigger {
+.sort-input .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
+.mat-form-field-infix .mat-select .mat-select-trigger {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -42,13 +43,12 @@
 }
 
 .sort-input .mat-form-field .mat-form-field-wrapper .mat-form-field-flex {
-  padding: 0 0 0 0;
+  padding: 0;
   background-color: #F9F9F9;
-  display: flex;
-  align-items: center;
 }
 
-.sort-input .mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix {
+.sort-input .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
+.mat-form-field-infix {
   height: 20px;
   display: flex;
   align-items: center;
@@ -60,11 +60,13 @@
 }
 
 .sort-input .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
-.mat-form-field-infix .mat-select .mat-select-trigger .mat-select-arrow-wrapper .mat-select-arrow {
+.mat-form-field-infix .mat-select .mat-select-trigger .mat-select-arrow-wrapper
+.mat-select-arrow {
   color: #151515;
 }
 
-.sort-input .mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .mat-form-field-label-wrapper .mat-form-field-label {
+.sort-input .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
+.mat-form-field-infix .mat-form-field-label-wrapper .mat-form-field-label {
   font-family: Poppins;
   font-weight: 600;
   font-size: 13px;
