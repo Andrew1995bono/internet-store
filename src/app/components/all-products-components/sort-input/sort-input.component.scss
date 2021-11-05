@@ -2,20 +2,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 auto 0;
-  width: 15.5%;
+  margin: 20px 0 auto 0;
+  width: 16%;
   height: 38px;
   background: #F9F9F9;
   border: 1px solid #D1D1D1;
   border-radius: 12px;
-  padding: 0 17px;
+  padding: 0 15px;
 }
 
 .sort-input .sort-by {
   font-size: 14px;
   line-height: 19px;
   color: #151515;
-  padding-right: 24px;
 }
 
 .vertical-line {
@@ -24,7 +23,8 @@
 }
 
 .sort-input .sort-select {
-  width: 60%;
+  width: 40%;
+  padding-top: 8px;
 }
 
 .sort-input .mat-form-field {
@@ -35,7 +35,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 7px;
 }
 
 .sort-input .mat-form-field-wrapper {
@@ -43,7 +42,7 @@
 }
 
 .sort-input .mat-form-field .mat-form-field-wrapper .mat-form-field-flex {
-  padding: 0 0 0 24px;
+  padding: 0 0 0 0;
   background-color: #F9F9F9;
   display: flex;
   align-items: center;
@@ -53,7 +52,11 @@
   height: 20px;
   display: flex;
   align-items: center;
-  padding-bottom: 17px;
+  border: none;
+}
+
+.sort-input .mat-form-field .mat-form-field-wrapper .mat-form-field-underline {
+  display: none;
 }
 
 .sort-input .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
@@ -61,6 +64,13 @@
   color: #151515;
 }
 
-.sort-input .mat-form-field .mat-form-field-wrapper .mat-form-field-underline {
-  display: none;
+.sort-input .mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .mat-form-field-label-wrapper .mat-form-field-label {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  color: #151515;
+  padding-left: 15px;
+  display: flex;
+  justify-content: flex-end;
 }
