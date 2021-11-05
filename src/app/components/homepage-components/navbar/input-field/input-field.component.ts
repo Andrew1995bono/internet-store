@@ -15,10 +15,10 @@ interface Food {
 export class InputFieldComponent implements OnInit {
 
   foods: Food[] = [
-    { value: 'steak-0', viewValue: 'Fruits' },
-    { value: 'pizza-1', viewValue: 'Vegetables' },
-    { value: 'tacos-2', viewValue: 'Berries' },
-    { value: 'tacos-2', viewValue: 'Nuts' }
+    { value: 'fruits-0', viewValue: 'Fruits' },
+    { value: 'vegetables-1', viewValue: 'Vegetables' },
+    { value: 'berries-2', viewValue: 'Berries' },
+    { value: 'nuts-3', viewValue: 'Nuts' }
   ];
 
   constructor() { }
