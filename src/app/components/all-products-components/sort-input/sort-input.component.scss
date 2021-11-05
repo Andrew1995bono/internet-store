@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 0 auto 0;
-  width: 181px;
+  width: 15.5%;
   height: 38px;
   background: #F9F9F9;
   border: 1px solid #D1D1D1;
@@ -14,7 +14,6 @@
   font-size: 13px;
   line-height: 19px;
   color: #151515;
-  width: 47px;
   height: 19px;
   margin-left: 16px;
 }
@@ -22,18 +21,4 @@
 .vertical-line {
   display: flex;
   align-items: center;
-}
-
-.second-label {
-  font-family: Poppins;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 18px;
-  color: #151515;
-}
-
-.arrow-down {
-  display: flex;
-  align-items: center;
-  margin-right: 18px;
 }

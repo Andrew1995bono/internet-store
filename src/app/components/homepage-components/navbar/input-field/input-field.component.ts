@@ -1,9 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-
-interface Food {
-  value: string;
-  viewValue: string;
-}
+import { DropdownSelect } from '../../../../interfaces/dropdown-select';
 
 @Component({
   selector: 'app-input-field',
@@ -14,11 +10,11 @@ interface Food {
 
 export class InputFieldComponent implements OnInit {
 
-  foods: Food[] = [
-    { value: 'fruits-0', viewValue: 'Fruits' },
-    { value: 'vegetables-1', viewValue: 'Vegetables' },
-    { value: 'berries-2', viewValue: 'Berries' },
-    { value: 'nuts-3', viewValue: 'Nuts' }
+  public foods: DropdownSelect[] = [
+    { value: 'fruits', viewValue: 'Fruits' },
+    { value: 'vegetables', viewValue: 'Vegetables' },
+    { value: 'berries', viewValue: 'Berries' },
+    { value: 'nuts', viewValue: 'Nuts' }
   ];
 
   constructor() { }
