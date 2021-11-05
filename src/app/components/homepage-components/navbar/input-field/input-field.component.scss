@@ -22,14 +22,8 @@
   width: 42.81%;
 }
 
-.first-label {
-  display: flex;
-  align-items: center;
-}
-
 .vertical-line {
   display: flex;
-  align-self: center;
 }
 
 .second-label {
@@ -37,11 +31,13 @@
   display: flex;
   align-self: center;
   justify-content: center;
+  width: 100%;
+  padding-left: 24px;
 }
 
 .second-label input {
   border: none;
-  width: 262px;
+  width: 100%;
   font-size: 14px;
   line-height: 19px;
   background-color: #F9F9F9;
@@ -55,7 +51,6 @@ input::placeholder {
   font-family: Open Sans;
   font-size: 14px;
   line-height: 19px;
-  padding-left: 24px;
 }
 
 .search {
@@ -65,13 +60,13 @@ input::placeholder {
 
 .mat-form-field-wrapper {
   padding: 0;
-
 }
 
 .mat-form-field .mat-form-field-wrapper .mat-form-field-flex {
   display: flex;
   align-items: center;
   padding: 0;
+  background-color: #F9F9F9;
 }
 
 .mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix {
@@ -80,6 +75,7 @@ input::placeholder {
   width: 140px;
   padding-bottom: 20px;
   background-color: #F9F9F9;
+  margin-right: 10px;
 }
 
 .mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .mat-select .mat-select-trigger .mat-select-arrow-wrapper {
