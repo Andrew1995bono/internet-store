@@ -1,19 +1,18 @@
 <div class="sort-input">
-  <div class="first-label">
+  <div class="sort-by">
     <div>Sort by</div>
   </div>
   <div class="vertical-line">
     <img src="../../assets/vertical-line.png" alt="vertical-line">
   </div>
-  <div class="second-label">
-    <!--    <mat-form-field appearance="fill">-->
-    <!--      <mat-label>All categories</mat-label>-->
-    <!--      <mat-select>-->
-    <!--        <mat-option *ngFor="let food of foods" [value]="food.value">-->
-    <!--          {{food.viewValue}}-->
-    <!--        </mat-option>-->
-    <!--      </mat-select>-->
-    <!--    </mat-form-field>-->
+  <div class="sort-select">
+    <mat-form-field appearance="fill">
+      <mat-label>Select</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let category of categories" [value]="category.value">
+          {{category.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
   </div>
-
 </div>

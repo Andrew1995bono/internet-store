@@ -8,17 +8,59 @@
   background: #F9F9F9;
   border: 1px solid #D1D1D1;
   border-radius: 12px;
+  padding: 0 17px;
 }
 
-.first-label {
-  font-size: 13px;
+.sort-input .sort-by {
+  font-size: 14px;
   line-height: 19px;
   color: #151515;
-  height: 19px;
-  margin-left: 16px;
+  padding-right: 24px;
 }
 
 .vertical-line {
   display: flex;
   align-items: center;
+}
+
+.sort-input .sort-select {
+  width: 60%;
+}
+
+.sort-input .mat-form-field {
+  width: 100%;
+}
+
+.sort-input .mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .mat-select .mat-select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 7px;
+}
+
+.sort-input .mat-form-field-wrapper {
+  padding: 0;
+}
+
+.sort-input .mat-form-field .mat-form-field-wrapper .mat-form-field-flex {
+  padding: 0 0 0 24px;
+  background-color: #F9F9F9;
+  display: flex;
+  align-items: center;
+}
+
+.sort-input .mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 17px;
+}
+
+.sort-input .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
+.mat-form-field-infix .mat-select .mat-select-trigger .mat-select-arrow-wrapper .mat-select-arrow {
+  color: #151515;
+}
+
+.sort-input .mat-form-field .mat-form-field-wrapper .mat-form-field-underline {
+  display: none;
 }

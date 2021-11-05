@@ -18,7 +18,13 @@
   border: 1px solid #D1D1D1;
   border-radius: 12px;
   padding-right: 17px;
+  padding-left: 17px;
   width: 42.81%;
+}
+
+.search {
+  display: flex;
+  align-items: center;
 }
 
 .vertical-line {
@@ -55,7 +61,6 @@ input::placeholder {
 .first-label {
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
 }
 
 .first-label .mat-form-field-wrapper {
@@ -73,7 +78,7 @@ input::placeholder {
   width: 140px;
   padding-bottom: 20px;
   background-color: #F9F9F9;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .mat-select .mat-select-trigger .mat-select-value {
@@ -81,7 +86,12 @@ input::placeholder {
 }
 
 .first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .mat-select .mat-select-trigger .mat-select-arrow-wrapper {
-  padding-top: 10px;
+  padding-top: 5px;
+}
+
+.first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
+.mat-form-field-infix .mat-select .mat-select-trigger .mat-select-arrow-wrapper .mat-select-arrow {
+  color: #6A983C;
 }
 
 .first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .mat-form-field-label-wrapper .mat-form-field-label {
