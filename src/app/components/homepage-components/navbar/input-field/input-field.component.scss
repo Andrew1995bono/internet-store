@@ -36,7 +36,7 @@
   display: flex;
   align-self: center;
   justify-content: center;
-  width: 100%;
+  width: 80%;
   padding-left: 24px;
 }
 
@@ -61,6 +61,11 @@ input::placeholder {
 .first-label {
   display: flex;
   align-items: center;
+  width: 42%;
+}
+
+.first-label .mat-form-field {
+  width: 100%;
 }
 
 .first-label .mat-form-field-wrapper {
@@ -76,10 +81,10 @@ input::placeholder {
 .mat-form-field-infix {
   height: 20px;
   padding-right: 15px;
-  width: 140px;
   padding-bottom: 20px;
   background-color: #F9F9F9;
   margin-right: 9px;
+  width: 100%;
 }
 
 .first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
