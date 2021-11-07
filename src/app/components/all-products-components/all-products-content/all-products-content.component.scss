@@ -6,6 +6,11 @@
 
 app-aside {
   margin-right: 32px;
+  width: 23.095%;
+}
+
+.card {
+  width: 100%;
 }
 
 .pagination {
@@ -110,7 +115,6 @@ pagination-controls pagination-template .ngx-pagination li.current {
   color: #6A983C;
   background: #F4F8EC;
   height: 14px;
-  width: 32px;
   border-radius: 10px;
   display: flex;
   align-items: center;
