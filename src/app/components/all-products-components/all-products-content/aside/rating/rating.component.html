@@ -4,10 +4,12 @@
     <div *ngFor="let star of stars">
         <mat-checkbox value="{{(star[star.length - 1])}}" (change)="getCheckboxRate($event)"></mat-checkbox>
       <div class="star" *ngFor="let item of star">
-        <span *ngIf="item === StarEnums.SolidStar"><img src="../../assets/star-symbol-filled.png" alt="filled-start"
-                                                        width="18" height="18"></span>
-        <span *ngIf="item === StarEnums.EmptyStar"><img src="../../assets/star-symbol-empty.png" alt="empty-star"
-                                                        width="18" height="18"></span>
+        <span *ngIf="item === StarEnums.SolidStar">
+          <img src="../../assets/star-symbol-filled.png" alt="filled-start" width="15" height="15">
+        </span>
+        <span *ngIf=" item=== StarEnums.EmptyStar">
+          <img src="../../assets/star-symbol-empty.png" alt="empty-star" width="15" height="15">
+        </span>
       </div>
     </div>
   </div>

@@ -25,12 +25,14 @@ ngx-slider {
   align-items: center;
   justify-content: space-between;
   margin-top: 16px;
+  width: 100%;
 }
 
 .min {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  width: 40.41%;
 }
 
 .min h3 {
@@ -47,7 +49,6 @@ ngx-slider {
   background: #F9F9F9;
   border: 1px solid #D1D1D1;
   border-radius: 12px;
-  width: 109px;
   height: 42px;
   padding-left: 20px;
 }
@@ -63,6 +64,7 @@ ngx-slider {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  width: 40.41%;
 }
 
 .max h3 {
@@ -79,7 +81,6 @@ ngx-slider {
   background: #F9F9F9;
   border: 1px solid #D1D1D1;
   border-radius: 12px;
-  width: 109px;
   height: 42px;
   padding-left: 20px;
 }
@@ -126,7 +127,7 @@ ngx-slider {
   background: #FFFFFF;
   border: 1px solid #D1D1D1;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  width: 20px;
+  width: 7.415%;
   height: 20px;
   top: -8px;
 }
