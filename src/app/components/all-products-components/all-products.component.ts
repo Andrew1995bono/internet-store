@@ -14,7 +14,10 @@ export class AllProductsComponent implements OnInit {
   public products: ProductCard[] = [];
   public productsQuantity: number;
 
-  constructor(private allProductService: AllProductsService, private filtersService: FiltersService) { }
+  constructor(
+    private allProductService: AllProductsService,
+    private filtersService: FiltersService
+  ) { }
 
   ngOnInit(): void {
     this.allProductService.getProducts().subscribe(data => {

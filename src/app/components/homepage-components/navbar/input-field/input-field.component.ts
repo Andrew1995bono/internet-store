@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { MatSelectChange } from '@angular/material/select';
 import { DropdownSelect } from '../../../../interfaces/dropdown-select';
+import { FiltersService } from '../../../../services/all-products/filters/filters.service';
 
 @Component({
   selector: 'app-input-field',
@@ -11,16 +13,20 @@ import { DropdownSelect } from '../../../../interfaces/dropdown-select';
 export class InputFieldComponent implements OnInit {
 
   public foods: DropdownSelect[] = [
-    { value: 'fruits', viewValue: 'Fruits' },
-    { value: 'vegetables', viewValue: 'Vegetables' },
-    { value: 'berries', viewValue: 'Berries' },
-    { value: 'nuts', viewValue: 'Nuts' }
+    { value: 'Fruits', viewValue: 'Fruits' },
+    { value: 'Vegetables', viewValue: 'Vegetables' },
+    { value: 'Berries', viewValue: 'Berries' },
+    { value: 'Nuts', viewValue: 'Nuts' }
   ];
 
-  constructor() { }
+  constructor(private filtersService: FiltersService) { }
 
   ngOnInit(): void {
 
+  }
+
+  public getSelectAllCategories(event: MatSelectChange): void {
+    this.filtersService.sortByCategories(event.value);
   }
 
 }

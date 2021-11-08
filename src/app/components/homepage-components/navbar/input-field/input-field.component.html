@@ -6,7 +6,7 @@
     <div class="first-label">
       <mat-form-field appearance="fill">
         <mat-label>All categories</mat-label>
-        <mat-select>
+        <mat-select (selectionChange)="getSelectAllCategories($event)">
           <mat-option *ngFor="let food of foods" [value]="food.value">
             {{food.viewValue}}
           </mat-option>

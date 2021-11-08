@@ -11,7 +11,7 @@ import { DropdownSelect } from '../../../interfaces/dropdown-select';
 export class SortInputComponent implements OnInit {
 
   public categories: DropdownSelect[] = [
-    { value: 'rating', viewValue: 'Rating' },
+    { value: 'rating', viewValue: 'Rating: from high to low' },
     { value: 'vegetables-1', viewValue: 'Price: from low to high' },
     { value: 'berries-2', viewValue: 'Price: from high to low' }
 
