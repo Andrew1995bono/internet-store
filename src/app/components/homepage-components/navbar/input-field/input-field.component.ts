@@ -13,6 +13,7 @@ import { FiltersService } from '../../../../services/all-products/filters/filter
 export class InputFieldComponent implements OnInit {
 
   public foods: DropdownSelect[] = [
+    { value: 'All categories', viewValue: 'All categories' },
     { value: 'Fruits', viewValue: 'Fruits' },
     { value: 'Vegetables', viewValue: 'Vegetables' },
     { value: 'Berries', viewValue: 'Berries' },
@@ -25,8 +26,8 @@ export class InputFieldComponent implements OnInit {
 
   }
 
-  public getSelectAllCategories(event: MatSelectChange): void {
-    this.filtersService.sortByCategories(event.value);
+  public getCategoryValue(event: MatSelectChange): void {
+    this.filtersService.getCategoryValue(event);
   }
 
 }

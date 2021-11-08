@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatCheckboxChange } from '@angular/material/checkbox';
 import { FiltersService } from '../../../../../services/all-products/filters/filters.service';
 
@@ -14,8 +14,6 @@ enum StarEnum {
 })
 
 export class RatingComponent implements OnInit {
-
-  @Output() private rateValue = new EventEmitter<MatCheckboxChange>();
 
   constructor(private filtersService: FiltersService) { }
 

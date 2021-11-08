@@ -20,7 +20,7 @@ export class FiltersService {
   public rateValue: number[] = [];
   private filteredByFarmItems: ProductCard[] = [];
   private filteredByRateItems: ProductCard[] = [];
-  private filteredByCategoryProducts: ProductCard[] = [];
+  private filteredByCategoryItems: ProductCard[] = [];
 
   constructor() {}
 
@@ -34,9 +34,18 @@ export class FiltersService {
     this.allProducts.next(this.filter(event));
   }
 
-  public filter(event: MatCheckboxChange): ProductCard[] {
-    const sortedByRate = this.sortByRate(event, this.products.value);
-    return this.filterByFarm(event, sortedByRate);
+  public getCategoryValue(event: MatSelectChange): void {
+    this.categoryValue.push(event.value);
+    if (this.categoryValue.length > 1) {
+      this.categoryValue.shift();
+    }
+    this.allProducts.next(this.filter(event));
+  }
+
+  public filter(event: any): ProductCard[] {
+    const sortedByRate = this.filterByRate(event, this.products.value);
+    const sortedByCategory = this.filterByCategory(event, sortedByRate);
+    return this.filterByFarm(event, sortedByCategory);
   }
 
   private filterByFarm(event: MatCheckboxChange, productsArr: ProductCard[]): ProductCard[] {
@@ -59,7 +68,7 @@ export class FiltersService {
     return [new ProductCard()];
   }
 
-  private sortByRate(event: MatCheckboxChange, productsArr: ProductCard[]): ProductCard[] {
+  private filterByRate(event: MatCheckboxChange, productsArr: ProductCard[]): ProductCard[] {
     if (event.checked) {
       if (!this.rateValue.length) {
         return productsArr;
@@ -79,11 +88,26 @@ export class FiltersService {
     return [new ProductCard()];
   }
 
-  public sortByCategories(event: MatSelectChange): ProductCard[] {
-    this.categoryValue.push(event.value);
-    this.filteredByCategoryProducts = this.products.value.filter((item: ProductCard) => this.categoryValue.includes(item.category));
-    this.categoryValue.pop();
-    return this.filteredByCategoryProducts;
+  public filterByCategory(event: MatSelectChange, productsArr: ProductCard[]): ProductCard[] {
+    if (event.source.value === 'All categories') {
+      return productsArr;
+    } else if (event.source.selected) {
+      if (!this.categoryValue.length) {
+        return productsArr;
+      }
+      return productsArr.filter((item: ProductCard) => this.categoryValue.includes(item.category));
+    } else if (!event.source.selected) {
+      this.categoryValue = this.categoryValue.filter((item: string) => item !== event.source.id);
+      return productsArr.filter((item: ProductCard) => {
+        if (this.categoryValue.includes(item.category)) {
+          return true;
+        } else if (this.categoryValue.length === 0) {
+          return this.filteredByCategoryItems;
+        }
+      });
+    }
+    return [new ProductCard()];
   }
 
 }
+
