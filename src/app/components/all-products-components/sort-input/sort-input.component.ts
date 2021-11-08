@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { MatSelectChange } from '@angular/material/select';
 import { DropdownSelect } from '../../../interfaces/dropdown-select';
+import { FiltersService } from '../../../services/all-products/filters/filters.service';
 
 @Component({
   selector: 'app-sort-input',
@@ -12,16 +14,19 @@ export class SortInputComponent implements OnInit {
 
   public categories: DropdownSelect[] = [
     { value: 'rating', viewValue: 'Rating: from high to low' },
-    { value: 'vegetables-1', viewValue: 'Price: from low to high' },
-    { value: 'berries-2', viewValue: 'Price: from high to low' }
+    { value: 'low-high', viewValue: 'Price: from low to high' },
+    { value: 'high-low', viewValue: 'Price: from high to low' }
 
   ];
 
-  constructor() { }
+  constructor(private filtersService: FiltersService) { }
 
   ngOnInit(): void {
 
   }
 
+  public getSortByValue(event: MatSelectChange): void {
+    this.filtersService.getSortByValue(event);
+  }
 }
 

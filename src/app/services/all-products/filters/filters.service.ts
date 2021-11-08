@@ -15,9 +15,10 @@ export class FiltersService {
   public allProducts: BehaviorSubject<ProductCard[]> = new BehaviorSubject<ProductCard[]>([new ProductCard()]);
   public itemsPerPage: BehaviorSubject<number> = new BehaviorSubject(0);
   public p: number = 3;
-  public categoryValue: string[] = [];
   public farmValue: string[] = [];
   public rateValue: number[] = [];
+  public categoryValue: string[] = [];
+  public sortByValue: string[] = [];
   private filteredByFarmItems: ProductCard[] = [];
   private filteredByRateItems: ProductCard[] = [];
   private filteredByCategoryItems: ProductCard[] = [];
@@ -35,10 +36,16 @@ export class FiltersService {
   }
 
   public getCategoryValue(event: MatSelectChange): void {
+    this.categoryValue = [];
     this.categoryValue.push(event.value);
     if (this.categoryValue.length > 1) {
       this.categoryValue.shift();
     }
+    this.allProducts.next(this.filter(event));
+  }
+
+  public getSortByValue(event: MatSelectChange): void {
+    this.sortByValue.push(event.value);
     this.allProducts.next(this.filter(event));
   }
 
@@ -90,6 +97,7 @@ export class FiltersService {
 
   public filterByCategory(event: MatSelectChange, productsArr: ProductCard[]): ProductCard[] {
     if (event.source.value === 'All categories') {
+      this.categoryValue.push('Fruits', 'Vegetables', 'Berries', 'Nuts');
       return productsArr;
     } else if (event.source.selected) {
       if (!this.categoryValue.length) {
