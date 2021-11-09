@@ -50,6 +50,7 @@ ngx-slider {
   border-radius: 12px;
   width: 109px;
   height: 42px;
+  padding-left: 20px;
 }
 
 .min input::placeholder {
@@ -57,7 +58,6 @@ ngx-slider {
   font-size: 14px;
   line-height: 19px;
   color: #A9A9A9;
-  padding-left: 18px;
 }
 
 .max {
@@ -82,6 +82,7 @@ ngx-slider {
   border-radius: 12px;
   width: 109px;
   height: 42px;
+  padding-left: 20px;
 }
 
 .max input::placeholder {
@@ -89,7 +90,6 @@ ngx-slider {
   font-size: 14px;
   line-height: 19px;
   color: #A9A9A9;
-  padding-left: 18px;
 }
 
 .reset-button {

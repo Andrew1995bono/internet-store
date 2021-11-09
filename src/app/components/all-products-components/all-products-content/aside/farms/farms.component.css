@@ -1,9 +1,9 @@
-.brands {
+.farms {
   width: 268px;
   margin-top: 48px;
 }
 
-.brands h2 {
+.farms h2 {
   margin: 0;
   height: 27px;
   font-family: Poppins;
@@ -13,11 +13,11 @@
   color: #151515;
 }
 
-.brands-filters {
+.farms-filters {
   margin-top: 18px;
 }
 
-.brands-filters div {
+.farms-filters div {
   display: flex;
   align-items: center;
   margin-bottom: 16px;
@@ -26,13 +26,14 @@
   color: #151515;
 }
 
-.brands-filters div:last-child {
+.farms-filters div:last-child {
   margin-bottom: 0;
 }
 
 mat-checkbox {
   margin-right: 10px;
 }
+
 
 /deep/ .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
   background-color: #6A983C;
@@ -43,4 +44,8 @@ mat-checkbox {
 mat-checkbox ::ng-deep .mat-checkbox-inner-container {
   width: 20px;
   height: 20px;
+}
+
+/deep/ .mat-checkbox-inner-container:hover {
+  cursor: pointer;
 }

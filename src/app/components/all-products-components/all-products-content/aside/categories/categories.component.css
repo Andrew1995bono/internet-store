@@ -1,7 +1,6 @@
 .categories {
   display: flex;
   flex-direction: column;
-  margin-top: 81px;
   width: 268px;
 }
 

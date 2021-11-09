@@ -16,13 +16,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AllProductsContentComponent } from './components/all-products-components/all-products-content/all-products-content.component';
 import { AsideComponent } from './components/all-products-components/all-products-content/aside/aside.component';
+<<<<<<< HEAD
 import { BrandsComponent } from './components/all-products-components/all-products-content/aside/brands/brands.component';
 import { CategoriesComponent } from './components/all-products-components/all-products-content/aside/categories/categories.component';
+=======
+import { CategoriesComponent } from './components/all-products-components/all-products-content/aside/categories/categories.component';
+import { FarmsComponent } from './components/all-products-components/all-products-content/aside/farms/farms.component';
+>>>>>>> product-rating
 import { RatingComponent } from './components/all-products-components/all-products-content/aside/rating/rating.component';
 import { SliderComponent } from './components/all-products-components/all-products-content/aside/slider/slider.component';
 import { ProductCardComponent } from './components/all-products-components/all-products-content/product-card/product-card.component';
 import { AllProductsTitleComponent } from './components/all-products-components/all-products-title/all-products-title.component';
 import { AllProductsComponent } from './components/all-products-components/all-products.component';
+<<<<<<< HEAD
+=======
+import { FooterComponent } from './components/all-products-components/footer/footer.component';
+>>>>>>> product-rating
 import { SortInputComponent } from './components/all-products-components/sort-input/sort-input.component';
 import { HeaderInfoComponent } from './components/homepage-components/header/header-info/header-info.component';
 import { HeaderComponent } from './components/homepage-components/header/header.component';
@@ -31,7 +40,10 @@ import { InputFieldComponent } from './components/homepage-components/navbar/inp
 import { NavbarComponent } from './components/homepage-components/navbar/navbar.component';
 import { SelectFieldComponent } from './components/homepage-components/navbar/select-field/select-field.component';
 import { PagesTitleComponent } from './components/homepage-components/pages-title/pages-title.component';
+<<<<<<< HEAD
 
+=======
+>>>>>>> product-rating
 
 @NgModule({
   declarations: [
@@ -50,9 +62,14 @@ import { PagesTitleComponent } from './components/homepage-components/pages-titl
     AsideComponent,
     ProductCardComponent,
     CategoriesComponent,
-    BrandsComponent,
+    FarmsComponent,
     RatingComponent,
+<<<<<<< HEAD
     SliderComponent
+=======
+    SliderComponent,
+    FooterComponent
+>>>>>>> product-rating
   ],
   imports: [
     BrowserModule,

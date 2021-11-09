@@ -1,5 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {ProductCard} from "../../../../interfaces/product-card";
+import { Component, Input, OnInit } from '@angular/core';
+import { ProductCard } from '../../../../interfaces/product-card';
+import { FiltersService } from '../../../../services/all-products/filters/filters.service';
 
 
 @Component({
@@ -7,6 +8,7 @@ import {ProductCard} from "../../../../interfaces/product-card";
   templateUrl: './product-card.component.html',
   styleUrls: ['./product-card.component.css']
 })
+
 export class ProductCardComponent implements OnInit {
 
   @Input() set productData(product: ProductCard) {
@@ -14,10 +16,18 @@ export class ProductCardComponent implements OnInit {
   };
 
   public product = {} as ProductCard;
+  public starArr: string[] = ['', '', '', '', ''];
 
-  constructor() {}
+  constructor(private filtersService: FiltersService) {}
 
   ngOnInit(): void {
+    this.setRating(this.product);
+  }
+
+  private setRating(product: ProductCard): void {
+    this.starArr.fill('../../assets/rate-star-filled.png', 0, (product.rating));
+    this.starArr.fill('../../assets/rate-star.png', product.rating, 5);
   }
 
 }
+

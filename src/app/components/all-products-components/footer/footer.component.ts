@@ -5,22 +5,21 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
+
 export class FooterComponent implements OnInit {
-  public firstRowTags: string[] = [
+
+  public rowTags: string[] = [
     'Beans', 'Carrots', 'Apples', 'Garlic',
     'Mushrooms', 'Tomatoes', 'Chilli peppers',
     'Broccoli', 'Watermelons', 'Oranges',
-    'Bananas', 'Grapes'
+    'Bananas', 'Grapes', 'Cherries', 'Meat', 'Seo tag',
+    'Fish', 'Seo tag', 'Fresh food', 'Lemons'
   ];
 
-  public secondRowTags: string[] = [
-    'Cherries', 'Meat', 'Seo tag',
-    'Fish', 'Seo tag', 'Fresh food',
-    'Lemons'
-  ];
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }
