@@ -13,9 +13,10 @@ import { FiltersService } from '../../../services/all-products/filters/filters.s
 export class SortInputComponent implements OnInit {
 
   public categories: DropdownSelect[] = [
-    { value: 'rating', viewValue: 'Rating: from high to low' },
-    { value: 'low-high', viewValue: 'Price: from low to high' },
-    { value: 'high-low', viewValue: 'Price: from high to low' }
+    { value: 'rating-high-low', viewValue: 'Rating: from high to low' },
+    { value: 'rating-low-high', viewValue: 'Rating: from low to high' },
+    { value: 'price-high-low', viewValue: 'Price: from high to low' },
+    { value: 'price-low-high', viewValue: 'Price: from low to high' }
 
   ];
 

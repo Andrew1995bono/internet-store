@@ -52,7 +52,8 @@ export class FiltersService {
   public filter(event: any): ProductCard[] {
     const sortedByRate = this.filterByRate(event, this.products.value);
     const sortedByCategory = this.filterByCategory(event, sortedByRate);
-    return this.filterByFarm(event, sortedByCategory);
+    const sortedBySortBy = this.filterBySortBy(event, sortedByCategory);
+    return this.filterByFarm(event, sortedBySortBy);
   }
 
   private filterByFarm(event: MatCheckboxChange, productsArr: ProductCard[]): ProductCard[] {
@@ -117,5 +118,19 @@ export class FiltersService {
     return [new ProductCard()];
   }
 
+  private filterBySortBy(event: MatSelectChange, productsArr: ProductCard[]): ProductCard[] {
+    if (event.source.value === 'rating-high-low') {
+      return productsArr.sort(function(a: ProductCard, b: ProductCard) {return b.rating - a.rating;});
+    } else if (event.source.value === 'rating-low-high') {
+      return productsArr.sort(function(a: ProductCard, b: ProductCard) {return a.rating - b.rating;});
+    } else if (event.source.value === 'price-high-low') {
+      return productsArr.sort(function(a: ProductCard, b: ProductCard) {return b.pricePromotional - a.pricePromotional;});
+    } else if (event.source.value === 'price-low-high') {
+      return productsArr.sort(function(a: ProductCard, b: ProductCard) {return a.pricePromotional - b.pricePromotional;});
+    } else {
+      return productsArr;
+    }
+    return [new ProductCard()];
+  }
 }
 
