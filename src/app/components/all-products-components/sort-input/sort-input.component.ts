@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatSelectChange } from '@angular/material/select';
-import { DropdownSelect } from '../../../interfaces/dropdown-select';
+import { DropDownEnumInterface } from '../../../interfaces/dropdown-select';
+import { SortByEnum } from '../../../interfaces/sort-by.enum';
 import { FiltersService } from '../../../services/all-products/filters/filters.service';
 
 @Component({
@@ -12,12 +13,12 @@ import { FiltersService } from '../../../services/all-products/filters/filters.s
 
 export class SortInputComponent implements OnInit {
 
-  public categories: DropdownSelect[] = [
-    { value: 'rating-high-low', viewValue: 'Rating: from high to low' },
-    { value: 'rating-low-high', viewValue: 'Rating: from low to high' },
-    { value: 'price-high-low', viewValue: 'Price: from high to low' },
-    { value: 'price-low-high', viewValue: 'Price: from low to high' }
-
+  public categories: DropDownEnumInterface[] = [
+    { value: SortByEnum.DefaultSorting, viewValue: 'Default sorting' },
+    { value: SortByEnum.AscendingRating, viewValue: 'Rating: from high to low' },
+    { value: SortByEnum.DescendingRating, viewValue: 'Rating: from low to high' },
+    { value: SortByEnum.AscendingPrice, viewValue: 'Price: from high to low' },
+    { value: SortByEnum.DescendingPrice, viewValue: 'Price: from low to high' }
   ];
 
   constructor(private filtersService: FiltersService) { }

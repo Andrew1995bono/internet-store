@@ -3,6 +3,7 @@ import { MatCheckboxChange } from '@angular/material/checkbox';
 import { MatSelectChange } from '@angular/material/select';
 import { BehaviorSubject } from 'rxjs';
 import { ProductCard } from '../../../interfaces/product-card';
+import { SortByEnum } from '../../../interfaces/sort-by.enum';
 
 
 @Injectable({
@@ -119,18 +120,18 @@ export class FiltersService {
   }
 
   private filterBySortBy(event: MatSelectChange, productsArr: ProductCard[]): ProductCard[] {
-    if (event.source.value === 'rating-high-low') {
-      return productsArr.sort(function(a: ProductCard, b: ProductCard) {return b.rating - a.rating;});
-    } else if (event.source.value === 'rating-low-high') {
-      return productsArr.sort(function(a: ProductCard, b: ProductCard) {return a.rating - b.rating;});
-    } else if (event.source.value === 'price-high-low') {
-      return productsArr.sort(function(a: ProductCard, b: ProductCard) {return b.pricePromotional - a.pricePromotional;});
-    } else if (event.source.value === 'price-low-high') {
-      return productsArr.sort(function(a: ProductCard, b: ProductCard) {return a.pricePromotional - b.pricePromotional;});
+    if (this.sortByValue.length > 0) {
+      const sortAction: { [key: string]: () => ProductCard[] } = {
+        [SortByEnum.DescendingRating]: () => productsArr.sort((a: ProductCard, b: ProductCard) => a.rating - b.rating),
+        [SortByEnum.AscendingRating]: () => productsArr.sort((a: ProductCard, b: ProductCard) => b.rating - a.rating),
+        [SortByEnum.DescendingPrice]: () => productsArr.sort((a: ProductCard, b: ProductCard) => a.pricePromotional - b.pricePromotional),
+        [SortByEnum.AscendingPrice]: () => productsArr.sort((a: ProductCard, b: ProductCard) => b.pricePromotional - a.pricePromotional),
+        [SortByEnum.DefaultSorting]: () => productsArr
+      };
+      return sortAction[event.source.value]();
     } else {
       return productsArr;
     }
-    return [new ProductCard()];
   }
 }
 
