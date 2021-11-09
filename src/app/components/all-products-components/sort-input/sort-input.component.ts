@@ -15,10 +15,10 @@ export class SortInputComponent implements OnInit {
 
   public categories: DropDownEnumInterface[] = [
     { value: SortByEnum.DefaultSorting, viewValue: 'Default sorting' },
-    { value: SortByEnum.AscendingRating, viewValue: 'Rating: from high to low' },
-    { value: SortByEnum.DescendingRating, viewValue: 'Rating: from low to high' },
-    { value: SortByEnum.AscendingPrice, viewValue: 'Price: from high to low' },
-    { value: SortByEnum.DescendingPrice, viewValue: 'Price: from low to high' }
+    { value: SortByEnum.DescendingRating, viewValue: 'Rating: from high to low' },
+    { value: SortByEnum.AscendingRating, viewValue: 'Rating: from low to high' },
+    { value: SortByEnum.DescendingPrice, viewValue: 'Price: from high to low' },
+    { value: SortByEnum.AscendingPrice, viewValue: 'Price: from low to high' }
   ];
 
   constructor(private filtersService: FiltersService) { }

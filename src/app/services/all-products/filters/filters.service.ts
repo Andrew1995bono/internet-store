@@ -19,10 +19,13 @@ export class FiltersService {
   public farmValue: string[] = [];
   public rateValue: number[] = [];
   public categoryValue: string[] = [];
-  public sortByValue: string[] = [];
+  public sortByValue: number[] = [];
+  public sortValue: number = SortByEnum.DefaultSorting;
+
   private filteredByFarmItems: ProductCard[] = [];
   private filteredByRateItems: ProductCard[] = [];
   private filteredByCategoryItems: ProductCard[] = [];
+  private filteredBySortByItems: ProductCard[] = [];
 
   constructor() {}
 
@@ -51,10 +54,16 @@ export class FiltersService {
   }
 
   public filter(event: any): ProductCard[] {
-    const sortedByRate = this.filterByRate(event, this.products.value);
-    const sortedByCategory = this.filterByCategory(event, sortedByRate);
-    const sortedBySortBy = this.filterBySortBy(event, sortedByCategory);
-    return this.filterByFarm(event, sortedBySortBy);
+
+    if (typeof event.value === 'number') {
+      this.sortValue = event.source.value;
+    }
+
+    const filteredByRate = this.filterByRate(event, this.products.value);
+    const filteredByCategory = this.filterByCategory(event, filteredByRate);
+    const filteredByFarm = this.filterByFarm(event, filteredByCategory);
+
+    return this.filterBySortBy(filteredByFarm);
   }
 
   private filterByFarm(event: MatCheckboxChange, productsArr: ProductCard[]): ProductCard[] {
@@ -119,19 +128,15 @@ export class FiltersService {
     return [new ProductCard()];
   }
 
-  private filterBySortBy(event: MatSelectChange, productsArr: ProductCard[]): ProductCard[] {
-    if (this.sortByValue.length > 0) {
-      const sortAction: { [key: string]: () => ProductCard[] } = {
-        [SortByEnum.DescendingRating]: () => productsArr.sort((a: ProductCard, b: ProductCard) => a.rating - b.rating),
-        [SortByEnum.AscendingRating]: () => productsArr.sort((a: ProductCard, b: ProductCard) => b.rating - a.rating),
-        [SortByEnum.DescendingPrice]: () => productsArr.sort((a: ProductCard, b: ProductCard) => a.pricePromotional - b.pricePromotional),
-        [SortByEnum.AscendingPrice]: () => productsArr.sort((a: ProductCard, b: ProductCard) => b.pricePromotional - a.pricePromotional),
-        [SortByEnum.DefaultSorting]: () => productsArr
-      };
-      return sortAction[event.source.value]();
-    } else {
-      return productsArr;
-    }
+  private filterBySortBy(productsArr: ProductCard[]): ProductCard[] {
+    const sortAction: { [key: string]: () => ProductCard[] } = {
+      [SortByEnum.DescendingRating]: () => productsArr.sort((a: ProductCard, b: ProductCard) => b.rating - a.rating),
+      [SortByEnum.AscendingRating]: () => productsArr.sort((a: ProductCard, b: ProductCard) => a.rating - b.rating),
+      [SortByEnum.DescendingPrice]: () => productsArr.sort((a: ProductCard, b: ProductCard) => b.pricePromotional - a.pricePromotional),
+      [SortByEnum.AscendingPrice]: () => productsArr.sort((a: ProductCard, b: ProductCard) => a.pricePromotional - b.pricePromotional),
+      [SortByEnum.DefaultSorting]: () => productsArr
+    };
+
+    return sortAction[this.sortValue]();
   }
 }
-
