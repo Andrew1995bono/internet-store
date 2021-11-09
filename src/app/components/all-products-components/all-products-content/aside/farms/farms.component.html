@@ -1,0 +1,9 @@
+<div class="farms">
+  <h2>Farms</h2>
+  <div class="farms-filters">
+    <div *ngFor="let farm of farmNames">
+      <mat-checkbox value="{{farm}}" (change)="getFarmValue($event)"></mat-checkbox>
+      Filter by {{farm}}
+    </div>
+  </div>
+</div>
