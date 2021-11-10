@@ -16,12 +16,11 @@ export class FiltersService {
   public allProducts: BehaviorSubject<ProductCard[]> = new BehaviorSubject<ProductCard[]>([new ProductCard()]);
   public itemsPerPage: BehaviorSubject<number> = new BehaviorSubject(0);
   public p: number = 3;
-  public farmValue: string[] = [];
-  public rateValue: number[] = [];
-  public categoryValue: string[] = [];
-  public sortByValue: number[] = [];
-  public sortValue: number = SortByEnum.DefaultSorting;
-
+  private farmValue: string[] = [];
+  private rateValue: number[] = [];
+  private categoryValue: string[] = [];
+  private sortByValue: number[] = [];
+  private sortValue: number = SortByEnum.DefaultSorting;
   private filteredByFarmItems: ProductCard[] = [];
   private filteredByRateItems: ProductCard[] = [];
   private filteredByCategoryItems: ProductCard[] = [];
@@ -55,10 +54,7 @@ export class FiltersService {
 
   public filter(event: any): ProductCard[] {
 
-    if (typeof event.value === 'number') {
-      this.sortValue = event.source.value;
-    }
-
+    this.checkTypeOfValue(event);
     const filteredByRate = this.filterByRate(event, this.products.value);
     const filteredByCategory = this.filterByCategory(event, filteredByRate);
     const filteredByFarm = this.filterByFarm(event, filteredByCategory);
@@ -106,7 +102,7 @@ export class FiltersService {
     return [new ProductCard()];
   }
 
-  public filterByCategory(event: MatSelectChange, productsArr: ProductCard[]): ProductCard[] {
+  private filterByCategory(event: MatSelectChange, productsArr: ProductCard[]): ProductCard[] {
     if (event.source.value === 'All categories') {
       this.categoryValue.push('Fruits', 'Vegetables', 'Berries', 'Nuts');
       return productsArr;
@@ -128,6 +124,12 @@ export class FiltersService {
     return [new ProductCard()];
   }
 
+  private checkTypeOfValue(event: MatSelectChange): void {
+    if (typeof event.value === 'number') {
+      this.sortValue = event.source.value;
+    }
+  }
+
   private filterBySortBy(productsArr: ProductCard[]): ProductCard[] {
     const sortAction: { [key: string]: () => ProductCard[] } = {
       [SortByEnum.DescendingRating]: () => productsArr.sort((a: ProductCard, b: ProductCard) => b.rating - a.rating),
@@ -136,7 +138,6 @@ export class FiltersService {
       [SortByEnum.AscendingPrice]: () => productsArr.sort((a: ProductCard, b: ProductCard) => a.pricePromotional - b.pricePromotional),
       [SortByEnum.DefaultSorting]: () => productsArr
     };
-
     return sortAction[this.sortValue]();
   }
 }

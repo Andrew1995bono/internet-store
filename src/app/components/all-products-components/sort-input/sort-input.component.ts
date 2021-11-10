@@ -14,11 +14,11 @@ import { FiltersService } from '../../../services/all-products/filters/filters.s
 export class SortInputComponent implements OnInit {
 
   public categories: DropDownEnumInterface[] = [
-    { value: SortByEnum.DefaultSorting, viewValue: 'Default sorting' },
-    { value: SortByEnum.DescendingRating, viewValue: 'Rating: from high to low' },
-    { value: SortByEnum.AscendingRating, viewValue: 'Rating: from low to high' },
-    { value: SortByEnum.DescendingPrice, viewValue: 'Price: from high to low' },
-    { value: SortByEnum.AscendingPrice, viewValue: 'Price: from low to high' }
+    { value: SortByEnum.DefaultSorting, viewValue: 'Default' },
+    { value: SortByEnum.DescendingRating, viewValue: 'rating-high-low' },
+    { value: SortByEnum.AscendingRating, viewValue: 'rating-low-high' },
+    { value: SortByEnum.DescendingPrice, viewValue: 'price-high-low' },
+    { value: SortByEnum.AscendingPrice, viewValue: 'price-low-high' }
   ];
 
   constructor(private filtersService: FiltersService) { }
