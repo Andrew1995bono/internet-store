@@ -4,7 +4,6 @@
     <ngx-slider [(value)]="value"
                 [(highValue)]="highValue"
                 [options]="options"
-                class="some"
                 (userChange)="getSliderValue($event)">
     </ngx-slider>
   </div>
@@ -23,7 +22,7 @@
       </div>
     </div>
     <div class="reset-button">
-      <button (click)="resetSliderValue($event)">Reset</button>
+      <button (click)="resetSliderValue()">Reset</button>
     </div>
   </div>
 </div>

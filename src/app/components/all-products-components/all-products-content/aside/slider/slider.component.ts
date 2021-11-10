@@ -24,12 +24,14 @@ export class SliderComponent implements OnInit {
 
   }
 
-  public resetSliderValue($event: MouseEvent): void {
+  public resetSliderValue(): void {
     this.value = 35;
     this.highValue = 70;
   }
 
   public getSliderValue(event: ChangeContext): void {
+    this.filtersService.highPrice = event.highValue;
+    this.filtersService.minPrice = event.value;
     this.filtersService.getSliderValue(event);
   }
 }

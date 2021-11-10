@@ -24,6 +24,8 @@ export class FiltersService {
   private filteredByFarmItems: ProductCard[] = [];
   private filteredByRateItems: ProductCard[] = [];
   private filteredByCategoryItems: ProductCard[] = [];
+  public minPrice: number = 0;
+  public highPrice: number = 100;
 
   constructor() {}
 
@@ -59,7 +61,7 @@ export class FiltersService {
     const filteredByRate = this.filterByRate(event, this.products.value);
     const filteredByCategory = this.filterByCategory(event, filteredByRate);
     const filteredByFarm = this.filterByFarm(event, filteredByCategory);
-    const filteredByPrice = this.filterByPrice(event, filteredByFarm);
+    const filteredByPrice = this.filterByPrice(filteredByFarm);
     return this.sortBy(filteredByPrice);
   }
 
@@ -70,7 +72,7 @@ export class FiltersService {
       }
       return productsArr.filter((item: ProductCard) => this.farmValue.includes(item.farm));
     } else if (!event.checked) {
-      this.farmValue = this.farmValue.filter((item: string) => item !== event.source.value);
+      this.farmValue = this.farmValue.filter((item: string) => item !== event.source?.value);
       return productsArr.filter((item: ProductCard) => {
         if (this.farmValue.includes(item.farm)) {
           return true;
@@ -130,6 +132,7 @@ export class FiltersService {
     }
   }
 
+
   private sortBy(productsArr: ProductCard[]): ProductCard[] {
     const sortAction: { [key: string]: () => ProductCard[] } = {
       [SortByEnum.DescendingRating]: () => productsArr.sort((a: ProductCard, b: ProductCard) => b.rating - a.rating),
@@ -141,15 +144,8 @@ export class FiltersService {
     return sortAction[this.sortValue]();
   }
 
-  private filterByPrice(event: ChangeContext, productsArr: ProductCard[]): ProductCard[] {
-    console.log(event);
-    if (event.pointerType === 0) {
-      return productsArr.filter((item: ProductCard) => item.pricePromotional >= event.value && item.pricePromotional <= event.highValue);
-    } else if (event.pointerType === 1) {
-      return productsArr.filter((item: ProductCard) => item.pricePromotional >= event.value && item.pricePromotional <= event.highValue);
-    } else {
-      return productsArr;
-    }
+  private filterByPrice(productsArr: ProductCard[]): ProductCard[] {
+    return productsArr.filter((item: ProductCard) => item.pricePromotional >= this.minPrice && item.pricePromotional <= this.highPrice);
   }
 
 }
