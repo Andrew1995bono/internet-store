@@ -47,20 +47,20 @@ export class FiltersService {
   }
 
   public getSortByValue(event: MatSelectChange): void {
+    this.checkTypeOfValue(event);
     this.allProducts.next(this.filter(event));
   }
 
   public getSliderValue(event: ChangeContext): void {
-    console.log(event);
     this.allProducts.next(this.filter(event));
   }
 
   public filter(event: any): ProductCard[] {
-    this.checkTypeOfValue(event);
     const filteredByRate = this.filterByRate(event, this.products.value);
     const filteredByCategory = this.filterByCategory(event, filteredByRate);
     const filteredByFarm = this.filterByFarm(event, filteredByCategory);
-    return this.filterBySortBy(filteredByFarm);
+    const filteredByPrice = this.filterByPrice(event, filteredByFarm);
+    return this.sortBy(filteredByPrice);
   }
 
   private filterByFarm(event: MatCheckboxChange, productsArr: ProductCard[]): ProductCard[] {
@@ -89,7 +89,7 @@ export class FiltersService {
       }
       return productsArr.filter((item: ProductCard) => this.rateValue.includes(item.rating));
     } else if (!event.checked) {
-      this.rateValue = this.rateValue.filter((item: number) => item !== +event.source.value);
+      this.rateValue = this.rateValue.filter((item: number) => item !== +event.source?.value);
       this.filteredByRateItems = productsArr.filter((item: ProductCard) => {
         if (this.rateValue.includes(item.rating)) {
           return true;
@@ -103,16 +103,16 @@ export class FiltersService {
   }
 
   private filterByCategory(event: MatSelectChange, productsArr: ProductCard[]): ProductCard[] {
-    if (event.source.value === 'All categories') {
+    if (event.source?.value === 'All categories') {
       this.categoryValue.push('Fruits', 'Vegetables', 'Berries', 'Nuts');
       return productsArr;
-    } else if (event.source.selected) {
+    } else if (event.source?.selected) {
       if (!this.categoryValue.length) {
         return productsArr;
       }
       return productsArr.filter((item: ProductCard) => this.categoryValue.includes(item.category));
-    } else if (!event.source.selected) {
-      this.categoryValue = this.categoryValue.filter((item: string) => item !== event.source.id);
+    } else if (!event.source?.selected) {
+      this.categoryValue = this.categoryValue.filter((item: string) => item !== event.source?.id);
       return productsArr.filter((item: ProductCard) => {
         if (this.categoryValue.includes(item.category)) {
           return true;
@@ -126,11 +126,11 @@ export class FiltersService {
 
   private checkTypeOfValue(event: MatSelectChange): void {
     if (typeof event.value === 'number') {
-      this.sortValue = event.source.value;
+      this.sortValue = event.source?.value;
     }
   }
 
-  private filterBySortBy(productsArr: ProductCard[]): ProductCard[] {
+  private sortBy(productsArr: ProductCard[]): ProductCard[] {
     const sortAction: { [key: string]: () => ProductCard[] } = {
       [SortByEnum.DescendingRating]: () => productsArr.sort((a: ProductCard, b: ProductCard) => b.rating - a.rating),
       [SortByEnum.AscendingRating]: () => productsArr.sort((a: ProductCard, b: ProductCard) => a.rating - b.rating),
@@ -139,6 +139,17 @@ export class FiltersService {
       [SortByEnum.DefaultSorting]: () => productsArr
     };
     return sortAction[this.sortValue]();
+  }
+
+  private filterByPrice(event: ChangeContext, productsArr: ProductCard[]): ProductCard[] {
+    console.log(event);
+    if (event.pointerType === 0) {
+      return productsArr.filter((item: ProductCard) => item.pricePromotional >= event.value && item.pricePromotional <= event.highValue);
+    } else if (event.pointerType === 1) {
+      return productsArr.filter((item: ProductCard) => item.pricePromotional >= event.value && item.pricePromotional <= event.highValue);
+    } else {
+      return productsArr;
+    }
   }
 
 }

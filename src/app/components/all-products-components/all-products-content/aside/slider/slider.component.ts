@@ -30,7 +30,6 @@ export class SliderComponent implements OnInit {
   }
 
   public getSliderValue(event: ChangeContext): void {
-    // console.log(event);
     this.filtersService.getSliderValue(event);
   }
 }

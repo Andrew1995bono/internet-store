@@ -1,8 +1,12 @@
 <div class="slider-filter">
   <h2>Price</h2>
   <div class="slider">
-    <ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="options"
-                (userChange)="getSliderValue($event)"></ngx-slider>
+    <ngx-slider [(value)]="value"
+                [(highValue)]="highValue"
+                [options]="options"
+                class="some"
+                (userChange)="getSliderValue($event)">
+    </ngx-slider>
   </div>
   <div>
     <div class="values">
