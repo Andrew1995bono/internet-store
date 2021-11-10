@@ -27,16 +27,20 @@ export class FiltersService {
   public minPrice: number = 0;
   public highPrice: number = 100;
 
-  constructor() {}
+  constructor() {
+  }
+
 
   public getFarmValue(event: MatCheckboxChange): void {
     this.farmValue.push(event.source.value);
     this.allProducts.next(this.filter(event));
+    this.itemsPerPage.next(this.filter(event).length);
   }
 
   public getRateValue(event: MatCheckboxChange): void {
     this.rateValue.push(+event.source.value);
     this.allProducts.next(this.filter(event));
+    this.itemsPerPage.next(this.filter(event).length);
   }
 
   public getCategoryValue(event: MatSelectChange): void {
@@ -46,15 +50,18 @@ export class FiltersService {
       this.categoryValue.shift();
     }
     this.allProducts.next(this.filter(event));
+    this.itemsPerPage.next(this.filter(event).length);
   }
 
   public getSortByValue(event: MatSelectChange): void {
     this.checkTypeOfValue(event);
     this.allProducts.next(this.filter(event));
+    this.itemsPerPage.next(this.filter(event).length);
   }
 
   public getSliderValue(event: ChangeContext): void {
     this.allProducts.next(this.filter(event));
+    this.itemsPerPage.next(this.filter(event).length);
   }
 
   public filter(event: any): ProductCard[] {

@@ -2,7 +2,7 @@
   <app-aside></app-aside>
   <div fxLayout="column" fxLayoutAlign="start start">
     <div class="card"
-         *ngFor="let product of filteredProducts | paginate: { itemsPerPage: itemsPerPage, currentPage: p } ">
+         *ngFor="let product of filteredProducts | paginate: { itemsPerPage: itemsPerPage, currentPage: p}">
       <app-product-card [productData]="product"></app-product-card>
     </div>
   </div>
