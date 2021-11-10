@@ -45,9 +45,7 @@ export class AllProductsContentComponent implements OnInit, OnDestroy {
   public showMoreProducts($event: MouseEvent): void {
     $event.preventDefault();
     this.itemsPerPage += 5;
-    this.filtersService.itemsPerPage.next(this.products.length);
-    this.p = 1;
-    console.log(this.products.length);
+    this.filtersService.itemsPerPage.next(this.filteredProducts.length);
   }
 
   public ngOnDestroy() {
