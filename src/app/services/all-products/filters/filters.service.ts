@@ -1,3 +1,4 @@
+import { ChangeContext } from '@angular-slider/ngx-slider';
 import { Injectable } from '@angular/core';
 import { MatCheckboxChange } from '@angular/material/checkbox';
 import { MatSelectChange } from '@angular/material/select';
@@ -19,12 +20,10 @@ export class FiltersService {
   private farmValue: string[] = [];
   private rateValue: number[] = [];
   private categoryValue: string[] = [];
-  private sortByValue: number[] = [];
   private sortValue: number = SortByEnum.DefaultSorting;
   private filteredByFarmItems: ProductCard[] = [];
   private filteredByRateItems: ProductCard[] = [];
   private filteredByCategoryItems: ProductCard[] = [];
-  private filteredBySortByItems: ProductCard[] = [];
 
   constructor() {}
 
@@ -48,17 +47,19 @@ export class FiltersService {
   }
 
   public getSortByValue(event: MatSelectChange): void {
-    this.sortByValue.push(event.value);
+    this.allProducts.next(this.filter(event));
+  }
+
+  public getSliderValue(event: ChangeContext): void {
+    console.log(event);
     this.allProducts.next(this.filter(event));
   }
 
   public filter(event: any): ProductCard[] {
-
     this.checkTypeOfValue(event);
     const filteredByRate = this.filterByRate(event, this.products.value);
     const filteredByCategory = this.filterByCategory(event, filteredByRate);
     const filteredByFarm = this.filterByFarm(event, filteredByCategory);
-
     return this.filterBySortBy(filteredByFarm);
   }
 
@@ -70,7 +71,6 @@ export class FiltersService {
       return productsArr.filter((item: ProductCard) => this.farmValue.includes(item.farm));
     } else if (!event.checked) {
       this.farmValue = this.farmValue.filter((item: string) => item !== event.source.value);
-
       return productsArr.filter((item: ProductCard) => {
         if (this.farmValue.includes(item.farm)) {
           return true;
@@ -140,4 +140,5 @@ export class FiltersService {
     };
     return sortAction[this.sortValue]();
   }
+
 }

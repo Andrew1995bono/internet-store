@@ -15,8 +15,8 @@ export class SortInputComponent implements OnInit {
 
   public categories: DropDownEnumInterface[] = [
     { value: SortByEnum.DefaultSorting, viewValue: 'Default' },
-    { value: SortByEnum.DescendingRating, viewValue: 'rating-high-low' },
-    { value: SortByEnum.AscendingRating, viewValue: 'rating-low-high' },
+    { value: SortByEnum.DescendingRating, viewValue: 'rate-high-low' },
+    { value: SortByEnum.AscendingRating, viewValue: 'rate-low-high' },
     { value: SortByEnum.DescendingPrice, viewValue: 'price-high-low' },
     { value: SortByEnum.AscendingPrice, viewValue: 'price-low-high' }
   ];
