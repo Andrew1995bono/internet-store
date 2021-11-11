@@ -9,7 +9,7 @@
 }
 
 .item-image {
-  width: 41.174%;
+  width: 30.97%;
 }
 
 .item-image img {
@@ -21,14 +21,14 @@
 }
 
 .item-info {
-  width: 89.43%;
+  width: 69.03%;
   padding: 32px;
   display: flex;
   justify-content: space-between;
 }
 
 .item-description {
-  width: 45.56%;
+  width: 50.56%;
 }
 
 .item-description h2 {
@@ -51,6 +51,7 @@
 .rate-star {
   display: flex;
   margin-top: 10px;
+  width: 40%;
 }
 
 .rate-star div {
@@ -65,6 +66,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 27px;
+  width: 88%;
 }
 
 .characteristic-property div {

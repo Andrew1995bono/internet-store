@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 51px;
+  width: 100%;
 }
 
 .rating h2 {
@@ -18,6 +19,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 18px;
+  width: 55%;
 }
 
 .rating-filters div {
@@ -31,6 +33,10 @@
 }
 
 .rating .rating-filters div:last-child {
+  margin-bottom: 0;
+}
+
+.star {
   margin-bottom: 0;
 }
 

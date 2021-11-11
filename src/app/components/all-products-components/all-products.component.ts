@@ -22,8 +22,9 @@ export class AllProductsComponent implements OnInit {
   ngOnInit(): void {
     this.allProductService.getProducts().subscribe(data => {
       this.products = data;
-      this.productsQuantity = data.length;
+      this.filtersService.filteredProductsQuantity.next(data.length);
       this.filtersService.products.next(data);
+      this.productsQuantity = data.length;
     });
   }
 

@@ -26,11 +26,9 @@ export class AllProductsContentComponent implements OnInit, OnDestroy {
   public itemsPerPage: number = 5;
   private unsubscribe$ = new Subject();
 
-
   constructor(private filtersService: FiltersService) {}
 
   ngOnInit(): void {
-    this.sendItemsPerPage();
     this.filtersService.allProducts.pipe(
       takeUntil(this.unsubscribe$)
     ).subscribe(data => {
@@ -39,14 +37,9 @@ export class AllProductsContentComponent implements OnInit, OnDestroy {
     });
   }
 
-  private sendItemsPerPage(): void {
-    this.filtersService.itemsPerPage.next(this.itemsPerPage);
-  }
-
   public showMoreProducts($event: MouseEvent): void {
     $event.preventDefault();
     this.itemsPerPage += 5;
-    this.filtersService.itemsPerPage.next(67);
   }
 
   public ngOnDestroy() {

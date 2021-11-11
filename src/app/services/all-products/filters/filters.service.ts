@@ -15,6 +15,7 @@ export class FiltersService {
 
   public products: BehaviorSubject<ProductCard[]> = new BehaviorSubject([new ProductCard()]);
   public allProducts: BehaviorSubject<ProductCard[]> = new BehaviorSubject<ProductCard[]>([new ProductCard()]);
+  public filteredProductsQuantity: BehaviorSubject<number> = new BehaviorSubject<number>(0);
   public itemsPerPage: BehaviorSubject<number> = new BehaviorSubject(0);
   public p: number = 3;
   private farmValue: string[] = [];
@@ -34,13 +35,11 @@ export class FiltersService {
   public getFarmValue(event: MatCheckboxChange): void {
     this.farmValue.push(event.source.value);
     this.allProducts.next(this.filter(event));
-    this.itemsPerPage.next(this.filter(event).length);
   }
 
   public getRateValue(event: MatCheckboxChange): void {
     this.rateValue.push(+event.source.value);
     this.allProducts.next(this.filter(event));
-    this.itemsPerPage.next(this.filter(event).length);
   }
 
   public getCategoryValue(event: MatSelectChange): void {
@@ -50,18 +49,15 @@ export class FiltersService {
       this.categoryValue.shift();
     }
     this.allProducts.next(this.filter(event));
-    this.itemsPerPage.next(this.filter(event).length);
   }
 
   public getSortByValue(event: MatSelectChange): void {
     this.checkTypeOfValue(event);
     this.allProducts.next(this.filter(event));
-    this.itemsPerPage.next(this.filter(event).length);
   }
 
   public getSliderValue(event: ChangeContext): void {
     this.allProducts.next(this.filter(event));
-    this.itemsPerPage.next(this.filter(event).length);
   }
 
   public filter(event: any): ProductCard[] {
@@ -148,6 +144,7 @@ export class FiltersService {
       [SortByEnum.AscendingPrice]: () => productsArr.sort((a: ProductCard, b: ProductCard) => a.pricePromotional - b.pricePromotional),
       [SortByEnum.DefaultSorting]: () => productsArr
     };
+    this.filteredProductsQuantity.next(productsArr.length);
     return sortAction[this.sortValue]();
   }
 
