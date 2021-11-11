@@ -1,0 +1,7 @@
+@import "../../../../mixins";
+
+mat-divider {
+  @include _480 {
+    display: none;
+  }
+}

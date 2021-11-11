@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
+
 html {
   margin: 0 auto;
   padding: 16px 45px 78px;
@@ -16,5 +17,6 @@ body {
 *, *:before, *:after {
   box-sizing: border-box;
 }
+
 
 

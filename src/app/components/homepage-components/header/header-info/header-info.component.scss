@@ -1,4 +1,16 @@
+@import "../../../../../mixins";
+
 .navbar {
+  @include _768 {
+    display: flex;
+    justify-content: space-between;
+  }
+  @include _600 {
+    justify-content: center;
+  }
+  @include _480 {
+    display: none;
+  }
   margin: 0;
   padding: 0;
   background-color: #FFFFFF;
@@ -13,6 +25,9 @@
 }
 
 .right-navbar {
+  @include _600 {
+    display: none;
+  }
   display: flex;
 }
 
@@ -24,6 +39,9 @@
 }
 
 .left-navbar a {
+  @include _600 {
+    color: #6A983C;
+  }
   color: #151515;
 }
 
@@ -32,6 +50,9 @@
 }
 
 .left-navbar a.phone {
+  @include _768 {
+    padding: 0 15px;
+  }
   padding: 0 33px;
 }
 
@@ -40,5 +61,8 @@
 }
 
 .right-navbar a.about-us {
-  padding: 0 38px;
+  @include _768 {
+    padding: 0 15px;
+  }
+  padding: 0 33px;
 }
