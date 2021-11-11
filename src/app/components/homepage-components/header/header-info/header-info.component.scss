@@ -32,6 +32,12 @@
 }
 
 .navbar a {
+  @include _836 {
+    font-size: 10px;
+  }
+  @include _768 {
+    font-size: 11px;
+  }
   text-decoration: none;
   height: 16px;
   font-size: 12px;

@@ -11,6 +11,15 @@
   margin: 29px 0 26px 17px;
 }
 
+.logo img {
+  @include _1024 {
+    width: 90%;
+  }
+  @include _836 {
+    width: 80%;
+  }
+}
+
 .search-input {
   @include _1240 {
     width: 44%;
@@ -28,6 +37,10 @@
     width: 45.6%;
     height: 35px;
   }
+  @include _836 {
+    width: 49%;
+    height: 35px;
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,6 +56,15 @@
 .search {
   display: flex;
   align-items: center;
+}
+
+.search img {
+  @include _1024 {
+    width: 100%;
+  }
+  @include _836 {
+    width: 90%;
+  }
 }
 
 .vertical-line {
@@ -72,6 +94,9 @@ input::placeholder {
   @include _1024 {
     font-size: 12px;
   }
+  @include _836 {
+    font-size: 11px;
+  }
   color: #A9A9A9;
   opacity: 0.6;
   font-family: Open Sans;
@@ -81,7 +106,7 @@ input::placeholder {
 
 .first-label {
   @include _1024 {
-    padding-bottom: 3px;
+    padding-bottom: 4px;
     height: 25px;
   }
   display: flex;
@@ -128,7 +153,7 @@ input::placeholder {
 .mat-form-field-infix .mat-form-field-label-wrapper {
   @include _1024 {
     padding-top: 0;
-    height: 25px;
+    height: 27px;
   }
 }
 
@@ -151,6 +176,9 @@ input::placeholder {
   @include _1024 {
     padding-bottom: 11px;
   }
+  @include _836 {
+    padding-bottom: 12px;
+  }
   padding-top: 5px;
 }
 
@@ -165,6 +193,9 @@ input::placeholder {
   @include _1024 {
     font-size: 13px;
   }
+  @include _836 {
+    font-size: 11px;
+  }
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
@@ -177,3 +208,11 @@ input::placeholder {
   display: none;
 }
 
+.add-item img {
+  @include _1024 {
+    width: 45%;
+  }
+  @include _836 {
+    width: 40%;
+  }
+}
