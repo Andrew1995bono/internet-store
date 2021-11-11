@@ -1,3 +1,5 @@
+@import "../../../../../mixins";
+
 .main-search-bar {
   display: flex;
   justify-content: space-between;
@@ -10,6 +12,22 @@
 }
 
 .search-input {
+  @include _1240 {
+    width: 44%;
+  }
+  @include _1170 {
+    width: 46.5%;
+  }
+  @include _1125 {
+    width: 48.5%;
+  }
+  @include _1080 {
+    width: 50.6%;
+  }
+  @include _1024 {
+    width: 45.6%;
+    height: 35px;
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,6 +69,9 @@
 }
 
 input::placeholder {
+  @include _1024 {
+    font-size: 12px;
+  }
   color: #A9A9A9;
   opacity: 0.6;
   font-family: Open Sans;
@@ -59,6 +80,10 @@ input::placeholder {
 }
 
 .first-label {
+  @include _1024 {
+    padding-bottom: 3px;
+    height: 25px;
+  }
   display: flex;
   align-items: center;
   width: 42%;
@@ -66,19 +91,31 @@ input::placeholder {
 
 .first-label .mat-form-field {
   width: 100%;
+  @include _1024 {
+    height: 30px;
+  }
 }
 
 .first-label .mat-form-field-wrapper {
   padding: 0;
+  @include _1024 {
+    height: 25px;
+  }
 }
 
 .first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex {
+  @include _1024 {
+    height: 25px;
+  }
   padding: 0;
   background-color: #F9F9F9;
 }
 
 .first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
 .mat-form-field-infix {
+  @include _1024 {
+    padding: 0;
+  }
   height: 20px;
   padding-right: 15px;
   padding-bottom: 20px;
@@ -88,12 +125,32 @@ input::placeholder {
 }
 
 .first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
+.mat-form-field-infix .mat-form-field-label-wrapper {
+  @include _1024 {
+    padding-top: 0;
+    height: 25px;
+  }
+}
+
+.first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
 .mat-form-field-infix .mat-select .mat-select-trigger .mat-select-value {
   padding-bottom: 20px;
 }
 
 .first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
+.mat-form-field-infix .mat-select .mat-select-trigger {
+  @include _1024 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
 .mat-form-field-infix .mat-select .mat-select-trigger .mat-select-arrow-wrapper {
+  @include _1024 {
+    padding-bottom: 11px;
+  }
   padding-top: 5px;
 }
 
@@ -105,6 +162,9 @@ input::placeholder {
 
 .first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
 .mat-form-field-infix .mat-form-field-label-wrapper .mat-form-field-label {
+  @include _1024 {
+    font-size: 13px;
+  }
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;

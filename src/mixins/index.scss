@@ -4,14 +4,38 @@
   }
 }
 
-@mixin _1140 {
-  @media (max-width: 1140px) {
+@mixin _1240 {
+  @media (max-width: 1240px) {
+    @content;
+  }
+}
+
+@mixin _1170 {
+  @media (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin _1125 {
+  @media (max-width: 1125px) {
+    @content;
+  }
+}
+
+@mixin _1080 {
+  @media (max-width: 1080px) {
     @content;
   }
 }
 
 @mixin _1024 {
   @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin _836 {
+  @media (max-width: 836px) {
     @content;
   }
 }
