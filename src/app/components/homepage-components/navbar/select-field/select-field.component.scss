@@ -1,7 +1,18 @@
+@import "../../../../../mixins";
+
 .select-field {
+  @include _1024 {
+    flex-wrap: wrap;
+  }
+  @include _836 {
+    flex-wrap: wrap;
+  }
+  @include _600 {
+    flex-wrap: wrap;
+  }
   display: flex;
   align-items: center;
-  height: 55px;
+  padding: 16px 97px 16px 45px;
   background: #F9F9F9;
   justify-content: space-between;
   margin: 0 27px 0 62px;
@@ -14,6 +25,15 @@
 }
 
 .select-field > div > div {
+  @include _1024 {
+    font-size: 14px;
+  }
+  @include _836 {
+    font-size: 13px;
+  }
+  @include _600 {
+    font-size: 12px;
+  }
   font-family: Poppins;
   font-weight: 500;
   font-size: 15px;
@@ -21,14 +41,12 @@
   color: #151515;
 }
 
-header div:first-child {
-  margin-left: 23px;
-}
-
-header div:last-child {
-  margin-right: 95px;
-}
-
 .select-field > div > img {
   margin-left: 5px;
+}
+
+.media-select .mat-form-field {
+  @include _1260 {
+    display: none;
+  }
 }
