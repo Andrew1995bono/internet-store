@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { NavigationCategories } from '../../../../interfaces/navigation-categories';
 
 @Component({
   selector: 'app-select-field',
   templateUrl: './select-field.component.html',
-  styleUrls: ['./select-field.component.scss']
+  styleUrls: ['./select-field.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 
 export class SelectFieldComponent implements OnInit {
