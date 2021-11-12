@@ -8,10 +8,6 @@
   padding: 0 29px 0 62px;
 }
 
-.logo {
-  padding: 29px 0 26px;
-}
-
 .logo img {
   @include _1024 {
     width: 90%;
@@ -19,6 +15,13 @@
   @include _836 {
     width: 80%;
   }
+  @include _768 {
+    width: 70%;
+  }
+  @include _420 {
+    display: none;
+  }
+  padding: 29px 0 26px;
 }
 
 .search-input {
@@ -36,14 +39,17 @@
   }
   @include _1024 {
     width: 45.6%;
-    height: 35px;
+    height: 36px;
   }
   @include _836 {
     width: 49%;
-    height: 35px;
   }
-  @include _380 {
-    display: none;
+  @include _768 {
+    width: 40%;
+  }
+  @include _600 {
+    width: 40%;
+    padding-right: 16px;
   }
   display: flex;
   justify-content: space-between;
@@ -69,6 +75,9 @@
   @include _836 {
     width: 90%;
   }
+  @include _768 {
+    width: 80%;
+  }
 }
 
 .vertical-line {
@@ -76,6 +85,9 @@
 }
 
 .second-label {
+  @include _600 {
+    padding-left: 13px;
+  }
   height: 19px;
   display: flex;
   align-self: center;
@@ -99,6 +111,9 @@ input::placeholder {
     font-size: 12px;
   }
   @include _836 {
+    font-size: 11px;
+  }
+  @include _768 {
     font-size: 11px;
   }
   color: #A9A9A9;
@@ -218,5 +233,11 @@ input::placeholder {
   }
   @include _836 {
     width: 40%;
+  }
+  @include _768 {
+    width: 35%;
+  }
+  @include _600 {
+    width: 30%;
   }
 }
