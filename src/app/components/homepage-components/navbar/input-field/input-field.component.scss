@@ -8,15 +8,21 @@
   padding: 0 29px 0 62px;
 }
 
-.logo img {
+.logo {
   @include _1024 {
-    width: 90%;
+    width: 18%;
   }
   @include _836 {
-    width: 80%;
+    width: 20.5%;
   }
   @include _768 {
-    width: 70%;
+    width: 20.8%;
+  }
+  @include _600 {
+    width: 25%;
+  }
+  @include _480 {
+    width: 29%;
   }
   @include _420 {
     display: none;

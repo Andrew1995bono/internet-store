@@ -9,6 +9,9 @@
   }
   @include _600 {
     flex-wrap: wrap;
+    justify-content: center;
+    padding: 16px 0 0;
+    margin: 0 45px;
   }
   display: flex;
   align-items: center;
@@ -34,6 +37,9 @@
   @include _600 {
     font-size: 12px;
   }
+  @include _600 {
+    display: none;
+  }
   font-family: Poppins;
   font-weight: 500;
   font-size: 15px;
@@ -42,11 +48,15 @@
 }
 
 .select-field > div > img {
+  @include _600 {
+    display: none;
+  }
   margin-left: 5px;
 }
 
 .media-select .mat-form-field {
-  @include _1260 {
-    display: none;
+  display: none;
+  @include _600 {
+    display: block;
   }
 }
