@@ -1,9 +1,8 @@
 @import "../../../../mixins";
 
 mat-divider {
-  @include _480 {
-    display: none;
+  @include _420 {
+    margin-top: 5px;
   }
-  padding: 0 45px;
   margin: 0 45px;
 }

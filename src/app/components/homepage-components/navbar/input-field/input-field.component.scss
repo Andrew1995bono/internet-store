@@ -9,8 +9,6 @@
 }
 
 .logo {
-  //margin: 29px 0 26px 17px;
-  //margin: 29px 0 26px 0;
   padding: 29px 0 26px;
 }
 
@@ -213,7 +211,6 @@ input::placeholder {
 .first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-underline {
   display: none;
 }
-
 
 .add-item img {
   @include _1024 {
