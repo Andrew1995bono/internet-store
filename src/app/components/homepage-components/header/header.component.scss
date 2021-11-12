@@ -4,4 +4,6 @@ mat-divider {
   @include _480 {
     display: none;
   }
+  padding: 0 45px;
+  margin: 0 45px;
 }

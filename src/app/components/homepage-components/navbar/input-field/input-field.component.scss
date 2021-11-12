@@ -5,10 +5,13 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 0 29px 0 62px;
 }
 
 .logo {
-  margin: 29px 0 26px 17px;
+  //margin: 29px 0 26px 17px;
+  //margin: 29px 0 26px 0;
+  padding: 29px 0 26px;
 }
 
 .logo img {
@@ -40,6 +43,9 @@
   @include _836 {
     width: 49%;
     height: 35px;
+  }
+  @include _380 {
+    display: none;
   }
   display: flex;
   justify-content: space-between;
@@ -207,6 +213,7 @@ input::placeholder {
 .first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-underline {
   display: none;
 }
+
 
 .add-item img {
   @include _1024 {

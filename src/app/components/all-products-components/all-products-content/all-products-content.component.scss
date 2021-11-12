@@ -3,6 +3,7 @@
   justify-content: space-between;
   padding-top: 81px;
   width: 100%;
+  padding: 64px 45px 0;
 }
 
 app-aside {
@@ -26,7 +27,8 @@ app-aside {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 18px;
+  height: 80px;
+  padding: 0 45px;
 }
 
 .page-control {

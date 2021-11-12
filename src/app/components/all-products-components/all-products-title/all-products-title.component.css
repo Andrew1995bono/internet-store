@@ -12,11 +12,13 @@
   font-size: 32px;
   line-height: 48px;
   color: #151515;
+  padding-left: 45px;
 }
 
 .products-quantity {
   display: flex;
   align-items: center;
+  padding-right: 45px;
 }
 
 .products-quantity p {
