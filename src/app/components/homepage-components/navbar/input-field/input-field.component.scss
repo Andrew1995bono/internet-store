@@ -1,6 +1,9 @@
 @import "../../../../../mixins";
 
 .main-search-bar {
+  @include _420 {
+    justify-content: center;
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -245,5 +248,8 @@ input::placeholder {
   }
   @include _600 {
     width: 30%;
+  }
+  @include _420 {
+    display: none;
   }
 }

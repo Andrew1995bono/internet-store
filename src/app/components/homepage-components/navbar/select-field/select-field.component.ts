@@ -11,7 +11,6 @@ import { NavigationCategories } from '../../../../interfaces/navigation-categori
 export class SelectFieldComponent implements OnInit {
 
   public navCategoriesList: NavigationCategories [] = [
-    { name: 'None', value: 'option' },
     { name: 'Electronics', value: 'option1' },
     { name: 'Food', value: 'option2' },
     { name: 'Clothes', value: 'option3' },
