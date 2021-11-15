@@ -1,9 +1,21 @@
+@import "../../../../mixins";
+
 .sort-input-block {
   height: 71px;
   padding: 16px 0 17px 48.5px;
+  width: 100%;
 }
 
 .sort-input {
+  @include _768 {
+    width: 36%;
+  }
+  @include _600 {
+    width: 46%;
+  }
+  @include _420 {
+    width: 69%;
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,6 +28,12 @@
 }
 
 .sort-input .sort-by {
+  @include _600 {
+    font-size: 13px;
+  }
+  @include _420 {
+    font-size: 12px;
+  }
   font-size: 14px;
   line-height: 19px;
   color: #151515;
@@ -57,6 +75,12 @@
 
 .sort-input .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
 .mat-form-field-infix .mat-form-field-label-wrapper .mat-form-field-label {
+  @include _600 {
+    font-size: 12px;
+  }
+  @include _420 {
+    font-size: 11px;
+  }
   font-family: Poppins;
   font-weight: 600;
   font-size: 13px;
@@ -69,4 +93,16 @@
 .mat-select-arrow {
   color: #151515;
   padding-bottom: 3px;
+}
+
+div #mat-select-4-panel > mat-option {
+  font-family: Open Sans;
+  font-size: 14px;
+  line-height: 19px;
+  color: #151515;
+  height: 30px;
+}
+
+div #mat-select-4-panel {
+  background-color: #B3D58F;
 }
