@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatSelectChange } from '@angular/material/select';
-import { DropdownSelect } from '../../../../interfaces/dropdown-select';
+import { DropDownCategoriesEnumInterface } from '../../../../interfaces/dropdown-select';
+import { SelectByEnum } from '../../../../interfaces/select-by.enum';
 import { FiltersService } from '../../../../services/all-products/filters/filters.service';
 
 @Component({
@@ -12,12 +13,12 @@ import { FiltersService } from '../../../../services/all-products/filters/filter
 
 export class InputFieldComponent implements OnInit {
 
-  public foods: DropdownSelect[] = [
-    { value: 'All categories', viewValue: 'All categories' },
-    { value: 'Fruits', viewValue: 'Fruits' },
-    { value: 'Vegetables', viewValue: 'Vegetables' },
-    { value: 'Berries', viewValue: 'Berries' },
-    { value: 'Nuts', viewValue: 'Nuts' }
+  public foods: DropDownCategoriesEnumInterface[] = [
+    { value: SelectByEnum.AllCategoriesSorting, viewValue: 'All categories' },
+    { value: SelectByEnum.FruitsSorting, viewValue: 'Fruits' },
+    { value: SelectByEnum.VegetablesSorting, viewValue: 'Vegetables' },
+    { value: SelectByEnum.BerriesSorting, viewValue: 'Berries' },
+    { value: SelectByEnum.NutsSorting, viewValue: 'Nuts' }
   ];
 
   constructor(private filtersService: FiltersService) { }
