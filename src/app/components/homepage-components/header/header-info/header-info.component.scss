@@ -98,13 +98,14 @@
 
 // burger button styles
 
-.body {
+.burger {
   @include _420 {
     display: block;
   }
   display: none;
-  width: 25%;
-  height: 100%
+  width: 21%;
+  height: 100%;
+  padding-bottom: 15px;
 }
 
 #sidebarMenu {
@@ -113,8 +114,8 @@
 }
 
 .main-content-wrapper a {
-  width: 100%;
-  height: 15px;
+  font-size: 7px;
+  height: 13px;
   display: block;
   background: #6A983C;
   text-align: center;
@@ -188,5 +189,25 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   }
 }
 
+.logo {
+  @include _420 {
+    display: inline;
+    padding: 0;
+    width: 35%;
+  }
+  display: none;
+}
 
+.cart {
+  @include _420 {
+    display: flex;
+    justify-content: flex-end;
+    width: 10%;
+  }
+  display: none;
+}
+
+.cart img {
+  width: 40%;
+}
 
