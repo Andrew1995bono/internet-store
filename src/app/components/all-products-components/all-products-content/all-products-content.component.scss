@@ -26,6 +26,16 @@ app-aside {
 }
 
 .pagination {
+  @include _600 {
+    height: 70px;
+  }
+  @include _480 {
+    height: 40px;
+    position: relative;
+  }
+  @include _420 {
+    height: 30px;
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,6 +55,9 @@ app-aside {
   @include _768 {
     font-size: 10px;
   }
+  @include _420 {
+    font-size: 9px;
+  }
   font-size: 12px;
   line-height: 16px;
   color: #A9A9A9;
@@ -57,6 +70,9 @@ pagination-controls pagination-template .ngx-pagination li a {
   }
   @include _768 {
     font-size: 10px;
+  }
+  @include _420 {
+    font-size: 9px;
   }
   font-size: 12px;
   line-height: 16px;
@@ -88,6 +104,9 @@ pagination-controls pagination-template .ngx-pagination li.current {
   @include _768 {
     font-size: 10px;
   }
+  @include _420 {
+    font-size: 9px;
+  }
   color: #6A983C;
   background-color: white;
   font-size: 12px;
@@ -105,6 +124,18 @@ pagination-controls pagination-template .ngx-pagination li.current {
   }
   @include _600 {
     padding: 8px 11px;
+  }
+  @include _480 {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  @include _420 {
+    padding: 6px 10px;
+  }
+  @include _380 {
+    padding: 4px 8px;
   }
   display: flex;
   flex-direction: row;
@@ -124,6 +155,9 @@ pagination-controls pagination-template .ngx-pagination li.current {
   }
   @include _600 {
     font-size: 12px;
+  }
+  @include _420 {
+    font-size: 11px;
   }
   background: #6A983C;
   border: none;
@@ -149,7 +183,7 @@ pagination-controls pagination-template .ngx-pagination li.current {
 
 .all-products-quantity p {
   margin: 0;
-  padding: 0 8px;
+  padding: 0 4px;
 }
 
 .all-products-quantity p:first-child {
@@ -158,6 +192,9 @@ pagination-controls pagination-template .ngx-pagination li.current {
   }
   @include _768 {
     font-size: 10px;
+  }
+  @include _420 {
+    font-size: 9px;
   }
   font-family: Poppins;
   font-weight: 600;
@@ -170,6 +207,7 @@ pagination-controls pagination-template .ngx-pagination li.current {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 8px;
 }
 
 .all-products-quantity p:last-child {
@@ -179,8 +217,13 @@ pagination-controls pagination-template .ngx-pagination li.current {
   @include _768 {
     font-size: 10px;
   }
+  @include _420 {
+    font-size: 9px;
+  }
   height: 16px;
   font-size: 12px;
   line-height: 16px;
   color: #A9A9A9;
 }
+
+

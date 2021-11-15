@@ -1,7 +1,18 @@
+@import "../../../../mixins";
+
 .footer {
   display: flex;
   flex-direction: column;
   padding: 81px 45px 78px;
+}
+
+.footer .footer-links .connections, .earnings {
+  @include _600 {
+    margin: 0 15px;
+  }
+  @include _480 {
+    margin: 0 8px;
+  }
 }
 
 .footer-links {
@@ -15,6 +26,21 @@ ul {
 }
 
 ul li {
+  @include _1024 {
+    font-size: 13px;
+  }
+  @include _768 {
+    font-size: 12px;
+  }
+  @include _600 {
+    font-size: 11px;
+  }
+  @include _480 {
+    font-size: 10px;
+  }
+  @include _420 {
+    font-size: 9px;
+  }
   list-style: none;
   font-size: 14px;
   line-height: 19px;
@@ -27,6 +53,22 @@ ul li:last-child {
 }
 
 h2 {
+  @include _1024 {
+    font-size: 17px;
+  }
+  @include _768 {
+    font-size: 16px;
+  }
+  @include _600 {
+    font-size: 15px;
+    white-space: nowrap;
+  }
+  @include _480 {
+    font-size: 14px;
+  }
+  @include _420 {
+    font-size: 12.5px;
+  }
   margin: 0;
   font-family: Poppins;
   font-weight: 600;
@@ -48,26 +90,6 @@ h2 {
 }
 
 .row p {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 4px 10px;
-  background: #F5F5F5;
-  border-radius: 12px;
-  font-family: Poppins;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 18px;
-  color: #151515;
-  margin: 16px 16px 0 0;
-}
-
-.second-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.second-row p {
   display: flex;
   flex-direction: row;
   align-items: center;
