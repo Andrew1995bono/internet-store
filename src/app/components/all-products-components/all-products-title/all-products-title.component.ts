@@ -4,7 +4,7 @@ import { FiltersService } from '../../../services/all-products/filters/filters.s
 @Component({
   selector: 'app-all-products-title',
   templateUrl: './all-products-title.component.html',
-  styleUrls: ['./all-products-title.component.css']
+  styleUrls: ['./all-products-title.component.scss']
 })
 
 export class AllProductsTitleComponent implements OnInit {

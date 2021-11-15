@@ -10,7 +10,7 @@
   @include _600 {
     flex-wrap: wrap;
     justify-content: center;
-    padding: 16px 0 0;
+    padding: 5px 0 0;
     margin: 0 45px;
   }
   @include _420 {
@@ -63,11 +63,14 @@
 }
 
 .media-select .mat-form-field {
-  display: none;
   @include _600 {
     display: block;
-    border: 2px solid #6A983C;
+    border: 1px solid #D1D1D1;
+    width: 80%;
+    border-radius: 12px;
+    padding: 5px;
   }
+  display: none;
 }
 
 .media-select .mat-form-field-wrapper {
@@ -114,4 +117,7 @@ div #mat-select-2-panel > mat-option {
   font-size: 14px;
   line-height: 19px;
   color: #151515;
+  height: 30px;
 }
+
+

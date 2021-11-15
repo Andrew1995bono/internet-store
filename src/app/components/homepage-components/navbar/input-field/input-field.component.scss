@@ -1,9 +1,12 @@
 @import "../../../../../mixins";
 
 .main-search-bar {
+  @include _600 {
+    height: 55px;
+  }
   @include _420 {
     justify-content: center;
-    //padding: 0 45px;
+    height: 40px;
   }
   display: flex;
   justify-content: space-between;
@@ -269,4 +272,16 @@ input::placeholder {
   @include _420 {
     display: none;
   }
+}
+
+div #mat-select-0-panel > mat-option {
+  font-family: Open Sans;
+  font-size: 14px;
+  line-height: 19px;
+  color: #151515;
+  height: 30px;
+}
+
+div #mat-select-0-panel {
+  background-color: #B3D58F;
 }

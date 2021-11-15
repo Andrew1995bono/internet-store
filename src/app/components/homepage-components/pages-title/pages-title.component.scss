@@ -1,4 +1,12 @@
+@import "../../../../mixins";
+
 .page-title {
+  @include _600 {
+    height: 30px;
+  }
+  @include _420 {
+    height: 20px;
+  }
   height: 48px;
   background: #FDFDFD;
   display: flex;
@@ -6,6 +14,9 @@
 }
 
 .page-title a {
+  @include _600 {
+    font-size: 10px;
+  }
   text-decoration: none;
   font-size: 12px;
   line-height: 16px;
