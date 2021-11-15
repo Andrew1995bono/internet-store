@@ -2,10 +2,24 @@
   display: flex;
   justify-content: space-between;
   padding-top: 81px;
+  width: 100%;
 }
 
 app-aside {
   margin-right: 32px;
+  width: 23%;
+}
+
+.wrapper-content .main {
+  width: 77%;
+}
+
+.card {
+  width: 77%;
+}
+
+.wrapper-content .ng-star-inserted {
+  width: 100%;
 }
 
 .pagination {
@@ -34,17 +48,14 @@ pagination-controls pagination-template .ngx-pagination li a {
   padding: 0 3px;
 }
 
-
 pagination-controls pagination-template .ngx-pagination li.pagination-previous.disabled {
   padding: 0;
   margin: 0;
 }
 
-
 pagination-controls pagination-template ul.ngx-pagination {
   padding-left: 0;
 }
-
 
 pagination-controls pagination-template {
   .ngx-pagination li.pagination-previous a, .ngx-pagination li.pagination-previous.disabled::before,
@@ -62,7 +73,6 @@ pagination-controls pagination-template .ngx-pagination li.current {
   margin-right: 0;
 }
 
-
 .show-more-products {
   display: flex;
   flex-direction: row;
@@ -72,7 +82,6 @@ pagination-controls pagination-template .ngx-pagination li.current {
   border: 2px solid #46760A;
   border-radius: 12px;
 }
-
 
 .show-more-products button {
   background: #6A983C;
@@ -97,9 +106,9 @@ pagination-controls pagination-template .ngx-pagination li.current {
   align-items: center;
 }
 
-
 .all-products-quantity p {
   margin: 0;
+  padding: 0 8px;
 }
 
 .all-products-quantity p:first-child {
@@ -110,7 +119,6 @@ pagination-controls pagination-template .ngx-pagination li.current {
   color: #6A983C;
   background: #F4F8EC;
   height: 14px;
-  width: 32px;
   border-radius: 10px;
   display: flex;
   align-items: center;

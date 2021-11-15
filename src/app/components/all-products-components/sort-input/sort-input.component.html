@@ -1,14 +1,18 @@
 <div class="sort-input">
-    <div class="first-label">
-      <div>Sort by</div>
-    </div>
-    <div class="vertical-line">
-      <img src="../../assets/vertical-line.png" alt="vertical-line">
-    </div>
-    <div class="second-label">
-      <div>Select</div>
-    </div>
-    <div class="arrow-down">
-      <img src="../../assets/arrow-down-black.png" alt="arrow-down">
-    </div>
+  <div class="sort-by">
+    <div>Sort by</div>
+  </div>
+  <div class="vertical-line">
+    <img src="../../assets/vertical-line.png" alt="vertical-line">
+  </div>
+  <div class="sort-select">
+    <mat-form-field appearance="fill">
+      <mat-label>Select</mat-label>
+      <mat-select (selectionChange)="getSortByValue($event)">
+        <mat-option *ngFor="let category of categories" [value]="category.value">
+          {{category.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
 </div>

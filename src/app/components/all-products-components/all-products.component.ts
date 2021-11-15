@@ -14,13 +14,17 @@ export class AllProductsComponent implements OnInit {
   public products: ProductCard[] = [];
   public productsQuantity: number;
 
-  constructor(private allProductService: AllProductsService, private filtersService: FiltersService) { }
+  constructor(
+    private allProductService: AllProductsService,
+    private filtersService: FiltersService
+  ) { }
 
   ngOnInit(): void {
     this.allProductService.getProducts().subscribe(data => {
       this.products = data;
-      this.productsQuantity = data.length;
+      this.filtersService.filteredProductsQuantity.next(data.length);
       this.filtersService.products.next(data);
+      this.productsQuantity = data.length;
     });
   }
 

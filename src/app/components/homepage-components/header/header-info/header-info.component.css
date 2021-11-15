@@ -25,14 +25,20 @@
 
 .left-navbar a {
   color: #151515;
-  margin-right: 33px;
 }
 
 .left-navbar a:first-child {
   color: #6A983C;
 }
 
+.left-navbar a.phone {
+  padding: 0 33px;
+}
+
 .right-navbar a {
   color: #6A983C;
-  margin-left: 38px;
+}
+
+.right-navbar a.about-us {
+  padding: 0 38px;
 }

@@ -1,7 +1,11 @@
 <div class="slider-filter">
   <h2>Price</h2>
   <div class="slider">
-    <ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="options"></ngx-slider>
+    <ngx-slider [(value)]="value"
+                [(highValue)]="highValue"
+                [options]="options"
+                (userChange)="getSliderValue($event)">
+    </ngx-slider>
   </div>
   <div>
     <div class="values">
@@ -18,7 +22,7 @@
       </div>
     </div>
     <div class="reset-button">
-      <button (click)="resetSliderValue($event)">Reset</button>
+      <button (click)="resetSliderValue()">Reset</button>
     </div>
   </div>
 </div>

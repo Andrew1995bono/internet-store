@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 import { FiltersService } from '../../../services/all-products/filters/filters.service';
 
 @Component({
@@ -10,16 +9,17 @@ import { FiltersService } from '../../../services/all-products/filters/filters.s
 
 export class AllProductsTitleComponent implements OnInit {
 
-  public itemsPerPage: BehaviorSubject<number>;
+  public filteredProductsQuantity: number;
+
 
   constructor(private filtersService: FiltersService) { }
 
   ngOnInit(): void {
-    this.getItemsPerPage();
+    this.filtersService.filteredProductsQuantity.subscribe(data => {
+      this.filteredProductsQuantity = data;
+      // debugger
+    });
   }
 
-  private getItemsPerPage(): void {
-    this.itemsPerPage = this.filtersService.itemsPerPage;
-  }
 
 }
