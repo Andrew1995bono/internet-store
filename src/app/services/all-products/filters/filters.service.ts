@@ -4,6 +4,7 @@ import { MatCheckboxChange } from '@angular/material/checkbox';
 import { MatSelectChange } from '@angular/material/select';
 import { BehaviorSubject } from 'rxjs';
 import { ProductCard } from '../../../interfaces/product-card';
+import { SelectByEnum } from '../../../interfaces/select-by.enum';
 import { SortByEnum } from '../../../interfaces/sort-by.enum';
 
 
@@ -20,11 +21,10 @@ export class FiltersService {
   public p: number = 3;
   private farmValue: string[] = [];
   private rateValue: number[] = [];
-  private categoryValue: string[] = [];
+  private categoryValue: number = SelectByEnum.AllCategoriesSorting;
   private sortValue: number = SortByEnum.DefaultSorting;
   private filteredByFarmItems: ProductCard[] = [];
   private filteredByRateItems: ProductCard[] = [];
-  private filteredByCategoryItems: ProductCard[] = [];
   public minPrice: number = 0;
   public highPrice: number = 100;
 
@@ -43,11 +43,7 @@ export class FiltersService {
   }
 
   public getCategoryValue(event: MatSelectChange): void {
-    this.categoryValue = [];
-    this.categoryValue.push(event.value);
-    if (this.categoryValue.length > 1) {
-      this.categoryValue.shift();
-    }
+    this.categoryValue = event.source?.value;
     this.allProducts.next(this.filter(event));
   }
 
@@ -62,7 +58,7 @@ export class FiltersService {
 
   public filter(event: any): ProductCard[] {
     const filteredByRate = this.filterByRate(event, this.products.value);
-    const filteredByCategory = this.filterByCategory(event, filteredByRate);
+    const filteredByCategory = this.filterByCategory(filteredByRate);
     const filteredByFarm = this.filterByFarm(event, filteredByCategory);
     const filteredByPrice = this.filterByPrice(filteredByFarm);
     return this.sortBy(filteredByPrice);
@@ -107,26 +103,15 @@ export class FiltersService {
     return [new ProductCard()];
   }
 
-  private filterByCategory(event: MatSelectChange, productsArr: ProductCard[]): ProductCard[] {
-    if (event.source?.value === 'All categories') {
-      this.categoryValue.push('Fruits', 'Vegetables', 'Berries', 'Nuts');
-      return productsArr;
-    } else if (event.source?.selected) {
-      if (!this.categoryValue.length) {
-        return productsArr;
-      }
-      return productsArr.filter((item: ProductCard) => this.categoryValue.includes(item.category));
-    } else if (!event.source?.selected) {
-      this.categoryValue = this.categoryValue.filter((item: string) => item !== event.source?.id);
-      return productsArr.filter((item: ProductCard) => {
-        if (this.categoryValue.includes(item.category)) {
-          return true;
-        } else if (this.categoryValue.length === 0) {
-          return this.filteredByCategoryItems;
-        }
-      });
-    }
-    return [new ProductCard()];
+  private filterByCategory(productsArr: ProductCard[]): ProductCard[] {
+    const selectAction: { [key: string]: () => ProductCard[] } = {
+      [SelectByEnum.FruitsSorting]: () => productsArr.filter((item: ProductCard) => item.category === 'Fruits'),
+      [SelectByEnum.VegetablesSorting]: () => productsArr.filter((item: ProductCard) => item.category === 'Vegetables'),
+      [SelectByEnum.BerriesSorting]: () => productsArr.filter((item: ProductCard) => item.category === 'Berries'),
+      [SelectByEnum.NutsSorting]: () => productsArr.filter((item: ProductCard) => item.category === 'Nuts'),
+      [SelectByEnum.AllCategoriesSorting]: () => productsArr
+    };
+    return selectAction[this.categoryValue]();
   }
 
   private checkTypeOfValue(event: MatSelectChange): void {
