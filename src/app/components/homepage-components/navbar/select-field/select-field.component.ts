@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 
 export class SelectFieldComponent implements OnInit {
 
-  public navList = ['Electronics', 'Food', 'Clothes', 'Skin and care', 'Toys', 'Special nutrition', 'Sports and outdoors', 'Books'];
-  public arrowDown = '../../assets/arrow-down.png';
+  public navList: string[] = ['Electronics', 'Food', 'Clothes', 'Skin and care', 'Toys', 'Special nutrition', 'Sports and outdoors', 'Books'];
+  public arrowDown: string = '../../assets/arrow-down.png';
 
   constructor() { }
 

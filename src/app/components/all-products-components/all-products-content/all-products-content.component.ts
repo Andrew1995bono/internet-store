@@ -1,5 +1,6 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
-import { MatCheckboxChange } from '@angular/material/checkbox';
+import { Component, Input, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 import { ProductCard } from '../../../interfaces/product-card';
 import { FiltersService } from '../../../services/all-products/filters/filters.service';
 
@@ -10,6 +11,7 @@ import { FiltersService } from '../../../services/all-products/filters/filters.s
   styleUrls: ['./all-products-content.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
+<<<<<<< HEAD
 export class AllProductsContentComponent implements OnInit {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21,14 +23,22 @@ export class AllProductsContentComponent implements OnInit {
 
 >>>>>>> product-rating
   @Input() products: ProductCard[] = [];
-  @Input() productsQuantity: number;
-  public p: number = 3;
-  public itemsPerPage: number = 5;
-  private farmValue: string[] = [];
-  private rateValue: number[] = [];
-  private filteredByFarmItems: ProductCard[] = [];
-  private filteredByRateItems: ProductCard[] = [];
+=======
+export class AllProductsContentComponent implements OnInit, OnDestroy {
 
+  @Input() set products(products: ProductCard[]) {
+    this.originProducts = products;
+    this.filteredProducts = products;
+  };
+
+>>>>>>> select-filters
+  @Input() productsQuantity: number;
+
+  public originProducts: ProductCard[];
+  public filteredProducts: ProductCard[];
+  public p: number = this.filtersService.p;
+  public itemsPerPage: number = 5;
+  private unsubscribe$ = new Subject();
 
 <<<<<<< HEAD
 >>>>>>> footer
@@ -40,38 +50,12 @@ export class AllProductsContentComponent implements OnInit {
   constructor(private filtersService: FiltersService) {}
 
   ngOnInit(): void {
-    this.sendItemsPerPage();
-  }
-
-  private sendItemsPerPage(): void {
-    this.filtersService.itemsPerPage.next(this.itemsPerPage);
-  }
-
-  public getFarmValue(event: MatCheckboxChange): void {
-    this.farmValue.push(event.source.value);
-    this.products = this.filter(event);
-  }
-
-  public getRateValue(event: MatCheckboxChange): void {
-    this.rateValue.push(+event.source.value);
-    this.products = this.filter(event);
-  }
-
-  private filter(event: MatCheckboxChange): ProductCard[] {
-    const sortedByRate = this.sortByRate(event, this.filtersService.products.value);
-    return this.sortByFarm(event, sortedByRate);
-  }
-
-
-  private sortByFarm(event: MatCheckboxChange, productsArr: ProductCard[]): ProductCard[] {
-    if (event.checked) {
-      if (!this.farmValue.length) {
-        return productsArr;
-      }
+    this.filtersService.allProducts.pipe(
+      takeUntil(this.unsubscribe$)
+    ).subscribe(data => {
+      this.filteredProducts = data;
       this.p = 1;
-      return productsArr.filter((item: ProductCard) => this.farmValue.includes(item.farm));
-    } else if (!event.checked) {
-      this.p = 1;
+<<<<<<< HEAD
       this.farmValue = this.farmValue.filter((item: string) => item !== event.source.value);
 
       return productsArr.filter((item: ProductCard) => {
@@ -106,13 +90,20 @@ export class AllProductsContentComponent implements OnInit {
       return this.filteredByRateItems;
     }
     return [new ProductCard()];
+=======
+    });
+>>>>>>> select-filters
   }
 
   public showMoreProducts($event: MouseEvent): void {
     $event.preventDefault();
     this.itemsPerPage += 5;
-    this.filtersService.itemsPerPage.next(this.itemsPerPage);
-    this.p = 1;
   }
+
+  public ngOnDestroy() {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
+  }
+
 }
 

@@ -1,7 +1,8 @@
 <div class="wrapper-content">
-  <app-aside (farmValue)="getFarmValue($event)" (rateValue)="getRateValue($event)"></app-aside>
-  <div fxLayout="column" fxLayoutAlign="start start">
-    <div *ngFor="let product of products | paginate: { itemsPerPage: itemsPerPage, currentPage: p } ">
+  <app-aside></app-aside>
+  <div class="main" fxLayout="column" fxLayoutAlign="start start">
+    <div class="card"
+         *ngFor="let product of filteredProducts | paginate: { itemsPerPage: itemsPerPage, currentPage: p}">
       <app-product-card [productData]="product"></app-product-card>
     </div>
   </div>
