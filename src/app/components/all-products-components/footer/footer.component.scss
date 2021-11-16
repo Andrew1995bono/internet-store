@@ -13,6 +13,9 @@
   @include _480 {
     margin: 0 8px;
   }
+  @include _480 {
+    margin: 0 6px;
+  }
 }
 
 .footer-links {
@@ -40,6 +43,9 @@ ul li {
   }
   @include _420 {
     font-size: 9px;
+  }
+  @include _380 {
+    font-size: 8px;
   }
   list-style: none;
   font-size: 14px;
@@ -69,6 +75,9 @@ h2 {
   @include _420 {
     font-size: 12.5px;
   }
+  @include _380 {
+    font-size: 11px;
+  }
   margin: 0;
   font-family: Poppins;
   font-weight: 600;
@@ -90,6 +99,24 @@ h2 {
 }
 
 .row p {
+  @include _768 {
+    font-size: 11px;
+    padding: 3px 9px;
+  }
+  @include _600 {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+  @include _480 {
+    font-size: 9px;
+    padding: 2px 7px;
+  }
+  @include _420 {
+    font-size: 8px;
+  }
+  @include _380 {
+    font-size: 7px;
+  }
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -110,6 +137,21 @@ h2 {
 }
 
 .footer-copyright p {
+  @include _768 {
+    font-size: 13px;
+  }
+  @include _600 {
+    font-size: 12px;
+  }
+  @include _480 {
+    font-size: 11px;
+  }
+  @include _420 {
+    font-size: 10px;
+  }
+  @include _380 {
+    font-size: 9px;
+  }
   font-size: 14px;
   line-height: 19px;
   color: #151515;
