@@ -34,6 +34,12 @@
   }
 }
 
+@mixin _970 {
+  @media (max-width: 970px) {
+    @content;
+  }
+}
+
 @mixin _836 {
   @media (max-width: 836px) {
     @content;
@@ -48,6 +54,12 @@
 
 @mixin _600 {
   @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin _625 {
+  @media (max-width: 625px) {
     @content;
   }
 }

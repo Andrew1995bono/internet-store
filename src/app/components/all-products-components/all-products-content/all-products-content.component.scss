@@ -2,6 +2,9 @@
 
 
 .wrapper-content {
+  @include _970 {
+    justify-content: center;
+  }
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -9,6 +12,9 @@
 }
 
 app-aside {
+  @include _970 {
+    display: none;
+  }
   margin-right: 32px;
   width: 23%;
 }

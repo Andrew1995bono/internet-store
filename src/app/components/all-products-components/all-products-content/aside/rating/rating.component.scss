@@ -12,12 +12,6 @@
   @include _1024 {
     font-size: 17px;
   }
-  @include _836 {
-    font-size: 16px;
-  }
-  @include _768 {
-    font-size: 15px;
-  }
   margin: 0;
   height: 27px;
   font-family: Poppins;
@@ -56,14 +50,6 @@ mat-checkbox ::ng-deep .mat-checkbox-inner-container {
   @include _1024 {
     width: 19px;
     height: 19px;
-  }
-  @include _836 {
-    width: 18px;
-    height: 18px;
-  }
-  @include _768 {
-    width: 17px;
-    height: 17px;
   }
   width: 20px;
   height: 20px;

@@ -9,12 +9,6 @@
   @include _1024 {
     font-size: 17px;
   }
-  @include _836 {
-    font-size: 16px;
-  }
-  @include _768 {
-    font-size: 15px;
-  }
   margin: 0;
   height: 27px;
   font-family: Poppins;
@@ -31,12 +25,6 @@
 .farms-filters div {
   @include _1024 {
     font-size: 13px;
-  }
-  @include _836 {
-    font-size: 12px;
-  }
-  @include _768 {
-    font-size: 11px;
   }
   display: flex;
   align-items: center;
@@ -63,14 +51,6 @@ mat-checkbox {
   @include _1024 {
     width: 19px;
     height: 19px;
-  }
-  @include _836 {
-    width: 18px;
-    height: 18px;
-  }
-  @include _768 {
-    width: 17px;
-    height: 17px;
   }
   width: 20px;
   height: 20px;

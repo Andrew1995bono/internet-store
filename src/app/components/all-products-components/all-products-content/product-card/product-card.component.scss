@@ -11,9 +11,6 @@
 }
 
 .item-image {
-  @include _1024 {
-    width: 37%;
-  }
   width: 30.97%;
 }
 
@@ -37,9 +34,6 @@
 }
 
 .item-description h2 {
-  @include _1024 {
-    font-size: 17px;
-  }
   margin: 0;
   font-family: Poppins;
   font-weight: 600;
@@ -49,9 +43,6 @@
 }
 
 .item-description h4 {
-  @include _1024 {
-    font-size: 11px;
-  }
   font-weight: normal;
   font-size: 12px;
   line-height: 16px;
@@ -65,13 +56,6 @@
   width: 65%;
 }
 
-.rate-star img {
-  @include _1024 {
-    width: 80%;
-    height: 67.7%;
-  }
-}
-
 .rate-star div {
   margin-right: 5px;
 }
@@ -81,9 +65,6 @@
 }
 
 .characteristics {
-  @include _1024 {
-    width: 100%;
-  }
   display: flex;
   justify-content: space-between;
   margin-top: 27px;
@@ -91,8 +72,8 @@
 }
 
 .characteristic-property div {
-  @include _1024 {
-    font-size: 13px;
+  @include _1125 {
+    padding-right: 10px;
   }
   height: 19px;
   font-size: 14px;
@@ -106,8 +87,7 @@
 }
 
 .characteristic-value div {
-  @include _1024 {
-    font-size: 13px;
+  @include _1125 {
     white-space: nowrap;
   }
   height: 19px;
@@ -127,9 +107,6 @@
 }
 
 .item-detail-title h2 {
-  @include _1024 {
-    font-size: 17px;
-  }
   margin: 0;
   height: 27px;
   font-family: Poppins;
@@ -140,9 +117,6 @@
 }
 
 .item-detail-title h4 {
-  @include _1024 {
-    font-size: 11px;
-  }
   margin: 0;
   height: 18px;
   font-family: Poppins;
@@ -154,9 +128,6 @@
 }
 
 .item-detail-title > p {
-  @include _1024 {
-    font-size: 11px;
-  }
   height: 18px;
   font-family: Poppins;
   font-weight: 600;
@@ -167,9 +138,6 @@
 }
 
 .item-detail-title > p:last-child {
-  @include _1024 {
-    font-size: 11px;
-  }
   margin-top: 0;
   height: 16px;
   font-weight: normal;
@@ -185,9 +153,6 @@
 }
 
 .product-detail {
-  @include _1024 {
-    padding: 10px 14px;
-  }
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -198,9 +163,6 @@
 }
 
 .product-detail button {
-  @include _1024 {
-    font-size: 13px;
-  }
   background: #6A983C;
   border: none;
   font-family: Poppins;
@@ -225,9 +187,6 @@
 }
 
 .wishlist button {
-  @include _1024 {
-    font-size: 14px;
-  }
   font-family: Poppins;
   font-weight: bold;
   font-size: 15px;

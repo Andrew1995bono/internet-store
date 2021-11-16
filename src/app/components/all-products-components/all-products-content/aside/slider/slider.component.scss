@@ -13,12 +13,6 @@
   @include _1024 {
     font-size: 17px;
   }
-  @include _836 {
-    font-size: 16px;
-  }
-  @include _768 {
-    font-size: 15px;
-  }
   margin: 0;
   height: 27px;
   font-family: Poppins;
@@ -51,9 +45,6 @@ ngx-slider {
   @include _1024 {
     font-size: 11px;
   }
-  @include _768 {
-    font-size: 10px;
-  }
   margin: 0;
   height: 18px;
   font-family: Poppins;
@@ -67,14 +58,6 @@ ngx-slider {
   @include _1024 {
     height: 38px;
     font-size: 12px;
-  }
-  @include _836 {
-    height: 34px;
-    font-size: 11px;
-  }
-  @include _768 {
-    height: 30px;
-    font-size: 10px;
   }
   background: #F9F9F9;
   border: 1px solid #D1D1D1;
@@ -101,9 +84,6 @@ ngx-slider {
   @include _1024 {
     font-size: 11px;
   }
-  @include _768 {
-    font-size: 10px;
-  }
   margin: 0;
   height: 18px;
   font-family: Poppins;
@@ -117,14 +97,6 @@ ngx-slider {
   @include _1024 {
     height: 38px;
     font-size: 12px;
-  }
-  @include _836 {
-    height: 34px;
-    font-size: 11px;
-  }
-  @include _768 {
-    height: 30px;
-    font-size: 10px;
   }
   background: #F9F9F9;
   border: 1px solid #D1D1D1;
@@ -149,12 +121,6 @@ ngx-slider {
 .reset-button button {
   @include _1024 {
     font-size: 11px;
-  }
-  @include _836 {
-    font-size: 10px;
-  }
-  @include _768 {
-    font-size: 9px;
   }
   font-family: Poppins;
   font-size: 12px;
