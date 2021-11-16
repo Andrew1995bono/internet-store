@@ -12,6 +12,9 @@
   @include _836 {
     font-size: 16px;
   }
+  @include _768 {
+    font-size: 15px;
+  }
   margin: 0;
   height: 27px;
   font-family: Poppins;
@@ -39,6 +42,9 @@
   @include _836 {
     font-size: 12px;
   }
+  @include _768 {
+    font-size: 11px;
+  }
   margin-bottom: 12px;
   height: 19px;
   font-size: 14px;
@@ -61,6 +67,9 @@
   }
   @include _836 {
     font-size: 10px;
+  }
+  @include _768 {
+    font-size: 9px;
   }
   margin-bottom: 12px;
   font-family: Poppins;

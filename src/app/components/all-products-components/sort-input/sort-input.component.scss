@@ -7,19 +7,25 @@
 }
 
 .sort-input {
+  @include _1024 {
+    width: 28%;
+  }
+  @include _836 {
+    width: 34%;
+  }
   @include _768 {
-    width: 36%;
+    width: 37.5%;
   }
   @include _600 {
-    width: 46%;
+    width: 49%;
   }
   @include _420 {
-    width: 69%;
+    width: 73%;
   }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 22%;
+  width: 21%;
   height: 38px;
   background: #F9F9F9;
   border: 1px solid #D1D1D1;
@@ -28,12 +34,6 @@
 }
 
 .sort-input .sort-by {
-  @include _600 {
-    font-size: 13px;
-  }
-  @include _420 {
-    font-size: 12px;
-  }
   font-size: 14px;
   line-height: 19px;
   color: #151515;
@@ -75,15 +75,9 @@
 
 .sort-input .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
 .mat-form-field-infix .mat-form-field-label-wrapper .mat-form-field-label {
-  @include _600 {
-    font-size: 12px;
-  }
-  @include _420 {
-    font-size: 11px;
-  }
   font-family: Poppins;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 18px;
   color: #151515;
 }

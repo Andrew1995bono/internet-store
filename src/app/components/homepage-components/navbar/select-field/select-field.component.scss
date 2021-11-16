@@ -4,11 +4,7 @@
   @include _1024 {
     flex-wrap: wrap;
   }
-  @include _836 {
-    flex-wrap: wrap;
-  }
   @include _600 {
-    flex-wrap: wrap;
     justify-content: center;
     padding: 5px 0 0;
     margin: 0 45px;
@@ -34,12 +30,6 @@
 .select-field > div > div {
   @include _1024 {
     font-size: 14px;
-  }
-  @include _836 {
-    font-size: 13px;
-  }
-  @include _600 {
-    font-size: 12px;
   }
   @include _600 {
     display: none;
@@ -123,15 +113,11 @@ div #mat-select-2-panel > mat-option {
 .select-field .mat-select-min-line {
   @include _600 {
     font-family: "Open Sans";
-    font-size: 15px;
-  }
-  @include _480 {
-    font-size: 14px;
   }
   @include _420 {
-    font-size: 13px;
+    font-size: 15px;
   }
   @include _380 {
-    font-size: 12px;
+    font-size: 14px;
   }
 }

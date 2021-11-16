@@ -51,24 +51,25 @@
     width: 50.6%;
   }
   @include _1024 {
-    width: 45.6%;
-    height: 36px;
+    width: 47.6%;
   }
   @include _836 {
-    width: 49%;
+    width: 60%;
   }
   @include _768 {
-    width: 40%;
+    width: 65%;
   }
   @include _600 {
-    width: 40%;
+    width: 60%;
     padding-right: 16px;
   }
   @include _420 {
-    width: 66%;
+    height: 35px;
+    width: 65%;
+    padding: 0 10px;
   }
   @include _380 {
-    padding: 0 12px;
+    width: 67%;
   }
   display: flex;
   justify-content: space-between;
@@ -129,18 +130,6 @@
 }
 
 input::placeholder {
-  @include _1024 {
-    font-size: 12px;
-  }
-  @include _836 {
-    font-size: 11px;
-  }
-  @include _768 {
-    font-size: 11px;
-  }
-  @include _420 {
-    font-size: 10px;
-  }
   color: #A9A9A9;
   opacity: 0.6;
   font-family: Open Sans;
@@ -163,23 +152,16 @@ input::placeholder {
     height: 30px;
   }
   @include _420 {
-    //padding-bottom: 4px;
     height: 25px;
   }
   width: 100%;
 }
 
 .first-label .mat-form-field-wrapper {
-  @include _1024 {
-    height: 25px;
-  }
   padding: 0;
 }
 
 .first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex {
-  @include _1024 {
-    height: 25px;
-  }
   padding: 0;
   background-color: #F9F9F9;
 }
@@ -201,7 +183,7 @@ input::placeholder {
 .mat-form-field-infix .mat-form-field-label-wrapper {
   @include _1024 {
     padding-top: 0;
-    height: 27px;
+    height: 30px;
   }
 }
 
@@ -209,7 +191,7 @@ input::placeholder {
 .first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
 .mat-form-field-infix .mat-select .mat-select-trigger .mat-select-arrow-wrapper {
   @include _1024 {
-    padding-top: 11px;
+    padding-top: 13px;
   }
   @include _420 {
     padding-top: 7px;
@@ -225,12 +207,6 @@ input::placeholder {
 
 .first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
 .mat-form-field-infix .mat-form-field-label-wrapper .mat-form-field-label {
-  @include _1024 {
-    font-size: 13px;
-  }
-  @include _836 {
-    font-size: 11px;
-  }
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;

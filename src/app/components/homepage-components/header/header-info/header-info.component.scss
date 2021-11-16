@@ -4,11 +4,11 @@
   @include _600 {
     height: 38px;
   }
-  @include _480 {
-    height: 30px;
+  @include _535 {
+    justify-content: center;
   }
   @include _420 {
-    height: 25px;
+    justify-content: space-between;
   }
   margin: 0;
   padding: 16px 45px;
@@ -26,27 +26,15 @@
 }
 
 .right-navbar {
-  @include _420 {
+  @include _535 {
     display: none;
   }
   display: flex;
 }
 
 .navbar a {
-  @include _1024 {
-    font-size: 11px;
-  }
-  @include _836 {
-    font-size: 10px;
-  }
-  @include _768 {
-    font-size: 9px;
-  }
   @include _600 {
-    font-size: 8px;
-  }
-  @include _480 {
-    font-size: 8px;
+    font-size: 11px;
   }
   text-decoration: none;
   height: 16px;
@@ -64,16 +52,10 @@
 
 .left-navbar a.phone {
   @include _768 {
-    padding: 0 15px;
+    padding: 0 20px;
   }
   @include _600 {
     padding: 0 12px;
-  }
-  @include _480 {
-    padding: 0 10px;
-  }
-  @include _420 {
-    padding: 0 6px;
   }
   padding: 0 33px;
 }
@@ -84,13 +66,10 @@
 
 .right-navbar a.about-us {
   @include _768 {
-    padding: 0 15px;
+    padding: 0 20px;
   }
   @include _600 {
     padding: 0 12px;
-  }
-  @include _480 {
-    padding: 0 10px;
   }
   padding: 0 33px;
 }
