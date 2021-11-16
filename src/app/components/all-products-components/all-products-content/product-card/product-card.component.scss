@@ -1,3 +1,5 @@
+@import "../../../../../mixins";
+
 .product-item {
   display: flex;
   justify-content: space-between;
@@ -9,6 +11,9 @@
 }
 
 .item-image {
+  //@include _1024 {
+  //  width: 40%;
+  //}
   width: 30.97%;
 }
 
@@ -70,6 +75,9 @@
 }
 
 .characteristic-property div {
+  //@include _1024 {
+  //  font-size: 13px;
+  //}
   height: 19px;
   font-size: 14px;
   line-height: 19px;
@@ -82,6 +90,10 @@
 }
 
 .characteristic-value div {
+  //@include _1024 {
+  //  font-size: 13px;
+  //  white-space: nowrap;
+  //}
   height: 19px;
   font-size: 14px;
   line-height: 19px;
