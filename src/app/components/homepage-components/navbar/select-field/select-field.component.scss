@@ -120,4 +120,18 @@ div #mat-select-2-panel > mat-option {
   height: 30px;
 }
 
-
+.select-field .mat-select-min-line {
+  @include _600 {
+    font-family: "Open Sans";
+    font-size: 15px;
+  }
+  @include _480 {
+    font-size: 14px;
+  }
+  @include _420 {
+    font-size: 13px;
+  }
+  @include _380 {
+    font-size: 12px;
+  }
+}

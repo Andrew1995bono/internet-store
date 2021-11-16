@@ -66,8 +66,9 @@
   }
   @include _420 {
     width: 66%;
-    height: 30px;
-    padding: 0 8px;
+  }
+  @include _380 {
+    padding: 0 12px;
   }
   display: flex;
   justify-content: space-between;
@@ -162,7 +163,7 @@ input::placeholder {
     height: 30px;
   }
   @include _420 {
-    padding-bottom: 4px;
+    //padding-bottom: 4px;
     height: 25px;
   }
   width: 100%;
@@ -206,26 +207,12 @@ input::placeholder {
 
 
 .first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
-.mat-form-field-infix .mat-select .mat-select-trigger .mat-select-value {
-  padding-bottom: 20px;
-}
-
-.first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
-.mat-form-field-infix .mat-select .mat-select-trigger {
-  @include _1024 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-
-.first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
 .mat-form-field-infix .mat-select .mat-select-trigger .mat-select-arrow-wrapper {
   @include _1024 {
-    padding-bottom: 11px;
+    padding-top: 11px;
   }
-  @include _836 {
-    padding-bottom: 12px;
+  @include _420 {
+    padding-top: 7px;
   }
   padding-top: 5px;
 }
