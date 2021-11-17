@@ -1,5 +1,20 @@
 <div class="wrapper-content">
   <app-aside></app-aside>
+  <mat-drawer-container class="example-container" autosize [class.example-container]="toggleContainer">
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <app-categories></app-categories>
+      <app-farms></app-farms>
+      <app-rating></app-rating>
+      <app-slider></app-slider>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle(); toggleClass()">
+        Filters
+      </button>
+    </div>
+
+  </mat-drawer-container>
   <div class="main" fxLayout="column" fxLayoutAlign="start start">
     <div class="card"
          *ngFor="let product of filteredProducts | paginate: { itemsPerPage: itemsPerPage, currentPage: p}">

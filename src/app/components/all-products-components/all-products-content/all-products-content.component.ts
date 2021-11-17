@@ -25,6 +25,8 @@ export class AllProductsContentComponent implements OnInit, OnDestroy {
   public p: number = this.filtersService.p;
   public itemsPerPage: number = 5;
   private unsubscribe$ = new Subject();
+  public showFiller: boolean = false;
+  public toggleContainer: boolean = false;
 
   constructor(private filtersService: FiltersService) {}
 
@@ -47,5 +49,8 @@ export class AllProductsContentComponent implements OnInit, OnDestroy {
     this.unsubscribe$.complete();
   }
 
+  public toggleClass() {
+    this.toggleContainer = true;
+  }
 }
 

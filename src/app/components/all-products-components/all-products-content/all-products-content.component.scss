@@ -3,7 +3,7 @@
 
 .wrapper-content {
   @include _970 {
-    justify-content: center;
+    justify-content: flex-start;
   }
   display: flex;
   justify-content: space-between;
@@ -19,13 +19,17 @@ app-aside {
   width: 23%;
 }
 
-.wrapper-content .main {
-  width: 77%;
+.wrapper-content mat-drawer-container {
+  @include _970 {
+    display: block;
+  }
+  display: none;
 }
 
-.card {
-  width: 77%;
-}
+//
+//.card {
+//  width: 77%;
+//}
 
 .wrapper-content .ng-star-inserted {
   width: 100%;
@@ -196,4 +200,35 @@ pagination-controls pagination-template .ngx-pagination li.current {
   color: #A9A9A9;
 }
 
+.wrapper-content .main {
+  @include _970 {
+    width: 92%;
+  }
+}
 
+.wrapper-content button.mat-focus-indicator {
+  background: #6A983C;
+  border: 1px solid #46760A;
+  border-radius: 12px;
+  font-family: Poppins;
+  font-size: 15px;
+  line-height: 22px;
+  color: #FFFFFF;
+  padding: 4px 12px;
+}
+
+.wrapper-content mat-drawer-container {
+  margin-right: 15px;
+}
+
+.wrapper-content .mat-drawer-side {
+  border: none;
+}
+
+.example-container {
+  width: 25%;
+}
+
+.product-card {
+
+}

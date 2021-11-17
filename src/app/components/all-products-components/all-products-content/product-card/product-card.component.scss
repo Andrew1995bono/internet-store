@@ -1,6 +1,9 @@
 @import "../../../../../mixins";
 
 .product-item {
+  @include _836 {
+    flex-direction: column;
+  }
   display: flex;
   justify-content: space-between;
   height: 280px;
@@ -11,6 +14,10 @@
 }
 
 .item-image {
+  @include _836 {
+    width: 100%;
+    height: 60%;
+  }
   width: 30.97%;
 }
 
@@ -23,6 +30,12 @@
 }
 
 .item-info {
+  @include _836 {
+    width: 100%;
+    padding: 10px;
+    height: 40%;
+    flex-direction: row;
+  }
   width: 69.03%;
   padding: 32px;
   display: flex;
@@ -30,10 +43,24 @@
 }
 
 .item-description {
+  @include _836 {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+  }
   width: 50.56%;
 }
 
+.description {
+  @include _836 {
+    margin-right: 15px;
+  }
+}
+
 .item-description h2 {
+  @include _836 {
+    font-size: 16px;
+  }
   margin: 0;
   font-family: Poppins;
   font-weight: 600;
@@ -43,6 +70,9 @@
 }
 
 .item-description h4 {
+  @include _836 {
+    margin: 0;
+  }
   font-weight: normal;
   font-size: 12px;
   line-height: 16px;
@@ -51,6 +81,10 @@
 }
 
 .rate-star {
+  @include _836 {
+    width: 35%;
+    margin-top: 25px;
+  }
   display: flex;
   margin-top: 10px;
   width: 65%;
@@ -65,6 +99,11 @@
 }
 
 .characteristics {
+  @include _836 {
+    margin-top: 0;
+    //width: 55%;
+    padding: 3px 0;
+  }
   display: flex;
   justify-content: space-between;
   margin-top: 27px;
@@ -74,6 +113,11 @@
 .characteristic-property div {
   @include _1125 {
     padding-right: 10px;
+  }
+  @include _836 {
+    margin-bottom: 4px;
+    font-size: 12px;
+    padding-right: 0;
   }
   height: 19px;
   font-size: 14px;
@@ -89,6 +133,10 @@
 .characteristic-value div {
   @include _1125 {
     white-space: nowrap;
+  }
+  @include _836 {
+    margin-bottom: 4px;
+    font-size: 12px;
   }
   height: 19px;
   font-size: 14px;
@@ -106,7 +154,25 @@
   color: #6A983C;
 }
 
+.item-detail {
+  @include _836 {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-between;
+  }
+}
+
+.item-detail-title {
+  @include _836 {
+    margin-left: 25px;
+  }
+}
+
 .item-detail-title h2 {
+  @include _836 {
+    font-size: 16px;
+  }
   margin: 0;
   height: 27px;
   font-family: Poppins;
@@ -147,6 +213,9 @@
 }
 
 .item-order {
+  @include _836 {
+    padding: 0;
+  }
   padding: 26px 0 0 8px;
   display: flex;
   flex-direction: column;
@@ -199,3 +268,5 @@
 .wishlist button:hover {
   cursor: pointer;
 }
+
+
