@@ -7,12 +7,68 @@
   <div class="product-description">
     <h1 class="product-name">Carrots from Tomissy Farm</h1>
     <div class="product-rating">
-      <span class="stars" *ngFor="let star of starArr"><img src="{{star}}" alt="rating-star"></span>
+      <span [class.stars]="!last" *ngFor="let star of starArr; last as last">
+        <img src="{{star}}" alt="rating-star">
+      </span>
       <span class="customer-review">(1 customer review)</span>
     </div>
     <div class="item-description">
       Carrots from Tomissy Farm are one of the best on the market. Tomisso and his family are giving a full love to his
       Bio products. To misso’s carrots are growing on the fields naturally.
+    </div>
+    <div class="product-properties">
+      <div class="left">
+        <div class="first-block-property">
+          <span>Country:</span>
+          <span>Category:</span>
+          <span>Stock:</span>
+          <span>Color:</span>
+        </div>
+        <div class="first-block-value">
+          <span>74547</span>
+          <span>Vegetables</span>
+          <span>In Stock</span>
+          <span>White blue</span>
+        </div>
+      </div>
+      <div class="right">
+        <div class="second-block-property">
+          <span>Size:</span>
+          <span>Buy by:</span>
+          <span>Delivery:</span>
+          <span>Delivery area:</span>
+        </div>
+        <div class="second-block-value">
+          <span>all sizes</span>
+          <span>pcs, kgs, box, pack</span>
+          <span>in 2 days</span>
+          <span>Czech Republic</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-order">
+      <div class="price">
+        <h1>36.23 USD</h1>
+        <h4>48.56 USD</h4>
+      </div>
+      <div class="add-product">
+        <div class="pcs-quantity">
+          <span class="one">1</span>
+          <img class="line" src="../../assets/line.png" alt="arrow-down">
+          <span class="pcs">Pcs</span>
+          <img src="../../assets/arrow-down-black.png" alt="arrow-down">
+        </div>
+        <div class="add-to-cart-button">
+          <span class="plus">+</span>
+          <button>Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="add-to-wishlist">
+      <button id="wishlist" mat-icon-button aria-label="Example icon-button with a heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <label for="wishlist">Add to my wish list</label>
     </div>
     <p>asffsaasddddddddddddddddddddsddddddddddddddddddddddddddddddddddddd</p>
     <p>asffsa</p>
