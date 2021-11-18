@@ -59,11 +59,18 @@
   @include _570 {
     padding: 10px 15px;
   }
+  @include _515 {
+    height: 39%;
+  }
   @include _450 {
     padding: 5px 10px;
   }
+  @include _420 {
+    padding-top: 10px;
+  }
   @include _380 {
-    height: 45%;
+    height: 47%;
+    padding: 5px 5px;
   }
   width: 69.03%;
   padding: 32px;
