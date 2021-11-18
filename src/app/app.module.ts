@@ -35,6 +35,7 @@ import { InputFieldComponent } from './components/homepage-components/navbar/inp
 import { NavbarComponent } from './components/homepage-components/navbar/navbar.component';
 import { SelectFieldComponent } from './components/homepage-components/navbar/select-field/select-field.component';
 import { PagesTitleComponent } from './components/homepage-components/pages-title/pages-title.component';
+import { ProductDetailComponent } from './components/product-detail-components/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { PagesTitleComponent } from './components/homepage-components/pages-titl
     FarmsComponent,
     RatingComponent,
     SliderComponent,
-    FooterComponent
+    FooterComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
