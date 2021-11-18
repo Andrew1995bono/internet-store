@@ -1,20 +1,14 @@
 <div class="wrapper-content">
   <app-aside></app-aside>
-  <mat-drawer-container class="example-container" autosize [class.example-container]="toggleContainer">
-    <mat-drawer #drawer class="example-sidenav" mode="side">
+  <div class="sidenav">
+    <button class="filters-button" (click)="sidenavPopup($event)">Filters</button>
+    <div class="sidenav-content" [class.popup]="popupClass" (click)="$event.stopPropagation()">
       <app-categories></app-categories>
       <app-farms></app-farms>
       <app-rating></app-rating>
       <app-slider></app-slider>
-    </mat-drawer>
-
-    <div class="example-sidenav-content">
-      <button type="button" mat-button (click)="drawer.toggle(); toggleClass()">
-        Filters
-      </button>
     </div>
-
-  </mat-drawer-container>
+  </div>
   <div class="main" fxLayout="column" fxLayoutAlign="start start">
     <div class="card"
          *ngFor="let product of filteredProducts | paginate: { itemsPerPage: itemsPerPage, currentPage: p}">

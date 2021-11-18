@@ -3,12 +3,31 @@
 
 .wrapper-content {
   @include _970 {
-    justify-content: flex-start;
+    //justify-content: flex-start;
   }
+  @include _836 {
+    padding: 64px 35px 0;
+  }
+  @include _570 {
+    padding: 64px 25px 0;
+  }
+  @include _570 {
+    padding: 64px 20px 0;
+  }
+  @include _515 {
+    padding: 64px 8px 0;
+  }
+  position: relative;
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 64px 45px 0;
+}
+
+.products {
+  @include _970 {
+    display: none;
+  }
 }
 
 app-aside {
@@ -26,10 +45,6 @@ app-aside {
   display: none;
 }
 
-//
-//.card {
-//  width: 77%;
-//}
 
 .wrapper-content .ng-star-inserted {
   width: 100%;
@@ -200,35 +215,41 @@ pagination-controls pagination-template .ngx-pagination li.current {
   color: #A9A9A9;
 }
 
-.wrapper-content .main {
+.sidenav {
   @include _970 {
-    width: 92%;
+    display: block;
   }
+  display: none;
 }
 
-.wrapper-content button.mat-focus-indicator {
+.filters-button {
+  position: absolute;
+  top: 20px;
   background: #6A983C;
-  border: 1px solid #46760A;
+  border: 2px solid #46760A;
+  box-sizing: border-box;
   border-radius: 12px;
+  padding: 4px 8px;
   font-family: Poppins;
   font-size: 15px;
   line-height: 22px;
   color: #FFFFFF;
-  padding: 4px 12px;
 }
 
-.wrapper-content mat-drawer-container {
-  margin-right: 15px;
-}
-
-.wrapper-content .mat-drawer-side {
-  border: none;
-}
-
-.example-container {
+.sidenav-content {
+  left: -245px;
   width: 25%;
+  position: absolute;
+  background-color: #111
 }
 
-.product-card {
-
+.popup {
+  background-color: darkseagreen;
+  transition: 0.5s;
+  left: 0;
+  padding: 20px;
+  border-radius: 5px;
 }
+
+
+
