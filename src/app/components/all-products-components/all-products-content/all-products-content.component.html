@@ -9,10 +9,12 @@
       <app-slider></app-slider>
     </div>
   </div>
-  <div class="main" fxLayout="column" fxLayoutAlign="start start">
-    <div class="card"
-         *ngFor="let product of filteredProducts | paginate: { itemsPerPage: itemsPerPage, currentPage: p}">
-      <app-product-card [productData]="product"></app-product-card>
+  <div class="products">
+    <div class="main" fxLayout="column" fxLayoutAlign="start start">
+      <div class="card"
+           *ngFor="let product of filteredProducts | paginate: { itemsPerPage: itemsPerPage, currentPage: p}">
+        <app-product-card [productData]="product"></app-product-card>
+      </div>
     </div>
   </div>
 </div>

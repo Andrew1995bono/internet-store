@@ -2,9 +2,6 @@
 
 
 .wrapper-content {
-  @include _970 {
-    //justify-content: flex-start;
-  }
   @include _836 {
     padding: 64px 35px 0;
   }
@@ -24,14 +21,16 @@
   padding: 64px 45px 0;
 }
 
-.products {
-  @include _970 {
-    display: none;
-  }
-}
 
 app-aside {
   @include _970 {
+    display: none;
+  }
+  @include _836 {
+    display: block;
+    width: 35%;
+  }
+  @include _768 {
     display: none;
   }
   margin-right: 32px;
@@ -44,7 +43,6 @@ app-aside {
   }
   display: none;
 }
-
 
 .wrapper-content .ng-star-inserted {
   width: 100%;
@@ -74,9 +72,6 @@ app-aside {
 }
 
 .page-control p {
-  @include _1024 {
-    font-size: 11px;
-  }
   font-size: 12px;
   line-height: 16px;
   color: #A9A9A9;
@@ -84,9 +79,6 @@ app-aside {
 }
 
 pagination-controls pagination-template .ngx-pagination li a {
-  @include _1024 {
-    font-size: 11px;
-  }
   font-size: 12px;
   line-height: 16px;
   color: #151515;
@@ -111,9 +103,6 @@ pagination-controls pagination-template {
 }
 
 pagination-controls pagination-template .ngx-pagination li.current {
-  @include _1024 {
-    font-size: 11px;
-  }
   color: #6A983C;
   background-color: white;
   font-size: 12px;
@@ -188,9 +177,6 @@ pagination-controls pagination-template .ngx-pagination li.current {
 }
 
 .all-products-quantity p:first-child {
-  @include _1024 {
-    font-size: 11px;
-  }
   font-family: Poppins;
   font-weight: 600;
   font-size: 12px;
@@ -206,9 +192,6 @@ pagination-controls pagination-template .ngx-pagination li.current {
 }
 
 .all-products-quantity p:last-child {
-  @include _1024 {
-    font-size: 11px;
-  }
   height: 16px;
   font-size: 12px;
   line-height: 16px;
@@ -223,6 +206,12 @@ pagination-controls pagination-template .ngx-pagination li.current {
 }
 
 .filters-button {
+  @include _836 {
+    display: none;
+  }
+  @include _768 {
+    display: block;
+  }
   position: absolute;
   top: 20px;
   background: #6A983C;
@@ -237,13 +226,28 @@ pagination-controls pagination-template .ngx-pagination li.current {
 }
 
 .sidenav-content {
-  left: -245px;
-  width: 25%;
+  @include _768 {
+    width: 35%;
+  }
+  @include _625 {
+    width: 43%;
+  }
+  @include _480 {
+    width: 50%;
+  }
+  @include _380 {
+    width: 65%;
+  }
+  left: -300px;
+  width: 28%;
   position: absolute;
   background-color: #111
 }
 
 .popup {
+  @include _480 {
+    padding: 15px;
+  }
   background-color: darkseagreen;
   transition: 0.5s;
   left: 0;

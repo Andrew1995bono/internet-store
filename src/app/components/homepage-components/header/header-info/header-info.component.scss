@@ -177,6 +177,9 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   @include _420 {
     width: 40%;
   }
+  @include _360 {
+    width: 50%;
+  }
   display: none;
 }
 
@@ -184,12 +187,18 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   @include _420 {
     display: flex;
     justify-content: flex-end;
-    width: 10%;
+    width: 20%;
   }
   display: none;
 }
 
 .cart img {
+  @include _420 {
+    width: 28%;
+  }
+  @include _360 {
+    width: 38%;
+  }
   width: 40%;
 }
 

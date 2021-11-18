@@ -11,7 +11,7 @@ import { FiltersService } from '../../../services/all-products/filters/filters.s
     styleUrls: ['./all-products-content.component.scss'],
     encapsulation: ViewEncapsulation.None,
     host: {
-      '(document:click)': 'onClick($event)'
+      '(document:click)': 'onClick()'
     }
   }
 )
@@ -61,7 +61,7 @@ export class AllProductsContentComponent implements OnInit, OnDestroy {
     this.popupClass = !this.popupClass;
   }
 
-  public onClick($event: MouseEvent) {
+  public onClick() {
     this.popupClass = false;
   }
 }
