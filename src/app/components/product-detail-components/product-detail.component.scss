@@ -2,6 +2,32 @@
   padding: 30px 47px 15px 42px;
   display: flex;
   justify-content: space-between;
+  position: relative;
+}
+
+
+p.promotion, p.shipping {
+  position: absolute;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #6A983C;
+  padding: 4px 10px;
+  background: #F4F8EC;
+  border-radius: 12px;
+}
+
+
+p.promotion {
+  top: -12px;
+  left: 58px;
+}
+
+
+p.shipping {
+  top: -12px;
+  left: 128px;
 }
 
 
@@ -246,6 +272,11 @@ img.line {
 
 span.pcs {
   margin-right: 8px;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #151515;
 }
 
 
@@ -293,6 +324,16 @@ span.add-to-wishlist {
 }
 
 
+.description-reviews-questions {
+  margin-top: 50px;
+}
+
+
+.product-detail-content .mat-tab-labels {
+  justify-content: space-between;
+}
+
+
 .product-detail-content .mat-tab-labels .mat-ripple {
   font-family: Poppins;
   font-style: normal;
@@ -303,10 +344,6 @@ span.add-to-wishlist {
   opacity: 1;
 }
 
-
-//.product-detail-content .mat-tab-labels #mat-tab-label-0-1 .mat-tab-label-content {
-//  align-items: center;
-//}
 
 .product-detail-content .mat-tab-labels span.reviews-quantity, span.questions-quantity {
   font-weight: 600;
@@ -324,3 +361,81 @@ span.add-to-wishlist {
   background-color: #151515;
   //width: 27.9%;
 }
+
+
+.description-reviews-questions h4 {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  color: #151515;
+}
+
+
+.description-reviews-questions h4.origins {
+  margin: 48px 0 8px;
+}
+
+
+.description-reviews-questions h4.how-to-cook {
+  margin: 32px 0 8px;
+}
+
+
+.description-reviews-questions p {
+  font-family: Open Sans;
+  line-height: 19px;
+  color: #151515;
+  margin: 0;
+}
+
+
+.product-detail-content .mat-tab-labels #mat-tab-label-0-0, #mat-tab-label-0-2 {
+  padding: 0;
+  justify-content: flex-start;
+}
+
+
+.more-products {
+  margin: 0 35px;
+  padding: 70px 45px 101px;
+}
+
+
+.more-products-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+span.you-may-be-love {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #151515;
+}
+
+
+span.more-products-button {
+  display: flex;
+  align-items: center;
+}
+
+
+span.more-products-button button {
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  color: #151515;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+
+span.more-products-button img {
+  margin-left: 12.5px;
+}
+
