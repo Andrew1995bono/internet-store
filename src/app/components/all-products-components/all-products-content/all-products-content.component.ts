@@ -31,7 +31,6 @@ export class AllProductsContentComponent implements OnInit, OnDestroy {
   private unsubscribe$ = new Subject();
   public showFiller: boolean = false;
   public popupClass: boolean = false;
-  public $event: KeyboardEvent;
 
   constructor(private filtersService: FiltersService) {
 

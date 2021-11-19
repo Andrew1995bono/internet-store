@@ -2,12 +2,12 @@
   <p class="promotion">-36 %</p>
   <p class="shipping">Free shipping</p>
   <div class="product-images">
-    <img class="first" src="https://www.nipponexpress.com/press/report/img/06-Nov-20-ogp.jpeg" alt="banana">
-    <img class="second" src="https://www.nipponexpress.com/press/report/img/06-Nov-20-ogp.jpeg" alt="banana">
-    <img class="third" src="https://www.nipponexpress.com/press/report/img/06-Nov-20-ogp.jpeg" alt="banana">
+    <img class="first" src="{{product.imgUrl}}" alt="product-image">
+    <img class="second" src="{{product.imgUrl}}" alt="product-image">
+    <img class="third" src="{{product.imgUrl}}" alt="product-image">
   </div>
   <div class="product-description">
-    <h1 class="product-name">Carrots from Tomissy Farm</h1>
+    <h1 class="product-name">{{product.name}}</h1>
     <div class="product-rating">
       <span [class.stars]="!last" *ngFor="let star of starArr; last as last">
         <img src="{{star}}" alt="rating-star">
@@ -15,8 +15,8 @@
       <span class="customer-review">(1 customer review)</span>
     </div>
     <div class="item-description">
-      Carrots from Tomissy Farm are one of the best on the market. Tomisso and his family are giving a full love to his
-      Bio products. To misso’s carrots are growing on the fields naturally.
+      {{product.name}} are one of the best on the market. {{product.farm}} are giving a full love to products.
+      {{product.name}} are growing on the fields naturally.
     </div>
     <div class="product-properties">
       <div class="left">
@@ -27,10 +27,10 @@
           <span>Color:</span>
         </div>
         <div class="first-block-value">
-          <span>74547</span>
-          <span>Vegetables</span>
-          <span>In Stock</span>
-          <span>White blue</span>
+          <span>{{product.countryCode}}</span>
+          <span>{{product.category}}</span>
+          <span>{{product.stockInfo}}</span>
+          <span>{{product.color}}</span>
         </div>
       </div>
       <div class="right">
@@ -41,17 +41,17 @@
           <span>Delivery area:</span>
         </div>
         <div class="second-block-value">
-          <span>all sizes</span>
-          <span>pcs, kgs, box, pack</span>
-          <span>in 2 days</span>
-          <span>Czech Republic</span>
+          <span>{{product.size}}</span>
+          <span>{{product.buyBuy}}</span>
+          <span>{{product.deliveryFrom}}</span>
+          <span>{{product.deliveryArea}}</span>
         </div>
       </div>
     </div>
     <div class="product-order">
       <div class="price">
-        <h1>36.23 USD</h1>
-        <h4>48.56 USD</h4>
+        <h1>{{product.pricePromotional}} USD</h1>
+        <h4>{{product.priceUsual}} USD</h4>
       </div>
       <div class="add-product">
         <div class="pcs-quantity">
