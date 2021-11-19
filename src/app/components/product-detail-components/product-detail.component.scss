@@ -184,7 +184,7 @@
 
 .product-order {
   padding: 16px 24px 16px 16px;
-  margin: 40px 35px 0 0;
+  margin: 40px 35px 24px 0;
   background: #FFFFFF;
   border: 1px solid #F5F5F5;
   border-radius: 12px;
@@ -276,4 +276,51 @@ span.pcs {
 span.plus {
   font-size: 24px;
   color: #92C064;
+}
+
+
+span.add-to-wishlist {
+  padding: 6px 12px 6px 0;
+}
+
+
+.add-to-wishlist label {
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  color: #151515;
+}
+
+
+.product-detail-content .mat-tab-labels .mat-ripple {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #151515;
+  opacity: 1;
+}
+
+
+//.product-detail-content .mat-tab-labels #mat-tab-label-0-1 .mat-tab-label-content {
+//  align-items: center;
+//}
+
+.product-detail-content .mat-tab-labels span.reviews-quantity, span.questions-quantity {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #6A983C;
+  background: #F4F8EC;
+  border-radius: 12px;
+  padding: 0px 8px;
+  margin: 4px 0 0 8px;
+}
+
+
+.product-detail-content .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: #151515;
+  //width: 27.9%;
 }
