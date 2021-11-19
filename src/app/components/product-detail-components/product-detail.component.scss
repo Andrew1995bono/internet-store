@@ -32,6 +32,7 @@ p.shipping {
 
 
 .product-images {
+  min-width: 48.7%;
   display: grid;
   grid-template-rows: 420px 220px;
   grid-template-columns: 1fr 1fr;
@@ -399,6 +400,7 @@ span.add-to-wishlist {
 .more-products {
   margin: 0 35px;
   padding: 70px 45px 101px;
+  border: 1px solid red;
 }
 
 
@@ -439,3 +441,86 @@ span.more-products-button img {
   margin-left: 12.5px;
 }
 
+
+.scroll-menu {
+  display: flex;
+  margin-top: 37px;
+  overflow: auto;
+  white-space: nowrap;
+  height: 330px;
+}
+
+
+.individual-product {
+  margin-right: 32px;
+}
+
+
+.individual-product img {
+  width: 251px;
+  border-radius: 12px;
+  height: 180px;
+  object-fit: cover;
+}
+
+
+.small-description {
+  margin: 16px 0;
+}
+
+
+.small-description h4 {
+  margin: 0;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  color: #151515;
+}
+
+
+.small-description h6 {
+  margin: 4px 0 0;
+  font-size: 12px;
+  line-height: 16px;
+  color: #575757;
+}
+
+
+.buy-now {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.buy-now h2 {
+  margin: 0;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #151515;
+}
+
+.buy-now h5 {
+  margin: 0;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #A9A9A9;
+}
+
+
+.buy-now button {
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  color: #FFFFFF;
+  background: #6A983C;
+  border: 2px solid #46760A;
+  border-radius: 12px;
+  padding: 1px 11px;
+  height: 36px;
+}

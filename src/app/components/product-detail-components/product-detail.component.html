@@ -113,5 +113,21 @@
       <img src="../../assets/arrow-right-green.png" alt="arrow-right-green">
     </span>
   </div>
+  <div class="scroll-menu">
+    <div class="individual-product" *ngFor="let product of products">
+      <img src="{{product.imgUrl}}" alt="product-image">
+      <div class="small-description">
+        <h4>{{product.name}}</h4>
+        <h6>{{product.description}}</h6>
+      </div>
+      <div class="buy-now">
+        <span class="prices">
+          <h2>{{product.pricePromotional}} USD</h2>
+          <h5>{{product.priceUsual}} USD</h5>
+        </span>
+        <button>Buy now</button>
+      </div>
+    </div>
+  </div>
 </div>
 <app-footer></app-footer>
