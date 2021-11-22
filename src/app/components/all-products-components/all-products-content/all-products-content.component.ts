@@ -6,11 +6,15 @@ import { FiltersService } from '../../../services/all-products/filters/filters.s
 
 
 @Component({
-  selector: 'app-all-products-content',
-  templateUrl: './all-products-content.component.html',
-  styleUrls: ['./all-products-content.component.scss'],
-  encapsulation: ViewEncapsulation.None
-})
+    selector: 'app-all-products-content',
+    templateUrl: './all-products-content.component.html',
+    styleUrls: ['./all-products-content.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    host: {
+      '(document:click)': 'onClick()'
+    }
+  }
+)
 export class AllProductsContentComponent implements OnInit, OnDestroy {
 
   @Input() set products(products: ProductCard[]) {
@@ -25,8 +29,13 @@ export class AllProductsContentComponent implements OnInit, OnDestroy {
   public p: number = this.filtersService.p;
   public itemsPerPage: number = 5;
   private unsubscribe$ = new Subject();
+  public showFiller: boolean = false;
+  public popupClass: boolean = false;
+  public $event: KeyboardEvent;
 
-  constructor(private filtersService: FiltersService) {}
+  constructor(private filtersService: FiltersService) {
+
+  }
 
   ngOnInit(): void {
     this.filtersService.allProducts.pipe(
@@ -47,5 +56,13 @@ export class AllProductsContentComponent implements OnInit, OnDestroy {
     this.unsubscribe$.complete();
   }
 
+  public sidenavPopup($event: MouseEvent) {
+    $event.stopPropagation();
+    this.popupClass = !this.popupClass;
+  }
+
+  public onClick() {
+    this.popupClass = false;
+  }
 }
 

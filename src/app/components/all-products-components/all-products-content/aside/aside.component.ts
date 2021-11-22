@@ -4,7 +4,7 @@ import { MatCheckboxChange } from '@angular/material/checkbox';
 @Component({
   selector: 'app-aside',
   templateUrl: './aside.component.html',
-  styleUrls: ['./aside.component.css']
+  styleUrls: ['./aside.component.scss']
 })
 
 export class AsideComponent implements OnInit {

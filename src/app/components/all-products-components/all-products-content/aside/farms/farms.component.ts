@@ -5,7 +5,7 @@ import { FiltersService } from '../../../../../services/all-products/filters/fil
 @Component({
   selector: 'app-farms',
   templateUrl: './farms.component.html',
-  styleUrls: ['./farms.component.css']
+  styleUrls: ['./farms.component.scss']
 })
 
 export class FarmsComponent implements OnInit {

@@ -6,7 +6,7 @@ import { FiltersService } from '../../../../services/all-products/filters/filter
 @Component({
   selector: 'app-product-card',
   templateUrl: './product-card.component.html',
-  styleUrls: ['./product-card.component.css']
+  styleUrls: ['./product-card.component.scss']
 })
 
 export class ProductCardComponent implements OnInit {

@@ -1,0 +1,12 @@
+@import "../../../../mixins";
+
+.navbar {
+  @include _600 {
+    height: 110px;
+  }
+  @include _420 {
+    height: 100px;
+  }
+  background: #FDFDFD;
+  height: 141px;
+}
