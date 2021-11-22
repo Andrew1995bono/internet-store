@@ -305,6 +305,11 @@ span.pcs {
 }
 
 
+.add-to-cart-button button:hover {
+  cursor: pointer;
+}
+
+
 span.plus {
   font-size: 24px;
   color: #92C064;
@@ -399,8 +404,7 @@ span.add-to-wishlist {
 
 .more-products {
   margin: 0 35px;
-  padding: 70px 45px 101px;
-  border: 1px solid red;
+  padding: 70px 45px 70px;
 }
 
 
@@ -447,12 +451,12 @@ span.more-products-button img {
   margin-top: 37px;
   overflow: auto;
   white-space: nowrap;
-  height: 330px;
 }
 
 
 .individual-product {
-  margin-right: 32px;
+  margin-right: 30px;
+  margin-bottom: 15px;
 }
 
 
@@ -524,3 +528,26 @@ span.more-products-button img {
   padding: 1px 11px;
   height: 36px;
 }
+
+
+.buy-now button:hover {
+  cursor: pointer;
+}
+
+
+.scroll-menu::-webkit-scrollbar {
+  height: 15px;
+  background: #F4F8EC;
+}
+
+
+.scroll-menu::-webkit-scrollbar-thumb:horizontal {
+  background: linear-gradient(0deg, rgba(146, 207, 86, 1) 0%, rgba(106, 152, 60, 1) 100%);
+  border-radius: 10px;
+}
+
+
+.description-reviews-questions .mat-tab-body-content {
+  overflow-y: hidden;
+}
+

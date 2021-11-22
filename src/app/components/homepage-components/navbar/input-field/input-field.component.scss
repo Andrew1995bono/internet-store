@@ -248,10 +248,10 @@ input::placeholder {
     width: 45%;
   }
   @include _836 {
-    width: 40%;
+    width: 43%;
   }
   @include _768 {
-    width: 35%;
+    width: 40%;
   }
   @include _600 {
     width: 30%;
@@ -277,4 +277,27 @@ div #mat-select-0-panel {
   @include _600 {
     display: none;
   }
+  display: flex;
+  position: relative;
+}
+
+
+.add-item img:first-child {
+  margin-right: 15px;
+}
+
+
+.cart-items {
+  position: absolute;
+  top: 1px;
+  right: 16px;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+  background: #E6704B;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 0px 5px;
 }

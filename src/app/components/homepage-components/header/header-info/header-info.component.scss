@@ -187,7 +187,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   @include _420 {
     display: flex;
     justify-content: flex-end;
-    width: 20%;
+    width: 25%;
   }
   display: none;
 }
@@ -197,8 +197,23 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     width: 28%;
   }
   @include _360 {
-    width: 38%;
+    width: 52%;
   }
   width: 40%;
 }
 
+
+.add-to-cart-items {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+  background: #E6704B;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 0px 5px;
+}
