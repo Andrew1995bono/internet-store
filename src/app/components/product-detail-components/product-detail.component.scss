@@ -2,6 +2,9 @@
 
 
 .product-detail-content {
+  @include _700 {
+    flex-direction: column;
+  }
   padding: 30px 47px 15px 42px;
   display: flex;
   justify-content: space-between;
@@ -23,12 +26,18 @@ p.promotion, p.shipping {
 
 
 p.promotion {
+  @include _700 {
+    left: 140px;
+  }
   top: -12px;
   left: 58px;
 }
 
 
 p.shipping {
+  @include _700 {
+    left: 210px;
+  }
   top: -12px;
   left: 128px;
 }
@@ -48,6 +57,27 @@ p.shipping {
   @include _836 {
     min-width: 40%;
     grid-template-rows: 320px 150px;
+  }
+  @include _800 {
+    grid-template-rows: 290px 135px;
+    grid-gap: 20px;
+  }
+  @include _735 {
+    min-width: 45%;
+  }
+  @include _700 {
+    padding: 0 40px;
+    grid-template-rows: 320px 180px;
+    gap: 15px;
+  }
+  @include _625 {
+    grid-template-rows: 300px 160px;
+  }
+  @include _570 {
+    grid-template-rows: 280px 140px;
+  }
+  @include _535 {
+    padding: 0;
   }
   min-width: 48.7%;
   display: grid;
@@ -91,6 +121,12 @@ p.shipping {
 
 
 .product-description {
+  @include _700 {
+    //padding-left: 40px;
+    //padding-right: 40px;
+    padding-left: 0;
+    margin-top: 20px;
+  }
   min-width: 51.3%;
   padding-left: 32px;
 }
@@ -99,6 +135,9 @@ p.shipping {
 .product-name {
   @include _900 {
     font-size: 30px;
+  }
+  @include _735 {
+    font-size: 28px;
   }
   font-family: Poppins;
   font-weight: 600;
@@ -134,6 +173,13 @@ p.shipping {
   @include _836 {
     margin-top: 30px;
   }
+  @include _800 {
+    margin-top: 32px;
+    font-size: 16px;
+  }
+  @include _735 {
+    font-size: 15px;
+  }
   margin-top: 42px;
   font-size: 17px;
   line-height: 23px;
@@ -142,8 +188,13 @@ p.shipping {
 
 
 .product-properties {
-  @include _836 {
-    margin-top: 30px;
+  @include _800 {
+    margin: 20px 0;
+    flex-direction: column;
+  }
+  @include _700 {
+    margin: 20px 0 0;
+    flex-direction: row;
   }
   display: flex;
   justify-content: space-between;
@@ -151,12 +202,18 @@ p.shipping {
 }
 
 .left {
+  @include _800 {
+    margin-bottom: 20px;
+  }
+  @include _700 {
+    margin-bottom: 0;
+  }
   display: flex;
 }
 
 
 .right {
-  @include _900 {
+  @include _920 {
     margin-right: 0;
   }
   display: flex;
@@ -184,6 +241,12 @@ p.shipping {
 
 
 .first-block-value {
+  @include _1080 {
+    margin-left: 25px;
+  }
+  @include _800 {
+    margin-left: 70px;
+  }
   display: flex;
   flex-direction: column;
   margin-left: 39px;
@@ -224,6 +287,9 @@ p.shipping {
 
 
 .second-block-value {
+  @include _800 {
+    margin-left: 25px;
+  }
   display: flex;
   flex-direction: column;
   font-size: 14px;
@@ -253,7 +319,19 @@ p.shipping {
     margin-top: 30px;
   }
   @include _800 {
-    margin-bottom: 10px;
+    margin-bottom: 0;
+    position: absolute;
+    top: 500px;
+    left: 0;
+    width: 100%;
+    padding: 15px 45px;
+  }
+  @include _700 {
+    top: 900px;
+    margin-top: 0;
+  }
+  @include _625 {
+    top: 850px;
   }
   padding: 16px 24px 16px 16px;
   margin: 40px 35px 24px 0;
@@ -388,6 +466,18 @@ span.plus {
 
 span.add-to-wishlist {
   padding: 6px 12px 6px 0;
+  height: 48px;
+  @include _800 {
+    background: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    border-radius: 12px;
+    position: absolute;
+    left: 170px;
+    top: 550px;
+  }
+  @include _700 {
+    display: none;
+  }
 }
 
 
@@ -407,6 +497,16 @@ span.add-to-wishlist {
     width: 100%;
     padding: 0 45px;
     left: 0;
+  }
+  @include _800 {
+    top: 620px;
+    margin-top: 20px;
+  }
+  @include _700 {
+    top: 1000px;
+  }
+  @include _625 {
+    top: 950px;
   }
 }
 
@@ -487,10 +587,19 @@ span.add-to-wishlist {
 
 .more-products {
   @include _920 {
-    margin-top: 300px;
+    margin-top: 315px;
   }
   @include _800 {
-    margin-top: 320px;
+    margin-top: 389px;
+  }
+  @include _735 {
+    margin-top: 393px;
+  }
+  @include _700 {
+    margin-top: 436px;
+  }
+  @include _570 {
+    margin-top: 480px;
   }
   margin: 0 35px;
   padding: 70px 45px 70px;

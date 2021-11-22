@@ -4,17 +4,20 @@
   }
 }
 
+
 @mixin _1240 {
   @media (max-width: 1240px) {
     @content;
   }
 }
 
+
 @mixin _1170 {
   @media (max-width: 1170px) {
     @content;
   }
 }
+
 
 @mixin _1125 {
   @media (max-width: 1125px) {
@@ -92,23 +95,26 @@
 }
 
 
-@mixin _735 {
-  @media (max-width: 735px) {
-    @content;
-  }
-}
-
 @mixin _768 {
   @media (max-width: 768px) {
     @content;
   }
 }
 
-@mixin _600 {
-  @media (max-width: 600px) {
+
+@mixin _735 {
+  @media (max-width: 735px) {
     @content;
   }
 }
+
+
+@mixin _700 {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+
 
 @mixin _625 {
   @media (max-width: 625px) {
@@ -116,11 +122,20 @@
   }
 }
 
+
+@mixin _600 {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+
 @mixin _570 {
   @media (max-width: 570px) {
     @content;
   }
 }
+
 
 @mixin _535 {
   @media (max-width: 535px) {
@@ -128,11 +143,13 @@
   }
 }
 
+
 @mixin _515 {
   @media (max-width: 515px) {
     @content;
   }
 }
+
 
 @mixin _480 {
   @media (max-width: 480px) {
@@ -140,11 +157,13 @@
   }
 }
 
+
 @mixin _450 {
   @media (max-width: 450px) {
     @content;
   }
 }
+
 
 @mixin _420 {
   @media (max-width: 420px) {
@@ -152,17 +171,20 @@
   }
 }
 
+
 @mixin _380 {
   @media (max-width: 380px) {
     @content;
   }
 }
 
+
 @mixin _360 {
   @media (max-width: 360px) {
     @content;
   }
 }
+
 
 @mixin _320 {
   @media (max-width: 320px) {
