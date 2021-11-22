@@ -1,3 +1,6 @@
+@import "../../../mixins";
+
+
 .product-detail-content {
   padding: 30px 47px 15px 42px;
   display: flex;
@@ -32,6 +35,20 @@ p.shipping {
 
 
 .product-images {
+  @include _1024 {
+    min-width: 45.7%;
+  }
+  @include _970 {
+    min-width: 42.7%;
+    grid-template-rows: 400px 200px;
+  }
+  @include _920 {
+    grid-template-rows: 340px 160px;
+  }
+  @include _836 {
+    min-width: 40%;
+    grid-template-rows: 320px 150px;
+  }
   min-width: 48.7%;
   display: grid;
   grid-template-rows: 420px 220px;
@@ -74,11 +91,15 @@ p.shipping {
 
 
 .product-description {
+  min-width: 51.3%;
   padding-left: 32px;
 }
 
 
 .product-name {
+  @include _900 {
+    font-size: 30px;
+  }
   font-family: Poppins;
   font-weight: 600;
   font-size: 32px;
@@ -107,6 +128,12 @@ p.shipping {
 
 
 .product-detail-content .item-description {
+  @include _900 {
+    font-size: 16px;
+  }
+  @include _836 {
+    margin-top: 30px;
+  }
   margin-top: 42px;
   font-size: 17px;
   line-height: 23px;
@@ -115,6 +142,9 @@ p.shipping {
 
 
 .product-properties {
+  @include _836 {
+    margin-top: 30px;
+  }
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
@@ -126,6 +156,9 @@ p.shipping {
 
 
 .right {
+  @include _900 {
+    margin-right: 0;
+  }
   display: flex;
   margin-right: 50px;
 }
@@ -210,6 +243,18 @@ p.shipping {
 
 
 .product-order {
+  @include _1100 {
+    margin-right: 0;
+  }
+  @include _920 {
+    padding: 15px;
+  }
+  @include _836 {
+    margin-top: 30px;
+  }
+  @include _800 {
+    margin-bottom: 10px;
+  }
   padding: 16px 24px 16px 16px;
   margin: 40px 35px 24px 0;
   background: #FFFFFF;
@@ -228,6 +273,15 @@ p.shipping {
 
 
 .price h1 {
+  @include _1030 {
+    font-size: 25px;
+  }
+  @include _920 {
+    font-size: 24px;
+  }
+  @include _900 {
+    font-size: 21px;
+  }
   font-family: Poppins;
   font-weight: 600;
   font-size: 26px;
@@ -248,6 +302,9 @@ p.shipping {
 
 
 .pcs-quantity {
+  @include _900 {
+    padding: 8px;
+  }
   background: #F9F9F9;
   border: 1px solid #D1D1D1;
   border-radius: 12px;
@@ -282,6 +339,13 @@ span.pcs {
 
 
 .add-to-cart-button {
+  @include _900 {
+    margin-left: 20px;
+    padding: 8px 12px;
+  }
+  @include _836 {
+    margin-left: 19px;
+  }
   padding: 12px 16px;
   background: #6A983C;
   border: 2px solid #46760A;
@@ -310,6 +374,12 @@ span.pcs {
 }
 
 
+.add-to-cart-button:hover {
+  background-color: #6A983C;
+  color: #fff;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
 span.plus {
   font-size: 24px;
   color: #92C064;
@@ -332,6 +402,12 @@ span.add-to-wishlist {
 
 .description-reviews-questions {
   margin-top: 50px;
+  @include _920 {
+    position: absolute;
+    width: 100%;
+    padding: 0 45px;
+    left: 0;
+  }
 }
 
 
@@ -402,7 +478,20 @@ span.add-to-wishlist {
 }
 
 
+.product-detail-content .mat-tab-labels #mat-tab-label-0-0 {
+  @include _1090 {
+    min-width: 28%;
+  }
+}
+
+
 .more-products {
+  @include _920 {
+    margin-top: 300px;
+  }
+  @include _800 {
+    margin-top: 320px;
+  }
   margin: 0 35px;
   padding: 70px 45px 70px;
 }
@@ -532,12 +621,14 @@ span.more-products-button img {
 
 .buy-now button:hover {
   cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 
 .scroll-menu::-webkit-scrollbar {
   height: 15px;
-  background: #F4F8EC;
+  background: rgb(227, 244, 225);
+  background: linear-gradient(90deg, rgba(227, 244, 225, 1) 0%, rgba(240, 251, 239, 1) 100%);
 }
 
 
