@@ -172,9 +172,6 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   @include _420 {
     display: inline;
     padding: 0;
-    width: 37%;
-  }
-  @include _420 {
     width: 40%;
   }
   @include _360 {
