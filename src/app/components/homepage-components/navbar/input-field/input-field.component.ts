@@ -27,7 +27,6 @@ export class InputFieldComponent implements OnInit {
   constructor(private filtersService: FiltersService, public productDetailService: ProductDetailService) { }
 
   ngOnInit(): void {
-    console.log(this.some);
   }
 
   public getCategoryValue(event: MatSelectChange): void {

@@ -37,6 +37,7 @@ import { InputFieldComponent } from './components/homepage-components/navbar/inp
 import { NavbarComponent } from './components/homepage-components/navbar/navbar.component';
 import { SelectFieldComponent } from './components/homepage-components/navbar/select-field/select-field.component';
 import { PagesTitleComponent } from './components/homepage-components/pages-title/pages-title.component';
+import { ProductDetailResolver } from './components/product-detail-components/product-detail-resolver';
 import { ProductDetailComponent } from './components/product-detail-components/product-detail.component';
 
 @NgModule({
@@ -81,7 +82,7 @@ import { ProductDetailComponent } from './components/product-detail-components/p
     MatIconModule,
     MatTabsModule
   ],
-  providers: [],
+  providers: [ProductDetailResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

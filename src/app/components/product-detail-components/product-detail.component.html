@@ -51,7 +51,9 @@
     <div class="product-order">
       <div class="price">
         <h1>{{product.pricePromotional}} USD</h1>
-        <h4>{{product.priceUsual}} USD</h4>
+        <h4>
+          <del>{{product.priceUsual}} USD</del>
+        </h4>
       </div>
       <div class="add-product">
         <div>
@@ -85,13 +87,13 @@
         <mat-tab label="Description">
           <h4 class="origins">Origins</h4>
           <p>
-            We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality.
+            We work hard to ensure that the fruits and vegetables we sell are fresh and high in quality.
             If we don’t grow them ourselves, we source them from carefully chosen suppliers,
             preferring to buy locally whenever possible.
           </p>
           <h4 class="how-to-cook">How to cook</h4>
           <p>
-            From roasts, salads and soups to casseroles and cakes, Carrots will lend sweetness,
+            From roasts, salads and soups to casseroles and cakes, {{product.name}} will lend sweetness,
             texture and colour to an enormous number of recipes.
           </p>
         </mat-tab>

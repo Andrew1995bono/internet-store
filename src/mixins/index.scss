@@ -165,6 +165,13 @@
 }
 
 
+@mixin _460 {
+  @media (max-width: 460px) {
+    @content;
+  }
+}
+
+
 @mixin _450 {
   @media (max-width: 450px) {
     @content;

@@ -5,6 +5,12 @@
   @include _700 {
     flex-direction: column;
   }
+  @include _420 {
+    padding: 30px 25px 15px;
+  }
+  @include _380 {
+    padding: 30px 18px 15px;
+  }
   padding: 30px 47px 15px 42px;
   display: flex;
   justify-content: space-between;
@@ -85,6 +91,12 @@ p.shipping {
   @include _535 {
     padding: 0;
   }
+  @include _480 {
+    grid-template-rows: 240px 130px;
+  }
+  @include _420 {
+    grid-template-rows: 230px 120px;
+  }
   min-width: 48.7%;
   display: grid;
   grid-template-rows: 420px 220px;
@@ -144,6 +156,9 @@ p.shipping {
   }
   @include _735 {
     font-size: 28px;
+  }
+  @include _480 {
+    font-size: 26px;
   }
   font-family: Poppins;
   font-weight: 600;
@@ -228,6 +243,9 @@ p.shipping {
 
 
 .first-block-property {
+  @include _480 {
+    font-size: 13px;
+  }
   display: flex;
   flex-direction: column;
   font-size: 14px;
@@ -256,6 +274,17 @@ p.shipping {
   @include _700 {
     margin-left: 25px;
   }
+  @include _480 {
+    margin-left: 20px;
+    font-size: 13px;
+  }
+  @include _450 {
+    margin-left: 15px;
+  }
+  @include _380 {
+    font-size: 12px;
+    margin-left: 12px;
+  }
   display: flex;
   flex-direction: column;
   margin-left: 39px;
@@ -279,6 +308,9 @@ p.shipping {
   @include _700 {
     margin-right: 0;
   }
+  @include _480 {
+    font-size: 13px;
+  }
   display: flex;
   flex-direction: column;
   margin-right: 16px;
@@ -301,6 +333,17 @@ p.shipping {
 .second-block-value {
   @include _800 {
     margin-left: 25px;
+  }
+  @include _480 {
+    margin-left: 20px;
+    font-size: 13px;
+  }
+  @include _450 {
+    margin-left: 15px;
+  }
+  @include _380 {
+    font-size: 12px;
+    margin-left: 12px;
   }
   display: flex;
   flex-direction: column;
@@ -342,11 +385,22 @@ p.shipping {
     top: 900px;
     margin-top: 0;
   }
+  @include _670 {
+    align-items: flex-start;
+  }
   @include _625 {
-    top: 861px;
+    top: 860px;
   }
   @include _570 {
     top: 821px;
+  }
+  @include _480 {
+    top: 768px;
+  }
+  @include _420 {
+    padding: 15px 25px;
+    flex-direction: column;
+    align-items: center;
   }
   padding: 16px 24px 16px 16px;
   margin: 40px 35px 24px 0;
@@ -364,6 +418,10 @@ p.shipping {
     flex-direction: column;
     align-items: flex-start;
   }
+  @include _420 {
+    align-items: center;
+    width: 100%;
+  }
   display: flex;
   align-items: center;
 }
@@ -377,6 +435,20 @@ p.shipping {
 }
 
 
+.price {
+  @include _670 {
+    display: flex;
+    flex-direction: column;
+  }
+  @include _420 {
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+    justify-content: space-between;
+  }
+}
+
+
 .price h1 {
   @include _1030 {
     font-size: 25px;
@@ -386,6 +458,9 @@ p.shipping {
   }
   @include _900 {
     font-size: 21px;
+  }
+  @include _480 {
+    font-size: 18px;
   }
   font-family: Poppins;
   font-weight: 600;
@@ -409,6 +484,9 @@ p.shipping {
 .pcs-quantity {
   @include _900 {
     padding: 8px;
+  }
+  @include _480 {
+    height: 42px;
   }
   background: #F9F9F9;
   border: 1px solid #D1D1D1;
@@ -451,6 +529,11 @@ span.pcs {
   @include _836 {
     margin-left: 19px;
   }
+  @include _480 {
+    padding: 4px 8px;
+    height: 42px;
+    margin-left: 10px;
+  }
   padding: 12px 16px;
   background: #6A983C;
   border: 2px solid #46760A;
@@ -463,6 +546,9 @@ span.pcs {
 
 
 .add-to-cart-button button {
+  @include _480 {
+    font-size: 14px;
+  }
   font-family: Poppins;
   font-weight: bold;
   font-size: 15px;
@@ -490,6 +576,14 @@ span.pcs {
   @include _670 {
     display: flex;
     align-items: center;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 22px;
+    color: #151515;
+  }
+  @include _480 {
+    font-size: 14px;
   }
   display: none;
 }
@@ -556,6 +650,12 @@ span.add-to-wishlist {
   @include _570 {
     top: 970px;
   }
+  @include _480 {
+    top: 917px;
+  }
+  @include _420 {
+    padding: 0 25px;
+  }
 }
 
 
@@ -565,6 +665,12 @@ span.add-to-wishlist {
 
 
 .product-detail-content .mat-tab-labels .mat-ripple {
+  @include _480 {
+    font-size: 16px;
+  }
+  @include _360 {
+    font-size: 14px;
+  }
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
@@ -589,7 +695,6 @@ span.add-to-wishlist {
 
 .product-detail-content .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
   background-color: #151515;
-  //width: 27.9%;
 }
 
 
@@ -613,10 +718,14 @@ span.add-to-wishlist {
 
 
 .description-reviews-questions p {
+  @include _360 {
+    font-size: 13px;
+  }
   font-family: Open Sans;
   line-height: 19px;
   color: #151515;
   margin: 0;
+  font-size: 14px;
 }
 
 
@@ -629,6 +738,13 @@ span.add-to-wishlist {
 .product-detail-content .mat-tab-labels #mat-tab-label-0-0 {
   @include _1090 {
     min-width: 28%;
+  }
+}
+
+
+.product-detail-content .mat-tab-labels #mat-tab-label-0-1 {
+  @include _420 {
+    padding: 0;
   }
 }
 
@@ -649,11 +765,18 @@ span.add-to-wishlist {
   @include _670 {
     margin-top: 487px;
   }
-  @include _625 {
-    margin-top: 506px;
-  }
   @include _570 {
     margin-top: 506px;
+  }
+  @include _480 {
+    padding: 70px 0;
+    margin: 506px 45px 0;
+  }
+  @include _460 {
+    margin-top: 483px;
+  }
+  @include _420 {
+    margin: 506px 25px 0;
   }
   margin: 0 35px;
   padding: 70px 45px 70px;
@@ -676,6 +799,9 @@ span.you-may-be-love {
 
 
 span.more-products-button {
+  @include _360 {
+    display: none;
+  }
   display: flex;
   align-items: center;
 }

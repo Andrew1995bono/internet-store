@@ -1,8 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductCard } from '../../interfaces/product-card';
-import { AllProductsService } from '../../services/all-products/all-products.service';
-import { FiltersService } from '../../services/all-products/filters/filters.service';
 import { ProductDetailService } from '../../services/product-detail/product-detail.service';
 
 @Component({
@@ -19,23 +17,17 @@ export class ProductDetailComponent implements OnInit {
 
   constructor(
     private productDetailService: ProductDetailService,
-    private route: ActivatedRoute,
-    private filtersService: FiltersService,
-    private allProductsService: AllProductsService
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    // this.products = this.filtersService.products.value;
-    this.allProductsService.getProducts().subscribe(products => {
-      this.route.params.subscribe(data => {
-        this.product = products.find(item => item.itemID === data.id) || new ProductCard();
-        this.setRating(this.product);
-        this.products = products;
-      });
-    });
+    const id = this.route.snapshot.data.product.id;
+    this.product = this.route.snapshot.data.product.products.find((p: ProductCard) => p.itemID === id);
+    this.setRating(this.product.rating);
+    this.products = this.route.snapshot.data.product.products;
   }
 
-  private setRating(product: ProductCard): void {
+  private setRating(rating: number): void {
     this.starArr.fill('../../assets/rate-star-filled.png', 0, (this.product.rating));
     this.starArr.fill('../../assets/rate-star.png', this.product.rating, 5);
   }
