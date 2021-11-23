@@ -54,15 +54,23 @@
         <h4>{{product.priceUsual}} USD</h4>
       </div>
       <div class="add-product">
-        <div class="pcs-quantity">
-          <span class="one">1</span>
-          <img class="line" src="../../assets/line.png" alt="arrow-down">
-          <span class="pcs">Pcs</span>
-          <img src="../../assets/arrow-down-black.png" alt="arrow-down">
+        <div>
+          <div class="pcs-quantity">
+            <span class="one">1</span>
+            <img class="line" src="../../assets/line.png" alt="arrow-down">
+            <span class="pcs">Pcs</span>
+            <img src="../../assets/arrow-down-black.png" alt="arrow-down">
+          </div>
+          <div class="add-to-cart-button">
+            <span class="plus">+</span>
+            <button (click)="addToCart()">Add to cart</button>
+          </div>
         </div>
-        <div class="add-to-cart-button">
-          <span class="plus">+</span>
-          <button (click)="addToCart()">Add to cart</button>
+        <div class="wishlist">
+          <button mat-icon-button aria-label="Example icon-button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <label for="wishlist">Add to my wish list</label>
         </div>
       </div>
     </div>

@@ -116,6 +116,13 @@
 }
 
 
+@mixin _670 {
+  @media (max-width: 670px) {
+    @content;
+  }
+}
+
+
 @mixin _625 {
   @media (max-width: 625px) {
     @content;

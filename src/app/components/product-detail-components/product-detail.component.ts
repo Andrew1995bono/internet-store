@@ -25,7 +25,7 @@ export class ProductDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.products = this.filtersService.products.value;
+    // this.products = this.filtersService.products.value;
     this.allProductsService.getProducts().subscribe(products => {
       this.route.params.subscribe(data => {
         this.product = products.find(item => item.itemID === data.id) || new ProductCard();
