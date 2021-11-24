@@ -39,6 +39,7 @@ import { SelectFieldComponent } from './components/homepage-components/navbar/se
 import { PagesTitleComponent } from './components/homepage-components/pages-title/pages-title.component';
 import { ProductDetailResolver } from './components/product-detail-components/product-detail-resolver';
 import { ProductDetailComponent } from './components/product-detail-components/product-detail.component';
+import { OrderPageComponent } from './components/order-page-components/order-page/order-page.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { ProductDetailComponent } from './components/product-detail-components/p
     RatingComponent,
     SliderComponent,
     FooterComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    OrderPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,103 @@
+.summary-container {
+  padding: 16px 45px;
+}
+
+
+.billing-info-header span:first-child, .additional-information-header span:first-child {
+  margin: 0;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 22px;
+  color: #151515;
+}
+
+
+.billing-info-header span:last-child, .additional-information-header span:last-child {
+  font-size: 12px;
+  color: #A9A9A9;
+}
+
+
+.forms-field {
+  display: flex;
+  padding-top: 32px;
+  width: 57.4%;
+}
+
+
+.forms-field p, .additional-information-input span {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #151515;
+  margin: 0;
+}
+
+
+.forms-field input {
+  background: #F9F9F9;
+  border: 1px solid #D1D1D1;
+  border-radius: 12px;
+  height: 42px;
+  width: 100%;
+  padding: 12px 16px 12px 21px;
+}
+
+
+.forms-field input::placeholder {
+  font-size: 14px;
+  line-height: 19px;
+  color: #A9A9A9;
+}
+
+
+.first-form-block {
+  width: 47.58%;
+  margin-right: 32px;
+}
+
+
+.second-form-block {
+  width: 47.58%;
+}
+
+
+.first-form-block div {
+  margin-bottom: 32px;
+}
+
+
+.second-form-block div {
+  margin-bottom: 32px;
+}
+
+
+.first-form-block div:last-child {
+  margin-bottom: 0;
+}
+
+
+.second-form-block div:last-child {
+  margin-bottom: 0;
+}
+
+
+.additional-information {
+  margin-top: 64px;
+  width: 57.4%;
+}
+
+
+.additional-information-input {
+  margin-top: 32px;
+}
+
+
+.additional-information-input input {
+  padding: 11px 16px 82px 21px;
+  background: #F9F9F9;
+  border: 1px solid #D1D1D1;
+  border-radius: 12px;
+  width: 100%;
+}

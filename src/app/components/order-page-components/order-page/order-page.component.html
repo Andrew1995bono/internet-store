@@ -1,0 +1,63 @@
+<div class="summary-container">
+  <div class="forms-container">
+    <div class="billing-info-header">
+      <span>Billing info</span><br>
+      <span>Please enter your billing info</span>
+    </div>
+    <div class="forms-field">
+      <div class="first-form-block">
+        <div class="first-name">
+          <p>First name</p>
+          <input type="text" placeholder="First name">
+        </div>
+        <div class="email-address">
+          <p>Email address</p>
+          <input type="email" placeholder="Email address">
+        </div>
+        <div class="address">
+          <p>Address</p>
+          <input type="text" placeholder="Address">
+        </div>
+        <div class="state-country">
+          <p>State / Country</p>
+          <input type="text" name="country" list="countries" placeholder="Choose your country">
+          <datalist id="countries">
+            <option *ngFor="let country of countriesAndCitiesArray" value="{{country.country}}">
+          </datalist>
+        </div>
+      </div>
+      <div class="second-form-block">
+        <div class="last-name">
+          <p>Last name</p>
+          <input type="text" placeholder="Last name">
+        </div>
+        <div class="phone-number">
+          <p>Phone number</p>
+          <input type="text" placeholder="Phone number">
+        </div>
+        <div class="town-city">
+          <p>Town / City</p>
+          <input type="text" name="city" list="cities" placeholder="Town or city">
+          <datalist id="cities">
+            <option *ngFor="let city of countriesAndCitiesArray" value="{{city.city}}">
+          </datalist>
+        </div>
+        <div class="zip-postal-code">
+          <p>ZIP / Postal code</p>
+          <input type="text" placeholder="Postal code or ZIP">
+        </div>
+      </div>
+    </div>
+    <div class="additional-information">
+      <div class="additional-information-header">
+        <span>Additional information</span> <br>
+        <span>Need something else? We will make it for you!</span>
+      </div>
+      <div class="additional-information-input">
+        <span>Order notes</span> <br>
+        <input type="text" placeholder="Need a specific delivery day? Sending a gift? Let's say ...">
+      </div>
+    </div>
+  </div>
+  <div class="order-summary"></div>
+</div>
