@@ -16,4 +16,5 @@ export class AllProductsService {
     collectionProducts = collection(this.firestore, 'products-items');
     return collectionData(collectionProducts);
   }
+
 }
