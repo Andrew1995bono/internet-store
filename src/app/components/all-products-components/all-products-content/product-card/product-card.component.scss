@@ -1,4 +1,16 @@
+@import "../../../../../mixins";
+
 .product-item {
+  @include _836 {
+    flex-direction: column;
+    height: 575px;
+    width: 100%;
+  }
+  @include _380 {
+    flex-direction: column;
+    height: 475px;
+    width: 100%;
+  }
   display: flex;
   justify-content: space-between;
   height: 280px;
@@ -8,7 +20,24 @@
   border-radius: 12px;
 }
 
+.product-card {
+  @include _836 {
+    width: 100%;
+  }
+}
+
 .item-image {
+  @include _970 {
+    min-width: 270px;
+  }
+  @include _836 {
+    width: 100%;
+    height: 60%;
+  }
+  @include _380 {
+    width: 100%;
+    height: 50%;
+  }
   width: 30.97%;
 }
 
@@ -21,6 +50,28 @@
 }
 
 .item-info {
+  @include _836 {
+    width: 100%;
+    padding: 15px 20px;
+    height: 40%;
+    flex-direction: row;
+  }
+  @include _570 {
+    padding: 10px 15px;
+  }
+  @include _515 {
+    height: 39%;
+  }
+  @include _450 {
+    padding: 5px 10px;
+  }
+  @include _420 {
+    padding-top: 10px;
+  }
+  @include _380 {
+    height: 47%;
+    padding: 5px 5px;
+  }
   width: 69.03%;
   padding: 32px;
   display: flex;
@@ -30,6 +81,7 @@
 .item-description {
   width: 50.56%;
 }
+
 
 .item-description h2 {
   margin: 0;
@@ -49,9 +101,12 @@
 }
 
 .rate-star {
+  @include _836 {
+    width: 35%;
+  }
   display: flex;
   margin-top: 10px;
-  width: 40%;
+  width: 65%;
 }
 
 .rate-star div {
@@ -63,6 +118,10 @@
 }
 
 .characteristics {
+  @include _836 {
+    margin-top: 0;
+    padding: 25px 0 0;
+  }
   display: flex;
   justify-content: space-between;
   margin-top: 27px;
@@ -70,6 +129,16 @@
 }
 
 .characteristic-property div {
+  @include _1125 {
+    padding-right: 10px;
+  }
+  @include _836 {
+    margin-bottom: 4px;
+    padding-right: 0;
+  }
+  @include _515 {
+    font-size: 12px;
+  }
   height: 19px;
   font-size: 14px;
   line-height: 19px;
@@ -82,6 +151,19 @@
 }
 
 .characteristic-value div {
+  @include _1125 {
+    white-space: nowrap;
+  }
+  @include _836 {
+    margin-bottom: 4px;
+    margin-left: 15px;
+  }
+  @include _515 {
+    font-size: 12px;
+  }
+  @include _450 {
+    margin-left: 5px;
+  }
   height: 19px;
   font-size: 14px;
   line-height: 19px;
@@ -96,6 +178,21 @@
 
 .characteristic-value div:first-child {
   color: #6A983C;
+}
+
+.item-detail {
+  @include _836 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+
+.item-detail-title {
+  @include _836 {
+    margin-right: 40px;
+  }
 }
 
 .item-detail-title h2 {
@@ -120,13 +217,16 @@
 }
 
 .item-detail-title > p {
+  @include _836 {
+    margin: 10px 0 0;
+  }
   height: 18px;
   font-family: Poppins;
   font-weight: 600;
   font-size: 12px;
   line-height: 18px;
   color: #A9A9A9;
-  margin: 16px 0 0 0;
+  margin: 16px 0 0;
 }
 
 .item-detail-title > p:last-child {
@@ -139,12 +239,24 @@
 }
 
 .item-order {
+  @include _836 {
+    padding: 15px 0 0;
+  }
   padding: 26px 0 0 8px;
   display: flex;
   flex-direction: column;
 }
 
 .product-detail {
+  @include _836 {
+    justify-content: space-between;
+  }
+  @include _600 {
+    padding: 10px 14px;
+  }
+  @include _515 {
+    padding: 5px 9px;
+  }
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -155,6 +267,12 @@
 }
 
 .product-detail button {
+  @include _600 {
+    font-size: 13px;
+  }
+  @include _515 {
+    font-size: 12.5px;
+  }
   background: #6A983C;
   border: none;
   font-family: Poppins;
@@ -179,6 +297,9 @@
 }
 
 .wishlist button {
+  @include _600 {
+    font-size: 14px;
+  }
   font-family: Poppins;
   font-weight: bold;
   font-size: 15px;
@@ -191,3 +312,4 @@
 .wishlist button:hover {
   cursor: pointer;
 }
+

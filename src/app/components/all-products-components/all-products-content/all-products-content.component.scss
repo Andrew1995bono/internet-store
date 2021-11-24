@@ -1,21 +1,47 @@
+@import "../../../../mixins";
+
+
 .wrapper-content {
+  @include _836 {
+    padding: 64px 35px 0;
+  }
+  @include _515 {
+    padding: 64px 30px 0;
+  }
+  @include _420 {
+    padding: 64px 22px 0;
+  }
+  @include _380 {
+    padding: 64px 15px 0;
+  }
+  position: relative;
   display: flex;
   justify-content: space-between;
-  padding-top: 81px;
   width: 100%;
+  padding: 64px 45px 0;
 }
 
+
 app-aside {
+  @include _970 {
+    display: none;
+  }
+  @include _836 {
+    display: block;
+    width: 35%;
+  }
+  @include _768 {
+    display: none;
+  }
   margin-right: 32px;
   width: 23%;
 }
 
-.wrapper-content .main {
-  width: 77%;
-}
-
-.card {
-  width: 77%;
+.wrapper-content mat-drawer-container {
+  @include _970 {
+    display: block;
+  }
+  display: none;
 }
 
 .wrapper-content .ng-star-inserted {
@@ -23,10 +49,21 @@ app-aside {
 }
 
 .pagination {
+  @include _600 {
+    height: 70px;
+  }
+  @include _535 {
+    height: 40px;
+    position: relative;
+  }
+  @include _420 {
+    height: 30px;
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 18px;
+  height: 80px;
+  padding: 0 45px;
 }
 
 .page-control {
@@ -55,6 +92,7 @@ pagination-controls pagination-template .ngx-pagination li.pagination-previous.d
 
 pagination-controls pagination-template ul.ngx-pagination {
   padding-left: 0;
+  margin: 0;
 }
 
 pagination-controls pagination-template {
@@ -74,6 +112,27 @@ pagination-controls pagination-template .ngx-pagination li.current {
 }
 
 .show-more-products {
+  @include _1024 {
+    padding: 11px 15px;
+  }
+  @include _768 {
+    padding: 10px 14px;
+  }
+  @include _600 {
+    padding: 8px 11px;
+  }
+  @include _535 {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  @include _420 {
+    padding: 6px 10px;
+  }
+  @include _380 {
+    padding: 4px 8px;
+  }
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -84,6 +143,12 @@ pagination-controls pagination-template .ngx-pagination li.current {
 }
 
 .show-more-products button {
+  @include _1024 {
+    font-size: 14px;
+  }
+  @include _420 {
+    font-size: 12px;
+  }
   background: #6A983C;
   border: none;
   font-family: Poppins;
@@ -108,7 +173,7 @@ pagination-controls pagination-template .ngx-pagination li.current {
 
 .all-products-quantity p {
   margin: 0;
-  padding: 0 8px;
+  padding: 0 4px;
 }
 
 .all-products-quantity p:first-child {
@@ -123,6 +188,7 @@ pagination-controls pagination-template .ngx-pagination li.current {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 8px;
 }
 
 .all-products-quantity p:last-child {
@@ -131,3 +197,63 @@ pagination-controls pagination-template .ngx-pagination li.current {
   line-height: 16px;
   color: #A9A9A9;
 }
+
+.sidenav {
+  @include _970 {
+    display: block;
+  }
+  display: none;
+}
+
+.filters-button {
+  @include _836 {
+    display: none;
+  }
+  @include _768 {
+    display: block;
+  }
+  position: absolute;
+  top: 20px;
+  background: #6A983C;
+  border: 2px solid #46760A;
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 4px 8px;
+  font-family: Poppins;
+  font-size: 15px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+
+.sidenav-content {
+  @include _768 {
+    width: 35%;
+  }
+  @include _625 {
+    width: 43%;
+  }
+  @include _480 {
+    width: 50%;
+  }
+  @include _380 {
+    width: 65%;
+  }
+  left: -300px;
+  width: 28%;
+  position: absolute;
+  background-color: #111
+}
+
+.popup {
+  @include _480 {
+    padding: 15px;
+  }
+  background-color: #C4E3B2;
+  transition: 0.5s;
+  left: 0;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+
+

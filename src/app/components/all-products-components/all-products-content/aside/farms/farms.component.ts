@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatCheckboxChange } from '@angular/material/checkbox';
 import { FiltersService } from '../../../../../services/all-products/filters/filters.service';
 
 @Component({
   selector: 'app-farms',
   templateUrl: './farms.component.html',
-  styleUrls: ['./farms.component.css']
+  styleUrls: ['./farms.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 
 export class FarmsComponent implements OnInit {

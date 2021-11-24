@@ -6,24 +6,15 @@ import { FiltersService } from '../../../services/all-products/filters/filters.s
 
 
 @Component({
-  selector: 'app-all-products-content',
-  templateUrl: './all-products-content.component.html',
-  styleUrls: ['./all-products-content.component.scss'],
-  encapsulation: ViewEncapsulation.None
-})
-<<<<<<< HEAD
-export class AllProductsContentComponent implements OnInit {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  @Input() products: ProductCard[] = [];
-  public p: number = 3;
-=======
-=======
-
->>>>>>> product-rating
-  @Input() products: ProductCard[] = [];
-=======
+    selector: 'app-all-products-content',
+    templateUrl: './all-products-content.component.html',
+    styleUrls: ['./all-products-content.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    host: {
+      '(document:click)': 'onClick()'
+    }
+  }
+)
 export class AllProductsContentComponent implements OnInit, OnDestroy {
 
   @Input() set products(products: ProductCard[]) {
@@ -31,7 +22,6 @@ export class AllProductsContentComponent implements OnInit, OnDestroy {
     this.filteredProducts = products;
   };
 
->>>>>>> select-filters
   @Input() productsQuantity: number;
 
   public originProducts: ProductCard[];
@@ -39,15 +29,12 @@ export class AllProductsContentComponent implements OnInit, OnDestroy {
   public p: number = this.filtersService.p;
   public itemsPerPage: number = 5;
   private unsubscribe$ = new Subject();
+  public showFiller: boolean = false;
+  public popupClass: boolean = false;
 
-<<<<<<< HEAD
->>>>>>> footer
-  constructor() { }
+  constructor(private filtersService: FiltersService) {
 
-  ngOnInit(): void {
-
-=======
-  constructor(private filtersService: FiltersService) {}
+  }
 
   ngOnInit(): void {
     this.filtersService.allProducts.pipe(
@@ -55,44 +42,7 @@ export class AllProductsContentComponent implements OnInit, OnDestroy {
     ).subscribe(data => {
       this.filteredProducts = data;
       this.p = 1;
-<<<<<<< HEAD
-      this.farmValue = this.farmValue.filter((item: string) => item !== event.source.value);
-
-      return productsArr.filter((item: ProductCard) => {
-        if (this.farmValue.includes(item.farm)) {
-          return true;
-        } else if (this.farmValue.length === 0) {
-          return this.filteredByFarmItems;
-        }
-      });
-    }
-    return [new ProductCard()];
->>>>>>> product-rating
-  }
-
-  private sortByRate(event: MatCheckboxChange, productsArr: ProductCard[]): ProductCard[] {
-    if (event.checked) {
-      this.p = 1;
-      if (!this.rateValue.length) {
-        return productsArr;
-      }
-      return productsArr.filter((item: ProductCard) => this.rateValue.includes(item.rating));
-    } else if (!event.checked) {
-      this.p = 1;
-      this.rateValue = this.rateValue.filter((item: number) => item !== +event.source.value);
-      this.filteredByRateItems = productsArr.filter((item: ProductCard) => {
-        if (this.rateValue.includes(item.rating)) {
-          return true;
-        } else if (this.rateValue.length === 0) {
-          return this.filteredByRateItems;
-        }
-      });
-      return this.filteredByRateItems;
-    }
-    return [new ProductCard()];
-=======
     });
->>>>>>> select-filters
   }
 
   public showMoreProducts($event: MouseEvent): void {
@@ -105,5 +55,13 @@ export class AllProductsContentComponent implements OnInit, OnDestroy {
     this.unsubscribe$.complete();
   }
 
+  public sidenavPopup($event: MouseEvent) {
+    $event.stopPropagation();
+    this.popupClass = !this.popupClass;
+  }
+
+  public onClick() {
+    this.popupClass = false;
+  }
 }
 

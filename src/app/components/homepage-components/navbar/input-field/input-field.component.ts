@@ -3,6 +3,7 @@ import { MatSelectChange } from '@angular/material/select';
 import { DropDownCategoriesEnumInterface } from '../../../../interfaces/dropdown-select';
 import { SelectByEnum } from '../../../../interfaces/select-by.enum';
 import { FiltersService } from '../../../../services/all-products/filters/filters.service';
+import { ProductDetailService } from '../../../../services/product-detail/product-detail.service';
 
 @Component({
   selector: 'app-input-field',
@@ -21,10 +22,11 @@ export class InputFieldComponent implements OnInit {
     { value: SelectByEnum.NutsSorting, viewValue: 'Nuts' }
   ];
 
-  constructor(private filtersService: FiltersService) { }
+  public some: number = this.productDetailService.addToCartItems;
+
+  constructor(private filtersService: FiltersService, public productDetailService: ProductDetailService) { }
 
   ngOnInit(): void {
-
   }
 
   public getCategoryValue(event: MatSelectChange): void {

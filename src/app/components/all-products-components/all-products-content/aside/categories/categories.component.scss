@@ -1,9 +1,14 @@
+@import "../../../../../../mixins";
+
 .categories {
   display: flex;
   flex-direction: column;
 }
 
 .categories h2 {
+  @include _1024 {
+    font-size: 17px;
+  }
   margin: 0;
   height: 27px;
   font-family: Poppins;
@@ -25,6 +30,9 @@
 }
 
 .category-filters span {
+  @include _1024 {
+    font-size: 13px;
+  }
   margin-bottom: 12px;
   height: 19px;
   font-size: 14px;
@@ -42,6 +50,9 @@
 }
 
 .category-items span {
+  @include _1024 {
+    font-size: 11px;
+  }
   margin-bottom: 12px;
   font-family: Poppins;
   font-weight: 600;

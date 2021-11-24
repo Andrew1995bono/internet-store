@@ -1,0 +1,144 @@
+<div class="product-detail-content">
+  <p class="promotion">-36 %</p>
+  <p class="shipping">Free shipping</p>
+  <div class="product-images">
+    <img class="first" src="{{product.imgUrl}}" alt="product-image">
+    <img class="second" src="{{product.imgUrl}}" alt="product-image">
+    <img class="third" src="{{product.imgUrl}}" alt="product-image">
+  </div>
+  <div class="product-description">
+    <h1 class="product-name">{{product.name}}</h1>
+    <div class="product-rating">
+      <span [class.stars]="!last" *ngFor="let star of starArr; last as last">
+        <img src="{{star}}" alt="rating-star">
+      </span>
+      <span class="customer-review">(1 customer review)</span>
+    </div>
+    <div class="item-description">
+      {{product.name}} are one of the best on the market. {{product.farm}} are giving a full love to products.
+      {{product.name}} are growing naturally.
+    </div>
+    <div class="product-properties">
+      <div class="left">
+        <div class="first-block-property">
+          <span>Country:</span>
+          <span>Category:</span>
+          <span>Stock:</span>
+          <span>Color:</span>
+        </div>
+        <div class="first-block-value">
+          <span>{{product.countryCode}}</span>
+          <span>{{product.category}}</span>
+          <span>{{product.stockInfo}}</span>
+          <span>{{product.color}}</span>
+        </div>
+      </div>
+      <div class="right">
+        <div class="second-block-property">
+          <span>Size:</span>
+          <span>Buy by:</span>
+          <span>Delivery:</span>
+          <span>Delivery area:</span>
+        </div>
+        <div class="second-block-value">
+          <span>{{product.size}}</span>
+          <span>{{product.buyBuy}}</span>
+          <span>{{product.deliveryFrom}}</span>
+          <span>{{product.deliveryArea}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-order">
+      <div class="price">
+        <h1>{{product.pricePromotional}} USD</h1>
+        <h4>
+          <del>{{product.priceUsual}} USD</del>
+        </h4>
+      </div>
+      <div class="add-product">
+        <div>
+          <div class="pcs-quantity">
+            <span class="one">1</span>
+            <img class="line" src="../../assets/line.png" alt="arrow-down">
+            <span class="pcs">Pcs</span>
+            <img src="../../assets/arrow-down-black.png" alt="arrow-down">
+          </div>
+          <div class="add-to-cart-button">
+            <span class="plus">+</span>
+            <button (click)="addToCart()">Add to cart</button>
+          </div>
+        </div>
+        <div class="wishlist">
+          <button mat-icon-button aria-label="Example icon-button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <label for="wishlist">Add to my wish list</label>
+        </div>
+      </div>
+    </div>
+    <span class="add-to-wishlist">
+      <button id="wishlist" mat-icon-button aria-label="Example icon-button with a heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <label for="wishlist">Add to my wish list</label>
+    </span>
+    <div class="description-reviews-questions">
+      <mat-tab-group>
+        <mat-tab label="Description">
+          <h4 class="origins">Origins</h4>
+          <p>
+            We work hard to ensure that products we sell are fresh and high in quality.
+            If we don’t grow them ourselves, we source them from carefully chosen suppliers,
+            preferring to buy locally whenever possible.
+          </p>
+          <h4 class="how-to-cook">How to cook</h4>
+          <p>
+            From roasts, salads and soups to casseroles and cakes, {{product.name}} will lend sweetness,
+            texture and colour to an enormous number of recipes.
+          </p>
+        </mat-tab>
+        <mat-tab label="Reviews">
+          <ng-template mat-tab-label>
+            <span class="reviews">Reviews</span>
+            <span class="reviews-quantity">18</span>
+          </ng-template>
+          <p>18 people have been reviewed this products</p>
+        </mat-tab>
+        <mat-tab label="Questions">
+          <ng-template mat-tab-label>
+            <span class="questions">Questions</span>
+            <span class="questions-quantity">4</span>
+          </ng-template>
+          <p>You can add your questions here:</p>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>
+<div class="more-products">
+  <div class="more-products-title">
+    <span class="you-may-be-love">You will maybe love</span>
+    <span class="more-products-button">
+      <button>More products</button>
+      <img src="../../assets/arrow-right-green.png" alt="arrow-right-green">
+    </span>
+  </div>
+  <div class="scroll-menu">
+    <div class="individual-product" *ngFor="let product of products">
+      <img src="{{product.imgUrl}}" alt="product-image">
+      <div class="small-description">
+        <h4>{{product.name}}</h4>
+        <h6>{{product.description}}</h6>
+      </div>
+      <div class="buy-now">
+        <span class="prices">
+          <h2>{{product.pricePromotional}} USD</h2>
+          <h5>{{product.priceUsual}} USD</h5>
+        </span>
+        <button>Buy now</button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+

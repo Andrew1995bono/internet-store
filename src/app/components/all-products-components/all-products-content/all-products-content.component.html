@@ -1,9 +1,20 @@
 <div class="wrapper-content">
   <app-aside></app-aside>
-  <div class="main" fxLayout="column" fxLayoutAlign="start start">
-    <div class="card"
-         *ngFor="let product of filteredProducts | paginate: { itemsPerPage: itemsPerPage, currentPage: p}">
-      <app-product-card [productData]="product"></app-product-card>
+  <div class="sidenav">
+    <button class="filters-button" (click)="sidenavPopup($event)">Filters</button>
+    <div class="sidenav-content" [class.popup]="popupClass" (click)="$event.stopPropagation()">
+      <app-categories></app-categories>
+      <app-farms></app-farms>
+      <app-rating></app-rating>
+      <app-slider></app-slider>
+    </div>
+  </div>
+  <div class="products">
+    <div class="main" fxLayout="column" fxLayoutAlign="start start">
+      <div class="card"
+           *ngFor="let product of filteredProducts | paginate: { itemsPerPage: itemsPerPage, currentPage: p}">
+        <app-product-card [productData]="product"></app-product-card>
+      </div>
     </div>
   </div>
 </div>

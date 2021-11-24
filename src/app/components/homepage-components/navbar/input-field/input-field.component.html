@@ -1,7 +1,5 @@
 <div class="main-search-bar">
-  <span class="logo">
-    <img src="../../assets/logo.png" alt="logo">
-  </span>
+  <img class="logo" src="../../assets/logo.png" alt="logo">
   <div class="search-input">
     <div class="first-label">
       <mat-form-field appearance="fill">
@@ -20,11 +18,12 @@
       <input type="text" placeholder="Search Products, categories ...">
     </div>
     <div class="search">
-      <img src="../../assets/search.png" alt="search-logo" width="20">
+      <img src="../../assets/search.png" alt="search-logo">
     </div>
   </div>
   <div class="add-item">
-    <img src="../../assets/user.png" alt="user-logo" width="30">
-    <img src="../../assets/shopping_basket.png" alt="basket" width="30">
+    <img src="../../assets/user.png" alt="user-logo">
+    <img src="../../assets/shopping_basket.png" alt="basket">
+    <p class="cart-items">{{productDetailService.addToCartItems}}</p>
   </div>
 </div>

@@ -1,4 +1,15 @@
+@import "../../../../mixins";
+
 .all-products-title {
+  @include _836 {
+    height: 55px;
+  }
+  @include _768 {
+    height: 50px;
+  }
+  @include _600 {
+    height: 45px;
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6,24 +17,44 @@
 }
 
 .title {
+  @include _1024 {
+    font-size: 30px;
+  }
+  @include _836 {
+    font-size: 28px;
+  }
+  @include _768 {
+    font-size: 26px;
+  }
+  @include _600 {
+    font-size: 24px;
+  }
+  @include _380 {
+    font-size: 23px;
+  }
   height: 48px;
   font-family: Poppins;
   font-weight: 600;
   font-size: 32px;
   line-height: 48px;
   color: #151515;
+  padding-left: 45px;
 }
 
 .products-quantity {
   display: flex;
   align-items: center;
+  padding-right: 45px;
 }
 
-.products-quantity p {
+.products-quantity > p {
   margin: 0;
 }
 
 .products-quantity p:first-child {
+  @include _1024 {
+    font-size: 11px;
+  }
   padding: 0 8px;
   font-family: Poppins;
   font-weight: 600;
@@ -39,8 +70,12 @@
 }
 
 .products-quantity p:last-child {
+  @include _1024 {
+    font-size: 11px;
+  }
   height: 16px;
   font-size: 12px;
   line-height: 16px;
   color: #A9A9A9;
 }
+

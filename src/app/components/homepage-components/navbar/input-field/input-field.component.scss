@@ -1,15 +1,80 @@
+@import "../../../../../mixins";
+
 .main-search-bar {
+  @include _600 {
+    height: 55px;
+    justify-content: center;
+    padding: 0 45px;
+  }
+  @include _420 {
+    height: 40px;
+    padding: 0 15px;
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 0 29px 0 62px;
 }
 
 .logo {
-  margin: 29px 0 26px 17px;
+  @include _1024 {
+    width: 18%;
+  }
+  @include _836 {
+    width: 20.5%;
+  }
+  @include _768 {
+    width: 20.8%;
+  }
+  @include _600 {
+    width: 25%;
+    display: none;
+  }
+  @include _420 {
+    margin-right: 25px;
+    display: none;
+  }
+  padding: 29px 0 26px;
 }
 
 .search-input {
+  @include _1240 {
+    width: 44%;
+  }
+  @include _1170 {
+    width: 46.5%;
+  }
+  @include _1125 {
+    width: 48.5%;
+  }
+  @include _1080 {
+    width: 50.6%;
+  }
+  @include _1024 {
+    width: 47.6%;
+  }
+  @include _970 {
+    width: 52%;
+  }
+  @include _836 {
+    width: 61%;
+  }
+  @include _768 {
+    width: 66%;
+  }
+  @include _600 {
+    width: 87%;
+    padding-right: 16px;
+  }
+  @include _420 {
+    height: 35px;
+    width: 90%;
+    padding: 0 10px;
+  }
+  @include _360 {
+    width: 100%;
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,11 +92,36 @@
   align-items: center;
 }
 
+.search img {
+  @include _1024 {
+    width: 100%;
+  }
+  @include _836 {
+    width: 90%;
+  }
+  @include _768 {
+    width: 80%;
+  }
+  @include _420 {
+    width: 70%;
+  }
+}
+
 .vertical-line {
   display: flex;
 }
 
 .second-label {
+  @include _600 {
+    padding-left: 13px;
+  }
+  @include _420 {
+    padding-left: 0;
+    width: 60%;
+  }
+  @include _420 {
+    width: 50%;
+  }
   height: 19px;
   display: flex;
   align-self: center;
@@ -41,6 +131,9 @@
 }
 
 .second-label input {
+  @include _420 {
+    width: 80%;
+  }
   border: none;
   width: 100%;
   font-size: 14px;
@@ -51,6 +144,9 @@
 }
 
 input::placeholder {
+  @include _420 {
+    font-size: 12px;
+  }
   color: #A9A9A9;
   opacity: 0.6;
   font-family: Open Sans;
@@ -59,12 +155,22 @@ input::placeholder {
 }
 
 .first-label {
+  @include _1024 {
+    padding-bottom: 4px;
+    height: 25px;
+  }
   display: flex;
   align-items: center;
   width: 42%;
 }
 
 .first-label .mat-form-field {
+  @include _1024 {
+    height: 30px;
+  }
+  @include _420 {
+    height: 25px;
+  }
   width: 100%;
 }
 
@@ -79,6 +185,9 @@ input::placeholder {
 
 .first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
 .mat-form-field-infix {
+  @include _1024 {
+    padding: 0;
+  }
   height: 20px;
   padding-right: 15px;
   padding-bottom: 20px;
@@ -88,12 +197,22 @@ input::placeholder {
 }
 
 .first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
-.mat-form-field-infix .mat-select .mat-select-trigger .mat-select-value {
-  padding-bottom: 20px;
+.mat-form-field-infix .mat-form-field-label-wrapper {
+  @include _1024 {
+    padding-top: 0;
+    height: 30px;
+  }
 }
+
 
 .first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
 .mat-form-field-infix .mat-select .mat-select-trigger .mat-select-arrow-wrapper {
+  @include _1024 {
+    padding-top: 13px;
+  }
+  @include _420 {
+    padding-top: 7px;
+  }
   padding-top: 5px;
 }
 
@@ -105,6 +224,12 @@ input::placeholder {
 
 .first-label .mat-form-field .mat-form-field-wrapper .mat-form-field-flex
 .mat-form-field-infix .mat-form-field-label-wrapper .mat-form-field-label {
+  @include _420 {
+    line-height: 18px;
+  }
+  @include _360 {
+    font-size: 14.5px;
+  }
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
@@ -117,3 +242,61 @@ input::placeholder {
   display: none;
 }
 
+.add-item img {
+  @include _1024 {
+    width: 45%;
+  }
+  @include _836 {
+    width: 43%;
+  }
+  @include _768 {
+    width: 40%;
+  }
+  @include _600 {
+    width: 30%;
+  }
+  @include _420 {
+    display: none;
+  }
+}
+
+div #mat-select-0-panel > mat-option {
+  font-family: Open Sans;
+  font-size: 14px;
+  line-height: 19px;
+  color: #151515;
+  height: 30px;
+}
+
+div #mat-select-0-panel {
+  background-color: #B3D58F;
+}
+
+.add-item {
+  @include _600 {
+    display: none;
+  }
+  display: flex;
+  position: relative;
+}
+
+
+.add-item img:first-child {
+  margin-right: 15px;
+}
+
+
+.cart-items {
+  position: absolute;
+  top: 1px;
+  right: 16px;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+  background: #E6704B;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 0px 5px;
+}

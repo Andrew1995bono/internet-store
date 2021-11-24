@@ -1,4 +1,24 @@
 <nav class="navbar">
+  <ng-template [ngIf]="true">
+    <div class="burger">
+      <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+      <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner diagonal part-1"></div>
+        <div class="spinner horizontal"></div>
+        <div class="spinner diagonal part-2"></div>
+      </label>
+      <div id="sidebarMenu">
+        <div class="main-content-wrapper">
+          <a href="#news">Chat with us</a>
+          <a href="#about">+420 336 775 664</a>
+          <a href="#about">info@freshnese.com</a>
+          <a href="#about">Blog</a>
+          <a href="#about">About Us</a>
+          <a href="#about">Careers</a>
+        </div>
+      </div>
+    </div>
+  </ng-template>
   <div class="left-navbar">
     <a href="#">Chat with us</a>
     <a class="phone" href="#">+420 336 775 664</a>
@@ -8,5 +28,11 @@
     <a href="#">Blog</a>
     <a class="about-us" href="#">About Us</a>
     <a href="#">Careers</a>
+  </div>
+  <img class="logo" src="../../assets/logo.png" alt="logo">
+  <div class="cart">
+    <img src="../../assets/user.png" alt="user-logo">
+    <img src="../../assets/shopping_basket.png" alt="basket">
+    <p class="add-to-cart-items">{{productDetailService.addToCartItems}}</p>
   </div>
 </nav>

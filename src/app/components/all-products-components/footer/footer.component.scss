@@ -1,12 +1,27 @@
+@import "../../../../mixins";
+
 .footer {
   display: flex;
   flex-direction: column;
-  margin-top: 81px;
+  padding: 64px 45px;
 }
+
 
 .footer-links {
   display: flex;
   justify-content: space-between;
+}
+
+.earnings {
+  @include _480 {
+    padding: 0 15px;
+  }
+}
+
+.get-in-touch {
+  @include _600 {
+    display: none;
+  }
 }
 
 ul {
@@ -15,6 +30,18 @@ ul {
 }
 
 ul li {
+  @include _768 {
+    font-size: 13px;
+  }
+  @include _625 {
+    font-size: 12px;
+  }
+  @include _600 {
+    font-size: 13px;
+  }
+  @include _420 {
+    font-size: 12px;
+  }
   list-style: none;
   font-size: 14px;
   line-height: 19px;
@@ -27,6 +54,18 @@ ul li:last-child {
 }
 
 h2 {
+  @include _768 {
+    font-size: 17px;
+  }
+  @include _625 {
+    font-size: 16px;
+  }
+  @include _600 {
+    font-size: 17px;
+  }
+  @include _420 {
+    font-size: 16px;
+  }
   margin: 0;
   font-family: Poppins;
   font-weight: 600;
@@ -48,26 +87,12 @@ h2 {
 }
 
 .row p {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 4px 10px;
-  background: #F5F5F5;
-  border-radius: 12px;
-  font-family: Poppins;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 18px;
-  color: #151515;
-  margin: 16px 16px 0 0;
-}
-
-.second-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.second-row p {
+  @include _535 {
+    margin: 14px 14px 0 0;
+  }
+  @include _480 {
+    margin: 12px 12px 0 0;
+  }
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -88,6 +113,12 @@ h2 {
 }
 
 .footer-copyright p {
+  @include _1024 {
+    font-size: 13px;
+  }
+  @include _535 {
+    font-size: 12px;
+  }
   font-size: 14px;
   line-height: 19px;
   color: #151515;

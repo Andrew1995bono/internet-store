@@ -5,11 +5,14 @@
     </div>
     <div class="item-info">
       <div class="item-description">
-        <h2>{{product.name}}</h2>
-        <h4>{{product.description}}</h4>
-        <div class="rate-star">
-          <div *ngFor="let star of starArr"><img src="{{star}}" alt="rating-star"></div>
+        <div class="description">
+          <h2>{{product.name}}</h2>
+          <h4>{{product.description}}</h4>
+          <div class="rate-star">
+            <div *ngFor="let star of starArr"><img src="{{star}}" alt="rating-star"></div>
+          </div>
         </div>
+
         <div class="characteristics">
           <div class="characteristic-property">
             <div>Freshness</div>
@@ -34,9 +37,7 @@
         </div>
         <div class="item-order">
           <div class="product-detail">
-            <a href="/productDetail">
-              <button>Product Detail</button>
-            </a>
+            <button (click)="sendProductID()">Product Detail</button>
             <img src="../../assets/arrow-right.png" alt="arrow-right" width="15">
           </div>
           <div class="wishlist">

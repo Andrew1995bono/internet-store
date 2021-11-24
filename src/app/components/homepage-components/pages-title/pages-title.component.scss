@@ -1,4 +1,10 @@
+@import "../../../../mixins";
+
 .page-title {
+  @include _600 {
+    height: 30px;
+  }
+
   height: 48px;
   background: #FDFDFD;
   display: flex;
@@ -10,6 +16,7 @@
   font-size: 12px;
   line-height: 16px;
   color: #A9A9A9;
+  padding-left: 45px;
 }
 
 .page-title img {

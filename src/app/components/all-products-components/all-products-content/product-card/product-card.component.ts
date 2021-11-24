@@ -1,12 +1,14 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductCard } from '../../../../interfaces/product-card';
 import { FiltersService } from '../../../../services/all-products/filters/filters.service';
+import { ProductDetailService } from '../../../../services/product-detail/product-detail.service';
 
 
 @Component({
   selector: 'app-product-card',
   templateUrl: './product-card.component.html',
-  styleUrls: ['./product-card.component.css']
+  styleUrls: ['./product-card.component.scss']
 })
 
 export class ProductCardComponent implements OnInit {
@@ -18,7 +20,11 @@ export class ProductCardComponent implements OnInit {
   public product = {} as ProductCard;
   public starArr: string[] = ['', '', '', '', ''];
 
-  constructor(private filtersService: FiltersService) {}
+  constructor(
+    private filtersService: FiltersService,
+    private productDetailService: ProductDetailService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.setRating(this.product);
@@ -29,5 +35,8 @@ export class ProductCardComponent implements OnInit {
     this.starArr.fill('../../assets/rate-star.png', product.rating, 5);
   }
 
+  public sendProductID(): void {
+    this.router.navigate(['allProducts', this.product.itemID]);
+  }
 }
 
