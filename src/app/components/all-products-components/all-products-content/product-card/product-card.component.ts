@@ -1,8 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductCard } from '../../../../interfaces/product-card';
-import { FiltersService } from '../../../../services/all-products/filters/filters.service';
-import { ProductDetailService } from '../../../../services/product-detail/product-detail.service';
+import { BreadcrumbsService } from '../../../../services/breadcrumbs.service';
+import { FiltersService } from '../../../../services/filters.service';
+import { ProductDetailService } from '../../../../services/product-detail.service';
 
 
 @Component({
@@ -23,7 +24,8 @@ export class ProductCardComponent implements OnInit {
   constructor(
     private filtersService: FiltersService,
     private productDetailService: ProductDetailService,
-    private router: Router
+    private router: Router,
+    private breadcrumbsService: BreadcrumbsService
   ) {}
 
   ngOnInit(): void {
@@ -38,5 +40,6 @@ export class ProductCardComponent implements OnInit {
   public sendProductID(): void {
     this.router.navigate(['allProducts', this.product.itemID]);
   }
+
 }
 

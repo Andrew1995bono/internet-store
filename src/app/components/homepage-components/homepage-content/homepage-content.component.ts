@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BreadcrumbsService } from '../../../services/breadcrumbs.service';
 
 
 @Component({
@@ -9,11 +10,10 @@ import { Component, OnInit } from '@angular/core';
 
 export class HomepageContentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private breadcrumbsService: BreadcrumbsService) { }
 
   ngOnInit(): void {
-
+    this.breadcrumbsService.breadCrumbs = [{ label: 'Homepage /', routerLink: '**' }];
   }
-
 
 }

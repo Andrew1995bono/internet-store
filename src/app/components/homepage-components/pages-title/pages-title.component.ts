@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BreadcrumbsService } from '../../../services/breadcrumbs.service';
 
 @Component({
   selector: 'app-pages-title',
@@ -9,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 export class PagesTitleComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(public breadcrumbsService: BreadcrumbsService) { }
 
   ngOnInit(): void {
+
   }
 
+
 }
+
+

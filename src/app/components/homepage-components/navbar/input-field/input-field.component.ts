@@ -2,8 +2,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatSelectChange } from '@angular/material/select';
 import { DropDownCategoriesEnumInterface } from '../../../../interfaces/dropdown-select';
 import { SelectByEnum } from '../../../../interfaces/select-by.enum';
-import { FiltersService } from '../../../../services/all-products/filters/filters.service';
-import { ProductDetailService } from '../../../../services/product-detail/product-detail.service';
+import { FiltersService } from '../../../../services/filters.service';
+import { ProductDetailService } from '../../../../services/product-detail.service';
 
 @Component({
   selector: 'app-input-field',

@@ -1,4 +1,4 @@
 <div class="page-title">
-  <a routerLink="**">Homepage</a>
-  <img src="../../assets/slash-symbol.png" alt="slash-symbol">
+  <a *ngFor="let breadcrumb of breadcrumbsService.breadCrumbs"
+     routerLink="{{breadcrumb.routerLink}}">{{breadcrumb.label}}</a>
 </div>

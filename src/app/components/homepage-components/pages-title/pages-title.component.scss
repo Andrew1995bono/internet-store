@@ -4,21 +4,24 @@
   @include _600 {
     height: 30px;
   }
-
   height: 48px;
   background: #FDFDFD;
   display: flex;
   align-items: center;
+  padding-left: 45px;
 }
+
 
 .page-title a {
   text-decoration: none;
   font-size: 12px;
   line-height: 16px;
   color: #A9A9A9;
-  padding-left: 45px;
+  margin-right: 10px;
 }
 
 .page-title img {
   margin-left: 5px;
 }
+
+

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductDetailService } from '../../../../services/product-detail/product-detail.service';
+import { ProductDetailService } from '../../../../services/product-detail.service';
 
 @Component({
   selector: 'app-header-info',
