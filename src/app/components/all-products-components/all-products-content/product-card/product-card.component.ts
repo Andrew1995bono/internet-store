@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductCard } from '../../../../interfaces/product-card';
-import { BreadcrumbsService } from '../../../../services/breadcrumbs.service';
 import { FiltersService } from '../../../../services/filters.service';
 import { ProductDetailService } from '../../../../services/product-detail.service';
 
@@ -24,8 +23,7 @@ export class ProductCardComponent implements OnInit {
   constructor(
     private filtersService: FiltersService,
     private productDetailService: ProductDetailService,
-    private router: Router,
-    private breadcrumbsService: BreadcrumbsService
+    private router: Router
   ) {}
 
   ngOnInit(): void {
