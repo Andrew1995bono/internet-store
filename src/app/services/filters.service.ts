@@ -3,9 +3,9 @@ import { Injectable } from '@angular/core';
 import { MatCheckboxChange } from '@angular/material/checkbox';
 import { MatSelectChange } from '@angular/material/select';
 import { BehaviorSubject } from 'rxjs';
-import { ProductCard } from '../../../interfaces/product-card';
-import { SelectByEnum } from '../../../interfaces/select-by.enum';
-import { SortByEnum } from '../../../interfaces/sort-by.enum';
+import { ProductCard } from '../interfaces/product-card';
+import { SelectByEnum } from '../interfaces/select-by.enum';
+import { SortByEnum } from '../interfaces/sort-by.enum';
 
 
 @Injectable({

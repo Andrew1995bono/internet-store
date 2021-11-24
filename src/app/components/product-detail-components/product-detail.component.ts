@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductCard } from '../../interfaces/product-card';
-import { ProductDetailService } from '../../services/product-detail/product-detail.service';
+import { BreadcrumbsService } from '../../services/breadcrumbs.service';
+import { ProductDetailService } from '../../services/product-detail.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -17,7 +18,8 @@ export class ProductDetailComponent implements OnInit {
 
   constructor(
     private productDetailService: ProductDetailService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private breadcrumbsService: BreadcrumbsService
   ) { }
 
   ngOnInit(): void {
@@ -25,6 +27,11 @@ export class ProductDetailComponent implements OnInit {
     this.product = this.route.snapshot.data.product.products.find((p: ProductCard) => p.itemID === id);
     this.setRating(this.product.rating);
     this.products = this.route.snapshot.data.product.products;
+    this.breadcrumbsService.breadCrumbs = [
+      { label: 'Homepage /', routerLink: '**' },
+      { label: 'All products /', routerLink: 'allProducts' },
+      { label: this.product.name, routerLink: 'allProducts' + '/' + this.product.itemID }
+    ];
   }
 
   private setRating(rating: number): void {

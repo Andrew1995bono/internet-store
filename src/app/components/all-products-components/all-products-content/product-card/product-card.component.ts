@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductCard } from '../../../../interfaces/product-card';
-import { FiltersService } from '../../../../services/all-products/filters/filters.service';
-import { ProductDetailService } from '../../../../services/product-detail/product-detail.service';
+import { FiltersService } from '../../../../services/filters.service';
+import { ProductDetailService } from '../../../../services/product-detail.service';
 
 
 @Component({
@@ -38,5 +38,6 @@ export class ProductCardComponent implements OnInit {
   public sendProductID(): void {
     this.router.navigate(['allProducts', this.product.itemID]);
   }
+
 }
 

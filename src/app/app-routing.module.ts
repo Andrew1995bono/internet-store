@@ -7,9 +7,12 @@ import { ProductDetailComponent } from './components/product-detail-components/p
 
 const routes: Routes = [
   { path: 'home', component: HomepageContentComponent },
-  { path: 'allProducts', component: AllProductsComponent },
+  { path: 'allProducts', component: AllProductsComponent, data: { title: 'All products' } },
   {
-    path: 'allProducts/:id', component: ProductDetailComponent, resolve: { product: ProductDetailResolver }
+    path: 'allProducts/:id',
+    component: ProductDetailComponent,
+    resolve: { product: ProductDetailResolver },
+    data: { title: 'Product detail' }
   },
   { path: '**', redirectTo: 'home' }
 ];

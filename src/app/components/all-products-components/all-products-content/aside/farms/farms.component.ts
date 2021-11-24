@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatCheckboxChange } from '@angular/material/checkbox';
-import { FiltersService } from '../../../../../services/all-products/filters/filters.service';
+import { FiltersService } from '../../../../../services/filters.service';
 
 @Component({
   selector: 'app-farms',

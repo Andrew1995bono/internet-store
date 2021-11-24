@@ -1,6 +1,6 @@
 import { ChangeContext, Options } from '@angular-slider/ngx-slider';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FiltersService } from '../../../../../services/all-products/filters/filters.service';
+import { FiltersService } from '../../../../../services/filters.service';
 
 @Component({
   selector: 'app-slider',

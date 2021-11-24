@@ -2,7 +2,8 @@ import { Component, Input, OnDestroy, OnInit, ViewEncapsulation } from '@angular
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { ProductCard } from '../../../interfaces/product-card';
-import { FiltersService } from '../../../services/all-products/filters/filters.service';
+import { BreadcrumbsService } from '../../../services/breadcrumbs.service';
+import { FiltersService } from '../../../services/filters.service';
 
 
 @Component({
@@ -32,9 +33,10 @@ export class AllProductsContentComponent implements OnInit, OnDestroy {
   public showFiller: boolean = false;
   public popupClass: boolean = false;
 
-  constructor(private filtersService: FiltersService) {
-
-  }
+  constructor(
+    private filtersService: FiltersService,
+    private breadcrumbsService: BreadcrumbsService
+  ) { }
 
   ngOnInit(): void {
     this.filtersService.allProducts.pipe(
@@ -43,6 +45,10 @@ export class AllProductsContentComponent implements OnInit, OnDestroy {
       this.filteredProducts = data;
       this.p = 1;
     });
+    this.breadcrumbsService.breadCrumbs = [
+      { label: 'Homepage /', routerLink: '**' },
+      { label: 'All products', routerLink: 'allProducts' }
+    ];
   }
 
   public showMoreProducts($event: MouseEvent): void {

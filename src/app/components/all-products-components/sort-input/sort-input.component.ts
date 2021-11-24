@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatSelectChange } from '@angular/material/select';
 import { DropDownEnumInterface } from '../../../interfaces/dropdown-select';
 import { SortByEnum } from '../../../interfaces/sort-by.enum';
-import { FiltersService } from '../../../services/all-products/filters/filters.service';
+import { FiltersService } from '../../../services/filters.service';
 
 @Component({
   selector: 'app-sort-input',
