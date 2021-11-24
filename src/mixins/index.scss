@@ -4,11 +4,13 @@
   }
 }
 
+
 @mixin _1240 {
   @media (max-width: 1240px) {
     @content;
   }
 }
+
 
 @mixin _1170 {
   @media (max-width: 1170px) {
@@ -16,17 +18,41 @@
   }
 }
 
+
 @mixin _1125 {
   @media (max-width: 1125px) {
     @content;
   }
 }
 
+
+@mixin _1100 {
+  @media (max-width: 1100px) {
+    @content;
+  }
+}
+
+
+@mixin _1090 {
+  @media (max-width: 1090px) {
+    @content;
+  }
+}
+
+
 @mixin _1080 {
   @media (max-width: 1080px) {
     @content;
   }
 }
+
+
+@mixin _1030 {
+  @media (max-width: 1030px) {
+    @content;
+  }
+}
+
 
 @mixin _1024 {
   @media (max-width: 1024px) {
@@ -40,17 +66,34 @@
   }
 }
 
+
+@mixin _920 {
+  @media (max-width: 920px) {
+    @content;
+  }
+}
+
+
+@mixin _900 {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+
 @mixin _836 {
   @media (max-width: 836px) {
     @content;
   }
 }
 
-@mixin _735 {
-  @media (max-width: 735px) {
+
+@mixin _800 {
+  @media (max-width: 800px) {
     @content;
   }
 }
+
 
 @mixin _768 {
   @media (max-width: 768px) {
@@ -58,11 +101,27 @@
   }
 }
 
-@mixin _600 {
-  @media (max-width: 600px) {
+
+@mixin _735 {
+  @media (max-width: 735px) {
     @content;
   }
 }
+
+
+@mixin _700 {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+
+
+@mixin _670 {
+  @media (max-width: 670px) {
+    @content;
+  }
+}
+
 
 @mixin _625 {
   @media (max-width: 625px) {
@@ -70,11 +129,20 @@
   }
 }
 
+
+@mixin _600 {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+
 @mixin _570 {
   @media (max-width: 570px) {
     @content;
   }
 }
+
 
 @mixin _535 {
   @media (max-width: 535px) {
@@ -82,11 +150,13 @@
   }
 }
 
+
 @mixin _515 {
   @media (max-width: 515px) {
     @content;
   }
 }
+
 
 @mixin _480 {
   @media (max-width: 480px) {
@@ -94,11 +164,20 @@
   }
 }
 
+
+@mixin _460 {
+  @media (max-width: 460px) {
+    @content;
+  }
+}
+
+
 @mixin _450 {
   @media (max-width: 450px) {
     @content;
   }
 }
+
 
 @mixin _420 {
   @media (max-width: 420px) {
@@ -106,17 +185,20 @@
   }
 }
 
+
 @mixin _380 {
   @media (max-width: 380px) {
     @content;
   }
 }
 
+
 @mixin _360 {
   @media (max-width: 360px) {
     @content;
   }
 }
+
 
 @mixin _320 {
   @media (max-width: 320px) {

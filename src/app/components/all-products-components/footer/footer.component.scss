@@ -1,12 +1,9 @@
 @import "../../../../mixins";
 
 .footer {
-  @include _535 {
-    padding-top: 120px;
-  }
   display: flex;
   flex-direction: column;
-  padding: 81px 45px 78px;
+  padding: 64px 45px;
 }
 
 

@@ -8,8 +8,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTabsModule } from '@angular/material/tabs';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxPaginationModule } from 'ngx-pagination';
@@ -35,6 +37,8 @@ import { InputFieldComponent } from './components/homepage-components/navbar/inp
 import { NavbarComponent } from './components/homepage-components/navbar/navbar.component';
 import { SelectFieldComponent } from './components/homepage-components/navbar/select-field/select-field.component';
 import { PagesTitleComponent } from './components/homepage-components/pages-title/pages-title.component';
+import { ProductDetailResolver } from './components/product-detail-components/product-detail-resolver';
+import { ProductDetailComponent } from './components/product-detail-components/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +60,8 @@ import { PagesTitleComponent } from './components/homepage-components/pages-titl
     FarmsComponent,
     RatingComponent,
     SliderComponent,
-    FooterComponent
+    FooterComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -73,9 +78,11 @@ import { PagesTitleComponent } from './components/homepage-components/pages-titl
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     ReactiveFormsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatIconModule,
+    MatTabsModule
   ],
-  providers: [],
+  providers: [ProductDetailResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
