@@ -6,7 +6,7 @@
 
 
 .forms-container {
-  width: 57.6%;
+  width: 59.2%;
 }
 
 
@@ -35,7 +35,7 @@
 }
 
 
-.forms-field p, .additional-information-input span {
+.forms-field label, .additional-information-input label {
   font-family: Poppins;
   font-weight: 600;
   font-size: 12px;
@@ -124,12 +124,12 @@
 
 .agree-inputs div.email-checkbox {
   margin-bottom: 16px;
-  width: 83.6%;
+  width: 82.6%;
 }
 
 
 .agree-inputs div.policy-checkbox {
-  width: 65.65%;
+  width: 64.8%;
 }
 
 
@@ -182,7 +182,7 @@
 
 
 .image-wishlist-remove img.product-image {
-  width: 91.5%;
+  width: 89.1%;
   height: 67px;
   object-fit: cover;
   border-radius: 12px;
@@ -352,4 +352,5 @@
   font-size: 26px;
   line-height: 39px;
   color: #6A983C;
+  margin: 0;
 }

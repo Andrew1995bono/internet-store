@@ -7,20 +7,23 @@
     <div class="forms-field">
       <div class="first-form-block">
         <div class="first-name">
-          <p>First name</p>
-          <input type="text" placeholder="First name">
+          <label for="first-name">First name</label>
+          <input id="first-name" type="text" placeholder="First name">
         </div>
         <div class="email-address">
-          <p>Email address</p>
-          <input type="email" placeholder="Email address">
+          <label for="email-address">Email address</label>
+          <input id="email-address" type="email" placeholder="Email address" [formControl]="emailFormControl">
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+          </mat-error>
         </div>
         <div class="address">
-          <p>Address</p>
-          <input type="text" placeholder="Address">
+          <label for="address">Address</label>
+          <input id="address" type="text" placeholder="Address">
         </div>
         <div class="state-country">
-          <p>State / Country</p>
-          <input type="text" name="country" list="countries" placeholder="Choose your country">
+          <label for="state-country">State / Country</label>
+          <input id="state-country" type="text" name="country" list="countries" placeholder="Choose your country">
           <datalist id="countries">
             <option *ngFor="let country of countriesAndCitiesArray" value="{{country.country}}">
           </datalist>
@@ -28,23 +31,23 @@
       </div>
       <div class="second-form-block">
         <div class="last-name">
-          <p>Last name</p>
-          <input type="text" placeholder="Last name">
+          <label for="last-name">Last name</label>
+          <input id="last-name" type="text" placeholder="Last name">
         </div>
         <div class="phone-number">
-          <p>Phone number</p>
-          <input type="text" placeholder="Phone number">
+          <label for="phone-number">Phone number</label>
+          <input id="phone-number" type="number" placeholder="Phone number">
         </div>
         <div class="town-city">
-          <p>Town / City</p>
-          <input type="text" name="city" list="cities" placeholder="Town or city">
+          <label for="town-city">Town / City</label>
+          <input id="town-city" type="text" name="city" list="cities" placeholder="Town or city">
           <datalist id="cities">
             <option *ngFor="let city of countriesAndCitiesArray" value="{{city.city}}">
           </datalist>
         </div>
         <div class="zip-postal-code">
-          <p>ZIP / Postal code</p>
-          <input type="text" placeholder="Postal code or ZIP">
+          <label for="zip-postal-code">ZIP / Postal code</label>
+          <input id="zip-postal-code" type="number" placeholder="Postal code or ZIP">
         </div>
       </div>
     </div>
@@ -54,8 +57,8 @@
         <span>Need something else? We will make it for you!</span>
       </div>
       <div class="additional-information-input">
-        <span>Order notes</span> <br>
-        <input type="text" placeholder="Need a specific delivery day? Sending a gift? Let's say ...">
+        <label for="order-notes">Order notes</label>
+        <input id="order-notes" type="text" placeholder="Need a specific delivery day? Sending a gift? Let's say ...">
       </div>
     </div>
     <div class="confirmation">

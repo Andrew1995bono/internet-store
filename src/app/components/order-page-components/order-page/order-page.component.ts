@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { CountriesCities } from '../../../interfaces/countries-cities';
 import { ProductCard } from '../../../interfaces/product-card';
 
@@ -959,7 +960,7 @@ export class OrderPageComponent implements OnInit {
       'city': 'Harare'
     }
   ];
-
+  public emailFormControl = new FormControl('', [Validators.required, Validators.email]);
 
   constructor() { }
 
