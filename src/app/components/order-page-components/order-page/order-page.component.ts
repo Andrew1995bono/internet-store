@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CountriesCities } from '../../../interfaces/countries-cities';
+import { ProductCard } from '../../../interfaces/product-card';
 
 @Component({
   selector: 'app-order-page',
@@ -10,7 +11,8 @@ import { CountriesCities } from '../../../interfaces/countries-cities';
 
 export class OrderPageComponent implements OnInit {
 
-
+  public starArr: string[] = ['', '', '', '', ''];
+  public product = {} as ProductCard;
   public countriesAndCitiesArray: CountriesCities[] = [
     {
       'country': 'Afghanistan',
@@ -962,7 +964,12 @@ export class OrderPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.setRating(4);
   }
 
+  private setRating(rating: number): void {
+    this.starArr.fill('../../assets/star-symbol-filled.png', 0, (this.product.rating));
+    this.starArr.fill('../../assets/star-symbol-empty.png', this.product.rating, 5);
+  }
 
 }
