@@ -6,28 +6,30 @@
     </div>
     <div class="forms-field">
       <div class="first-form-block">
-        <div class="first-name">
-          <label for="first-name">First name</label>
-          <input id="first-name" type="text" placeholder="First name">
-        </div>
-        <div class="email-address">
-          <label for="email-address">Email address</label>
-          <input id="email-address" type="email" placeholder="Email address" [formControl]="emailFormControl">
-          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-            Please enter a valid email address
-          </mat-error>
-        </div>
-        <div class="address">
-          <label for="address">Address</label>
-          <input id="address" type="text" placeholder="Address">
-        </div>
-        <div class="state-country">
-          <label for="state-country">State / Country</label>
-          <input id="state-country" type="text" name="country" list="countries" placeholder="Choose your country">
-          <datalist id="countries">
-            <option *ngFor="let country of countriesAndCitiesArray" value="{{country.country}}">
-          </datalist>
-        </div>
+        <form [formGroup]="userForm">
+          <div class="first-name">
+            <label for="first-name">First name</label>
+            <input id="first-name" type="text" placeholder="First name" formControlName="firstName">
+          </div>
+          <div class="email-address">
+            <label for="email-address">Email address</label>
+            <input id="email-address" type="email" placeholder="Email address" [formControl]="emailFormControl">
+            <mat-error *ngIf="emailFormControl.hasError('email')">
+              Please enter a valid email address
+            </mat-error>
+          </div>
+          <div class="address">
+            <label for="address">Address</label>
+            <input id="address" type="text" placeholder="Address">
+          </div>
+          <div class="state-country">
+            <label for="state-country">State / Country</label>
+            <input id="state-country" type="text" name="country" list="countries" placeholder="Choose your country">
+            <datalist id="countries">
+              <option *ngFor="let country of countriesAndCitiesArray" value="{{country.country}}">
+            </datalist>
+          </div>
+        </form>
       </div>
       <div class="second-form-block">
         <div class="last-name">

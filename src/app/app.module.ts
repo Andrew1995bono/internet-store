@@ -37,9 +37,10 @@ import { InputFieldComponent } from './components/homepage-components/navbar/inp
 import { NavbarComponent } from './components/homepage-components/navbar/navbar.component';
 import { SelectFieldComponent } from './components/homepage-components/navbar/select-field/select-field.component';
 import { PagesTitleComponent } from './components/homepage-components/pages-title/pages-title.component';
+import { OrderPageComponent } from './components/order-page-components/order-page/order-page.component';
 import { ProductDetailResolver } from './components/product-detail-components/product-detail-resolver';
 import { ProductDetailComponent } from './components/product-detail-components/product-detail.component';
-import { OrderPageComponent } from './components/order-page-components/order-page/order-page.component';
+
 
 @NgModule({
   declarations: [
