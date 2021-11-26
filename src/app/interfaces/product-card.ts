@@ -18,6 +18,7 @@ export class ProductCard {
   buyBuy: string;
   deliveryTime: string;
   deliveryArea: string;
+  freshnessDay: string;
 
   constructor() { }
 }

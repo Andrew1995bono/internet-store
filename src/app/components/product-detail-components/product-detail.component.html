@@ -66,7 +66,7 @@
           <div class="add-to-cart-button">
             <span class="plus">+</span>
             <a routerLink="/order">
-              <button (click)="addToCart()">Add to cart</button>
+              <button (click)="addToCart(); pushProductToStorage()">Add to cart</button>
             </a>
           </div>
         </div>

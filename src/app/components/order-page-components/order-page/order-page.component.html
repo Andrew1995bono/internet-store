@@ -95,7 +95,6 @@
           </div>
         </div>
         <div class="complete-order">
-          <p>{{userForm.status}}</p>
           <button type="submit" [disabled]="!userForm.valid">Complete order</button>
         </div>
       </div>
@@ -107,11 +106,11 @@
         <span>Order Summary</span><br>
         <span>Price can change depending on shipping method and taxes of your state.</span>
       </div>
-      <div class="summary-product">
+      <div class="summary-product" *ngFor="let item of addedToCartProducts">
         <div class="image-wishlist-remove">
           <img class="product-image"
-               src="https://nystudio107-ems2qegf7x6qiqq.netdna-ssl.com/img/blog/_1200x675_crop_center-center_82_line/image_optimzation.jpg"
-               alt="try-image">
+               src="{{item.imgUrl}}"
+               alt="product-image">
           <br>
           <img src="../../assets/wishlist.png" alt="add-to-wishlist-img">
           <span class="wishlist">Wishlist</span>
@@ -120,15 +119,15 @@
           <span class="remove">Remove</span>
         </div>
         <div class="summary-product-description">
-          <h3>Product title</h3>
+          <h3>{{item.name}}</h3>
           <div class="farm-freshness">
             <div class="property">
               <p>Farm:</p>
               <p>Freshness:</p>
             </div>
             <div class="value">
-              <p>Tharamis Farm</p>
-              <p>1 day old</p>
+              <p>{{item.farm}}</p>
+              <p>{{item.freshnessDay}}</p>
             </div>
           </div>
           <div class="summary-rating">
@@ -136,7 +135,7 @@
             <img src="{{star}}" alt="rating-star">
           </span>
           </div>
-          <h2>36.99 USD</h2>
+          <h2>{{item.priceUsual}} USD</h2>
         </div>
         <div class="pcs">
           <span>1pcs</span>

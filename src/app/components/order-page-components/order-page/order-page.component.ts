@@ -17,20 +17,22 @@ export class OrderPageComponent implements OnInit {
   public product = {} as ProductCard;
   public countriesAndCitiesArray: CountriesCities[] = countriesAndCities;
   public userForm: FormGroup;
+  public addedToCartProducts: ProductCard[] = [];
 
   constructor(
     private fb: FormBuilder
   ) { }
 
   ngOnInit(): void {
-    this.setRating(4);
+    this.setRating(2);
     this.userForm = this.generateUserForm();
     // this.userForm.valueChanges.subscribe(console.log);
+    this.getProduct();
   }
 
   private setRating(rating: number): void {
-    this.starArr.fill('../../assets/star-symbol-filled.png', 0, (this.product.rating));
-    this.starArr.fill('../../assets/star-symbol-empty.png', this.product.rating, 5);
+    this.starArr.fill('../../assets/star-symbol-filled.png', 0, (rating));
+    this.starArr.fill('../../assets/star-symbol-empty.png', rating, 5);
   }
 
 
@@ -56,6 +58,10 @@ export class OrderPageComponent implements OnInit {
 
   get form() {
     return this.userForm.controls;
+  }
+
+  getProduct(): void {
+    this.addedToCartProducts = JSON.parse(localStorage.getItem('products') || '');
   }
 
 }
