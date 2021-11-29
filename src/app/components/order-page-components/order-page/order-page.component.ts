@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CountriesCities } from '../../../interfaces/countries-cities';
 import { ProductCard } from '../../../interfaces/product-card';
+import { BreadcrumbsService } from '../../../services/breadcrumbs.service';
 import { countriesAndCities } from './countries-cities-constant';
 
 @Component({
@@ -20,7 +21,8 @@ export class OrderPageComponent implements OnInit {
   public addedToCartProducts: ProductCard[] = [];
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private breadcrumbsService: BreadcrumbsService
   ) { }
 
   ngOnInit(): void {
@@ -28,6 +30,10 @@ export class OrderPageComponent implements OnInit {
     this.userForm = this.generateUserForm();
     // this.userForm.valueChanges.subscribe(console.log);
     this.getProduct();
+    this.breadcrumbsService.breadCrumbs = [
+      { label: 'Homepage /', routerLink: '**' },
+      { label: 'Checkout page ', routerLink: 'order' }
+    ];
   }
 
   private setRating(rating: number): void {

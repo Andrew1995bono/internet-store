@@ -174,14 +174,25 @@
 }
 
 
-.summary-product {
+.ordered-products {
   margin: 40px 0 62px;
+  overflow-y: auto;
+  height: 170px;
+}
+
+
+.summary-product {
   display: flex;
 }
 
 
+.indentation {
+  margin-bottom: 54px;
+}
+
+
 .image-wishlist-remove img.product-image {
-  width: 89.1%;
+  width: 100px;
   height: 67px;
   object-fit: cover;
   border-radius: 12px;
@@ -227,6 +238,11 @@
 
 .value {
   margin-left: 14px;
+}
+
+
+.value p:first-child {
+  white-space: nowrap;
 }
 
 

@@ -40,10 +40,6 @@ export class ProductDetailComponent implements OnInit {
   }
 
 
-  public addToCart(): void {
-    this.productDetailService.addToCartItems += 1;
-  }
-
   public pushProductToStorage(): void {
     this.productDetailService.pushProductToStorage(this.product);
   }
