@@ -14,11 +14,13 @@ import { countriesAndCities } from './countries-cities-constant';
 
 export class OrderPageComponent implements OnInit {
 
-  public starArr: string[] = ['', '', '', '', ''];
-  public product = {} as ProductCard;
+  public starArr: any[] = [];
   public countriesAndCitiesArray: CountriesCities[] = countriesAndCities;
   public userForm: FormGroup;
   public addedToCartProducts: ProductCard[] = [];
+  public subtotalPrice: number = 0;
+  public tax: number = 16.53;
+  public totalOrder: number = 0;
 
   constructor(
     private fb: FormBuilder,
@@ -26,7 +28,12 @@ export class OrderPageComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.setRating(2);
+    for (let i = 0; i < JSON.parse(localStorage.getItem('products') || '').length; i++) {
+      this.starArr.push(Array(5).fill(''));
+      this.setRating(JSON.parse(localStorage.getItem('products') || '')[i].rating, i);
+      this.subtotalPrice += JSON.parse(localStorage.getItem('products') || '')[i].pricePromotional;
+      this.totalOrder = this.subtotalPrice + this.tax;
+    }
     this.userForm = this.generateUserForm();
     // this.userForm.valueChanges.subscribe(console.log);
     this.getProduct();
@@ -36,9 +43,9 @@ export class OrderPageComponent implements OnInit {
     ];
   }
 
-  private setRating(rating: number): void {
-    this.starArr.fill('../../assets/star-symbol-filled.png', 0, (rating));
-    this.starArr.fill('../../assets/star-symbol-empty.png', rating, 5);
+  private setRating(rating: number, i: number): void {
+    this.starArr[i].fill('../../assets/star-symbol-filled.png', 0, (rating));
+    this.starArr[i].fill('../../assets/star-symbol-empty.png', rating, 5);
   }
 
 

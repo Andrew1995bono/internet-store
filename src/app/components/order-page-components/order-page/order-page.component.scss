@@ -6,7 +6,7 @@
 
 
 .forms-container {
-  width: 59.2%;
+  width: 60.15%;
 }
 
 
@@ -171,6 +171,7 @@
   border-radius: 12px;
   padding: 32px 16px 34px;
   margin-left: 32px;
+  margin-top: 18px;
 }
 
 
@@ -199,7 +200,7 @@
 }
 
 
-.image-wishlist-remove span.wishlist, span.remove {
+.image-wishlist-remove span.wish-list, span.remove {
   margin-left: 7px;
 }
 
@@ -238,11 +239,6 @@
 
 .value {
   margin-left: 14px;
-}
-
-
-.value p:first-child {
-  white-space: nowrap;
 }
 
 

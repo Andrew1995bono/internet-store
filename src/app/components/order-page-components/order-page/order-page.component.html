@@ -115,7 +115,7 @@
                  alt="product-image">
             <br>
             <img src="../../assets/wishlist.png" alt="add-to-wishlist-img">
-            <span class="wishlist">Wishlist</span>
+            <span class="wish-list">Wishlist</span>
             <br>
             <img class="delete-item" src="../../assets/remove-item-icon.png" alt="add-to-wishlist-img">
             <span class="remove">Remove</span>
@@ -133,11 +133,11 @@
               </div>
             </div>
             <div class="summary-rating">
-              <span [class.stars]="!last" *ngFor="let star of starArr;last as last">
+              <span [class.stars]="!last" *ngFor="let star of starArr[i];last as last">
                 <img src="{{star}}" alt="rating-star">
               </span>
             </div>
-            <h2>{{item.priceUsual}} USD</h2>
+            <h2>{{item.pricePromotional}} USD</h2>
           </div>
           <div class="pcs">
             <span>1pcs</span>
@@ -149,11 +149,11 @@
       </div>
       <div class="subtotal">
         <h5>Subtotal</h5>
-        <p>73.98 USD</p>
+        <p>{{subtotalPrice}} USD</p>
       </div>
       <div class="tax">
         <h5>Tax</h5>
-        <p>17% 16.53 USD</p>
+        <p>17% {{tax}} USD</p>
       </div>
       <div class="promo-code" data-text="Apply now">
         <input type="text" placeholder="Apply promo code">
@@ -164,7 +164,7 @@
           <p>Guaranteed delivery day: June 12, 2020</p>
         </div>
         <div>
-          <p>89.84 USD</p>
+          <p>{{totalOrder}} USD</p>
         </div>
       </div>
     </div>
