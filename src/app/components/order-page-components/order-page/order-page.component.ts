@@ -65,7 +65,7 @@ export class OrderPageComponent implements OnInit {
       zipPostalCode: ['', Validators.pattern('[0-9]{5}')],
       orderNotes: [''],
       newsSending: [''],
-      policyAgreement: ['', Validators.required]
+      policyAgreement: ['', Validators.requiredTrue]
     });
   }
 

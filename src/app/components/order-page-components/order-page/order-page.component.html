@@ -10,27 +10,25 @@
           <div class="first-name">
             <label for="first-name">First name</label>
             <input id="first-name" type="text" placeholder="First name" formControlName="firstName">
-            <mat-error *ngIf="form.firstName.invalid && form.firstName.touched">Please enter a
-              first name
+            <mat-error *ngIf="form.firstName.invalid && form.firstName.touched">
+              <sup>*</sup>Please enter a first name
             </mat-error>
           </div>
           <div class="email-address">
             <label for="email-address">Email address</label>
             <input id="email-address" type="email" placeholder="Email address" formControlName="emailAddress">
-            <mat-error *ngIf="form.emailAddress.invalid && form.emailAddress.touched">Please enter a valid email
-              address
+            <mat-error *ngIf="form.emailAddress.invalid && form.emailAddress.touched">
+              <sup>*</sup>Please enter a valid email address
             </mat-error>
           </div>
           <div class="address">
             <label for="address">Address</label>
             <input id="address" type="text" placeholder="Address" formControlName="address">
-            <mat-error *ngIf="form.address.invalid && form.address.touched">Please enter an address</mat-error>
           </div>
           <div class="state-country">
             <label for="state-country">State / Country</label>
             <input id="state-country" type="text" name="country" list="countries" placeholder="Choose your country"
                    formControlName="country">
-            <mat-error *ngIf="form.country.invalid && form.country.touched ">Please choose your country</mat-error>
             <datalist id="countries">
               <option *ngFor="let country of countriesAndCitiesArray" value="{{country.country}}">
             </datalist>
@@ -40,21 +38,21 @@
           <div class="last-name">
             <label for="last-name">Last name</label>
             <input id="last-name" type="text" placeholder="Last name" formControlName="lastName">
-            <mat-error *ngIf="form.lastName.invalid && form.lastName.touched">Please enter a
-              last name
+            <mat-error *ngIf="form.lastName.invalid && form.lastName.touched">
+              <sup>*</sup>Please enter a last name
             </mat-error>
           </div>
           <div class="phone-number">
             <label for="phone-number">Phone number</label>
             <input id="phone-number" type="tel" placeholder="Phone number" formControlName="phoneNumber">
-            <mat-error *ngIf="form.phoneNumber.invalid && form.phoneNumber.touched">Please enter the phone number
+            <mat-error *ngIf="form.phoneNumber.invalid && form.phoneNumber.touched">
+              <sup>*</sup>Please enter the phone number
             </mat-error>
           </div>
           <div class="town-city">
             <label for="town-city">Town / City</label>
             <input id="town-city" type="text" name="city" list="cities" placeholder="Town or city"
                    formControlName="city">
-            <mat-error *ngIf="form.city.invalid && form.city.touched ">Please choose your city</mat-error>
             <datalist id="cities">
               <option *ngFor="let city of countriesAndCitiesArray" value="{{city.city}}">
             </datalist>
@@ -62,9 +60,6 @@
           <div class="zip-postal-code">
             <label for="zip-postal-code">ZIP / Postal code</label>
             <input id="zip-postal-code" type="text" placeholder="Postal code or ZIP" formControlName="zipPostalCode">
-            <mat-error *ngIf="form.zipPostalCode.invalid && form.zipPostalCode.touched">Please enter the correct ZIP
-              code
-            </mat-error>
           </div>
         </div>
       </div>
