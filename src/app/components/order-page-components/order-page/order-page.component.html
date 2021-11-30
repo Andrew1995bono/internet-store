@@ -150,8 +150,9 @@
         <h5>Tax</h5>
         <p>17% {{tax}} USD</p>
       </div>
-      <div class="promo-code" data-text="Apply now">
-        <input type="text" placeholder="Apply promo code">
+      <div class="promo-code">
+        <input id="apply-now" type="text" placeholder="Apply promo code">
+        <button (click)="onApplyDiscount()" [disabled]="disabledPromoButton">Apply now</button>
       </div>
       <div class="total-order">
         <div>
@@ -159,6 +160,9 @@
           <p>Guaranteed delivery day: June 12, 2020</p>
         </div>
         <div>
+          <p *ngIf="discountTotalOrderState">
+            <del>{{discountTotalOrder}} USD</del>
+          </p>
           <p>{{totalOrder}} USD</p>
         </div>
       </div>

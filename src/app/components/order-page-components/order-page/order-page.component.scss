@@ -45,7 +45,7 @@
 }
 
 
-.forms-field input, .promo-code input {
+.forms-field input, .promo-code {
   background: #F9F9F9;
   border: 1px solid #D1D1D1;
   border-radius: 12px;
@@ -124,12 +124,14 @@
 
 .agree-inputs div.email-checkbox {
   margin-bottom: 16px;
-  width: 82.6%;
+  //width: 82.6%;
+  margin-right: 114.5px;
 }
 
 
 .agree-inputs div.policy-checkbox {
-  width: 64.8%;
+  //width: 64.8%;
+  margin-right: 232px;
 }
 
 
@@ -160,8 +162,19 @@
 }
 
 
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
 .complete-order button:hover {
   box-shadow: 0 0 12px rgba(23, 23, 33, .2);
+}
+
+
+.wrapper {
+  width: 45.1%;
 }
 
 
@@ -330,22 +343,36 @@
 
 
 .promo-code {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 32px 0 40px;
 }
 
 
-.promo-code::after {
-  content: attr(data-text);
-  position: absolute;
-  right: 17px;
-  top: 50%;
-  font-size: 15px;
-  transform: translateY(-50%);
+.promo-code input {
+  border: none;
+  background-color: #F9F9F9;
+}
+
+
+.promo-code input:focus {
+  outline: none;
+}
+
+.promo-code button {
   font-family: Poppins;
   font-weight: bold;
+  font-size: 15px;
   line-height: 22px;
   color: #151515;
+  border: none;
+  background-color: #F9F9F9;
+}
+
+
+.promo-code button:hover {
+  cursor: pointer;
 }
 
 
@@ -357,7 +384,14 @@
 }
 
 
-.total-order div:last-child p {
+.total-order div:last-child p:first-child {
+  font-size: 16px;
+  color: grey;
+  margin: 0;
+}
+
+
+.total-order div:last-child p:last-child {
   font-family: Poppins;
   font-weight: 600;
   font-size: 26px;
@@ -370,4 +404,15 @@
 mat-error {
   position: absolute;
   font-size: 13px;
+}
+
+
+.ordered-products::-webkit-scrollbar {
+  background-color: #F9F9F9;
+}
+
+
+.ordered-products::-webkit-scrollbar-thumb {
+  background: #c8e9a3;
+  border-radius: 7px;
 }
