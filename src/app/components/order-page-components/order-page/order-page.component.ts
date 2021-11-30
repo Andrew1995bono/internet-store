@@ -14,7 +14,7 @@ import { countriesAndCities } from './countries-cities-constant';
 
 export class OrderPageComponent implements OnInit {
 
-  public starArr: any[] = [];
+  public starArr: Array<string[]> = [];
   public countriesAndCitiesArray: CountriesCities[] = countriesAndCities;
   public userForm: FormGroup;
   public addedToCartProducts: ProductCard[] = [];
@@ -48,7 +48,7 @@ export class OrderPageComponent implements OnInit {
   }
 
   public onSubmit(): void {
-    console.warn(this.userForm.value);
+    console.warn(this.userForm.value); // output form value
   }
 
   private generateUserForm(): FormGroup {
