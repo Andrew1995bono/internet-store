@@ -79,7 +79,7 @@ export class OrderPageComponent implements OnInit {
     for (let i = 0; i < JSON.parse(localStorage.getItem('products') || '').length; i++) {
       this.starArr.push(Array(5).fill(''));
       this.setRating(JSON.parse(localStorage.getItem('products') || '')[i].rating, i);
-      this.subtotalPrice += JSON.parse(localStorage.getItem('products') || '')[i].pricePromotional;
+      this.subtotalPrice += Number((JSON.parse(localStorage.getItem('products') || '')[i].pricePromotional).toFixed(2));
       this.totalOrder = Number((this.subtotalPrice + this.tax).toFixed(2));
       this.discountTotalOrder = this.totalOrder;
     }
