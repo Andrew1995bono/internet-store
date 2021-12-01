@@ -125,6 +125,9 @@
   @include _815 {
     top: 1490px;
   }
+  @include _600 {
+    top: 1431px;
+  }
 }
 
 
@@ -135,6 +138,9 @@
   }
   @include _815 {
     top: 1754px;
+  }
+  @include _600 {
+    top: 1695px;
   }
 }
 
@@ -195,6 +201,15 @@
   @include _900 {
     margin-right: 102.5px;
   }
+  @include _700 {
+    margin-right: 102px;
+  }
+  @include _670 {
+    margin-right: 72px;
+  }
+  @include _600 {
+    margin-right: 45px;
+  }
   margin-bottom: 16px;
   margin-right: 102.5px;
 }
@@ -209,6 +224,21 @@
   }
   @include _900 {
     margin-right: 221px;
+  }
+  @include _700 {
+    margin-right: 220.5px;
+  }
+  @include _670 {
+    margin-right: 190.5px;
+  }
+  @include _600 {
+    margin-right: 120.5px;
+  }
+  @include _570 {
+    margin-right: 90px;
+  }
+  @include _535 {
+    margin-right: 55.5px;
   }
   margin-right: 221px;
 }
@@ -326,6 +356,14 @@ button[disabled] {
     width: 140px;
     height: 140px;
   }
+  @include _600 {
+    width: 120px;
+    height: 120px;
+  }
+  @include _570 {
+    width: 100px;
+    height: 100px;
+  }
   width: 100px;
   height: 67px;
   object-fit: cover;
@@ -364,6 +402,9 @@ button[disabled] {
   @include _700 {
     font-size: 20px;
   }
+  @include _570 {
+    font-size: 18px;
+  }
   font-family: Poppins;
   font-weight: 500;
   font-size: 15px;
@@ -391,6 +432,9 @@ button[disabled] {
   @include _700 {
     font-size: 13px;
   }
+  @include _570 {
+    font-size: 12px;
+  }
   margin: 0;
 }
 
@@ -411,6 +455,15 @@ button[disabled] {
   @include _670 {
     margin-left: 35px;
   }
+  @include _625 {
+    margin-left: 25px;
+  }
+  @include _600 {
+    margin-left: 20px;
+  }
+  @include _570 {
+    margin-left: 15px;
+  }
   margin-left: 14px;
 }
 
@@ -424,6 +477,9 @@ button[disabled] {
 .summary-rating {
   @include _815 {
     margin-top: 15px;
+  }
+  @include _600 {
+    margin-top: 10px;
   }
   margin-top: 8px;
 }
@@ -450,6 +506,12 @@ button[disabled] {
   @include _700 {
     font-size: 16px;
   }
+  @include _600 {
+    margin: 10px 0 0;
+  }
+  @include _570 {
+    font-size: 15px;
+  }
   font-family: Poppins;
   font-weight: 600;
   font-size: 18px;
@@ -465,6 +527,9 @@ button[disabled] {
   }
   @include _700 {
     margin-top: 120px;
+  }
+  @include _600 {
+    margin-top: 107px;
   }
   background: #F9F9F9;
   border: 1px solid #D1D1D1;
