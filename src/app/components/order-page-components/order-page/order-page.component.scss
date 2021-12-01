@@ -1,6 +1,9 @@
 @import "src/mixins";
 
 .summary-container {
+  @include _815 {
+    flex-direction: column-reverse;
+  }
   padding: 16px 45px;
   display: flex;
   justify-content: space-between;
@@ -8,6 +11,9 @@
 
 
 .forms-container {
+  @include _815 {
+    width: 100%;
+  }
   width: 60.15%;
 }
 
@@ -15,6 +21,9 @@
 .billing-info-header {
   @include _900 {
     padding-top: 15px;
+  }
+  @include _815 {
+    padding-top: 30px;
   }
 }
 
@@ -80,6 +89,9 @@
     margin-bottom: 25px;
     width: 100%;
   }
+  @include _815 {
+    width: 48%;
+  }
   width: 48%;
 }
 
@@ -88,6 +100,10 @@
   @include _900 {
     flex-direction: column;
     margin-bottom: 20px;
+  }
+  @include _815 {
+    flex-direction: row;
+    margin-bottom: 0;
   }
   width: 100%;
   display: flex;
@@ -106,6 +122,9 @@
     top: 1186px;
     width: 75%;
   }
+  @include _815 {
+    top: 1490px;
+  }
 }
 
 
@@ -114,12 +133,18 @@
     top: 1450px;
     padding-bottom: 50px;
   }
+  @include _815 {
+    top: 1754px;
+  }
 }
 
 
 .additional-information, .confirmation {
   @include _900 {
     position: absolute;
+  }
+  @include _815 {
+    margin: 0;
   }
   margin-top: 64px;
 }
@@ -244,16 +269,13 @@ button[disabled] {
 }
 
 
-.wrapper {
-  @include _900 {
-    height: 970px;
-  }
-}
-
-
 .order-summary {
   @include _836 {
     margin-left: 20px;
+  }
+  @include _815 {
+    margin: 0;
+    padding: 15px;
   }
   background: #FFFFFF;
   border: 1px solid #D1D1D1;
@@ -265,6 +287,9 @@ button[disabled] {
 
 
 .ordered-products {
+  @include _815 {
+    max-height: 340px;
+  }
   margin: 40px 0 62px;
   max-height: 510px;
   overflow-y: auto;
@@ -272,6 +297,9 @@ button[disabled] {
 
 
 .summary-product {
+  @include _815 {
+    justify-content: space-between;
+  }
   display: flex;
 }
 
@@ -282,6 +310,22 @@ button[disabled] {
 
 
 .image-wishlist-remove img.product-image {
+  @include _815 {
+    width: 200px;
+    height: 200px;
+  }
+  @include _735 {
+    width: 180px;
+    height: 180px;
+  }
+  @include _700 {
+    width: 160px;
+    height: 160px;
+  }
+  @include _670 {
+    width: 140px;
+    height: 140px;
+  }
   width: 100px;
   height: 67px;
   object-fit: cover;
@@ -294,13 +338,32 @@ button[disabled] {
 }
 
 
+.image-wishlist-remove > span {
+  @include _815 {
+    font-size: 14px;
+  }
+  @include _670 {
+    font-size: 12px;
+  }
+}
+
+
 .summary-product-description {
+  @include _815 {
+    margin-left: 0;
+  }
   margin-left: 16px;
   width: 44%;
 }
 
 
 .summary-product-description h3 {
+  @include _815 {
+    font-size: 22px;
+  }
+  @include _700 {
+    font-size: 20px;
+  }
   font-family: Poppins;
   font-weight: 500;
   font-size: 15px;
@@ -311,6 +374,10 @@ button[disabled] {
 
 
 .farm-freshness {
+  @include _815 {
+    margin-top: 15px;
+    //justify-content: space-between;
+  }
   display: flex;
   margin-top: 4px;
   font-size: 12px;
@@ -318,6 +385,12 @@ button[disabled] {
 
 
 .farm-freshness p {
+  @include _815 {
+    font-size: 14px;
+  }
+  @include _700 {
+    font-size: 13px;
+  }
   margin: 0;
 }
 
@@ -329,6 +402,15 @@ button[disabled] {
 
 
 .value {
+  @include _815 {
+    margin-left: 70px;
+  }
+  @include _735 {
+    margin-left: 47px;
+  }
+  @include _670 {
+    margin-left: 35px;
+  }
   margin-left: 14px;
 }
 
@@ -340,7 +422,22 @@ button[disabled] {
 
 
 .summary-rating {
+  @include _815 {
+    margin-top: 15px;
+  }
   margin-top: 8px;
+}
+
+
+.summary-rating img {
+  @include _815 {
+    width: 17px;
+    height: 17px;
+  }
+  @include _670 {
+    width: 15px;
+    height: 15px;
+  }
 }
 
 
@@ -350,6 +447,9 @@ button[disabled] {
 
 
 .summary-product-description h2 {
+  @include _700 {
+    font-size: 16px;
+  }
   font-family: Poppins;
   font-weight: 600;
   font-size: 18px;
@@ -360,6 +460,12 @@ button[disabled] {
 
 
 .pcs {
+  @include _815 {
+    margin: 122px 3px 0 0;
+  }
+  @include _700 {
+    margin-top: 120px;
+  }
   background: #F9F9F9;
   border: 1px solid #D1D1D1;
   border-radius: 12px;
