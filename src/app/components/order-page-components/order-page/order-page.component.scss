@@ -240,6 +240,9 @@
   @include _535 {
     margin-right: 55.5px;
   }
+  @include _450 {
+    margin-right: 45px;
+  }
   margin-right: 221px;
 }
 
@@ -276,6 +279,9 @@
 
 
 .complete-order button {
+  @include _535 {
+    padding: 16.5px 38px;
+  }
   background: #6A983C;
   border: 2px solid #46760A;
   border-radius: 12px;
@@ -330,12 +336,42 @@ button[disabled] {
   @include _815 {
     justify-content: space-between;
   }
+  @include _535 {
+    flex-direction: column;
+    align-items: center;
+  }
   display: flex;
 }
 
 
 .indentation {
   margin-bottom: 54px;
+}
+
+
+.image-wishlist-remove {
+  @include _535 {
+    width: 65%;
+  }
+  @include _450 {
+    width: 75%;
+  }
+}
+
+
+.add-remove {
+  @include _535 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+.add-remove div:last-child {
+  @include _535 {
+    margin-left: 20px;
+  }
 }
 
 
@@ -364,6 +400,13 @@ button[disabled] {
     width: 100px;
     height: 100px;
   }
+  @include _535 {
+    width: 100%;
+    height: 180px;
+  }
+  @include _450 {
+    height: 155px;
+  }
   width: 100px;
   height: 67px;
   object-fit: cover;
@@ -390,6 +433,13 @@ button[disabled] {
   @include _815 {
     margin-left: 0;
   }
+  @include _535 {
+    margin-top: 20px;
+    width: 65%;
+  }
+  @include _450 {
+    width: 75%;
+  }
   margin-left: 16px;
   width: 44%;
 }
@@ -405,6 +455,9 @@ button[disabled] {
   @include _570 {
     font-size: 18px;
   }
+  @include _535 {
+    font-size: 22px;
+  }
   font-family: Poppins;
   font-weight: 500;
   font-size: 15px;
@@ -417,7 +470,9 @@ button[disabled] {
 .farm-freshness {
   @include _815 {
     margin-top: 15px;
-    //justify-content: space-between;
+  }
+  @include _535 {
+    justify-content: space-between;
   }
   display: flex;
   margin-top: 4px;
@@ -434,6 +489,9 @@ button[disabled] {
   }
   @include _570 {
     font-size: 12px;
+  }
+  @include _535 {
+    font-size: 14px;
   }
   margin: 0;
 }
@@ -494,6 +552,10 @@ button[disabled] {
     width: 15px;
     height: 15px;
   }
+  @include _535 {
+    width: 17px;
+    height: 17px;
+  }
 }
 
 
@@ -512,12 +574,27 @@ button[disabled] {
   @include _570 {
     font-size: 15px;
   }
+  @include _535 {
+    font-size: 18px;
+  }
   font-family: Poppins;
   font-weight: 600;
   font-size: 18px;
   line-height: 27px;
   color: #6A983C;
   margin: 17.6px 0 0;
+}
+
+
+.pcs-wrapper {
+  @include _535 {
+    display: flex;
+    justify-content: flex-start;
+    width: 65%;
+  }
+  @include _450 {
+    width: 75%;
+  }
 }
 
 
@@ -530,6 +607,10 @@ button[disabled] {
   }
   @include _600 {
     margin-top: 107px;
+  }
+  @include _535 {
+    margin-top: 15px;
+    //padding-right: 160px;
   }
   background: #F9F9F9;
   border: 1px solid #D1D1D1;
@@ -640,6 +721,9 @@ button[disabled] {
 
 
 .total-order div:last-child p:last-child {
+  @include _535 {
+    font-size: 22px;
+  }
   font-family: Poppins;
   font-weight: 600;
   font-size: 26px;

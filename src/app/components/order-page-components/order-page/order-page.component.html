@@ -113,11 +113,16 @@
                  src="{{item.imgUrl}}"
                  alt="product-image">
             <br>
-            <img src="../../assets/wishlist.png" alt="add-to-wishlist-img">
-            <span class="wish-list">Wishlist</span>
-            <br>
-            <img class="delete-item" src="../../assets/remove-item-icon.png" alt="add-to-wishlist-img">
-            <span class="remove">Remove</span>
+            <div class="add-remove">
+              <div>
+                <img src="../../assets/wishlist.png" alt="add-to-wishlist-img">
+                <span class="wish-list">Wishlist</span>
+              </div>
+              <div>
+                <img class="delete-item" src="../../assets/remove-item-icon.png" alt="add-to-wishlist-img">
+                <span class="remove">Remove</span>
+              </div>
+            </div>
           </div>
           <div class="summary-product-description">
             <h3>{{item.name}}</h3>
@@ -138,11 +143,13 @@
             </div>
             <h2>{{item.pricePromotional}} USD</h2>
           </div>
-          <div class="pcs">
-            <span>1pcs</span>
-            <img class="vertical" src="../../assets/line.png" alt="arrow-down">
-            <span class="pcs-text">Pcs</span>
-            <img src="../../assets/arrow-down-black.png" alt="arrow-down">
+          <div class="pcs-wrapper">
+            <div class="pcs">
+              <span>1pcs</span>
+              <img class="vertical" src="../../assets/line.png" alt="arrow-down">
+              <span class="pcs-text">Pcs</span>
+              <img src="../../assets/arrow-down-black.png" alt="arrow-down">
+            </div>
           </div>
         </div>
       </div>
