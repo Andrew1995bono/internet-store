@@ -94,4 +94,5 @@ export class OrderPageComponent implements OnInit {
       input.value = '';
     }
   }
+
 }

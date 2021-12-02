@@ -53,6 +53,11 @@
 }
 
 
+.confirmation-header span:last-child {
+  margin-right: 45px;
+}
+
+
 .forms-field {
   @include _900 {
     padding-top: 20px;
@@ -135,19 +140,22 @@
     width: 75%;
   }
   @include _815 {
-    top: 1472px;
+    top: 1383px;
   }
   @include _600 {
-    top: 1413px;
+    top: 1324px;
   }
   @include _570 {
-    top: 1769px;
+    top: 1680px;
   }
   @include _528 {
-    top: 1791px;
+    top: 1702px;
   }
   @include _420 {
-    top: 1796px;
+    top: 1707px;
+  }
+  @include _380 {
+    top: 1697px;
   }
 }
 
@@ -158,19 +166,22 @@
     padding-bottom: 50px;
   }
   @include _815 {
-    top: 1744px;
+    top: 1655px;
   }
   @include _600 {
-    top: 1685px;
+    top: 1596px;
   }
   @include _570 {
-    top: 2040px;
+    top: 1951px;
   }
   @include _528 {
-    top: 2062px;
+    top: 1973px;
   }
   @include _420 {
-    top: 2067px;
+    top: 1978px;
+  }
+  @include _380 {
+    top: 1968px;
   }
 }
 
@@ -223,10 +234,10 @@
 
 .agree-inputs div.email-checkbox {
   @include _1170 {
-    margin-right: 82.5px;
+    margin-right: 65.5px;
   }
   @include _1080 {
-    margin-right: 27px;
+    margin-right: 10px;
   }
   @include _900 {
     margin-right: 102.5px;
@@ -247,16 +258,16 @@
     margin-right: 15px;
   }
   margin-bottom: 16px;
-  margin-right: 121.5px;
+  margin-right: 104.5px;
 }
 
 
 .agree-inputs div.policy-checkbox {
   @include _1170 {
-    margin-right: 193px;
+    margin-right: 176px;
   }
   @include _1080 {
-    margin-right: 129px;
+    margin-right: 112px;
   }
   @include _900 {
     margin-right: 221px;
@@ -285,7 +296,7 @@
   @include _380 {
     margin-right: 15px;
   }
-  margin-right: 240.5px;
+  margin-right: 223.5px;
 }
 
 
@@ -369,10 +380,10 @@ button[disabled] {
 
 .ordered-products {
   @include _815 {
-    max-height: 340px;
+    max-height: 250px;
   }
   margin: 40px 0 62px;
-  max-height: 510px;
+  max-height: 340px;
   overflow-y: auto;
 }
 
@@ -792,10 +803,10 @@ button[disabled] {
     font-size: 22px;
   }
   @include _450 {
-    font-size: 20px;
+    font-size: 18px;
   }
   @include _435 {
-    font-size: 17px;
+    font-size: 16px;
   }
   font-family: Poppins;
   font-weight: 600;
