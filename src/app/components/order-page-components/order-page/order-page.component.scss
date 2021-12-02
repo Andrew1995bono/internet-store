@@ -4,6 +4,12 @@
   @include _815 {
     flex-direction: column-reverse;
   }
+  @include _420 {
+    padding: 16px 25px;
+  }
+  @include _380 {
+    padding: 16px 15px;
+  }
   padding: 16px 45px;
   display: flex;
   justify-content: space-between;
@@ -49,7 +55,7 @@
 
 .forms-field {
   @include _900 {
-    padding-top: 40px;
+    padding-top: 20px;
   }
   padding-top: 32px;
 }
@@ -92,6 +98,9 @@
   @include _815 {
     width: 48%;
   }
+  @include _570 {
+    width: 100%;
+  }
   width: 48%;
 }
 
@@ -99,11 +108,14 @@
 .first-name-last-name, .email-address-phone-number, .address-city, .country-zip {
   @include _900 {
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
   @include _815 {
     flex-direction: row;
     margin-bottom: 0;
+  }
+  @include _570 {
+    flex-direction: column;
   }
   width: 100%;
   display: flex;
@@ -119,28 +131,46 @@
 
 .additional-information {
   @include _900 {
-    top: 1186px;
+    top: 1020px;
     width: 75%;
   }
   @include _815 {
-    top: 1490px;
+    top: 1472px;
   }
   @include _600 {
-    top: 1431px;
+    top: 1413px;
+  }
+  @include _570 {
+    top: 1769px;
+  }
+  @include _528 {
+    top: 1791px;
+  }
+  @include _420 {
+    top: 1796px;
   }
 }
 
 
 .confirmation {
   @include _900 {
-    top: 1450px;
+    top: 1290px;
     padding-bottom: 50px;
   }
   @include _815 {
-    top: 1754px;
+    top: 1744px;
   }
   @include _600 {
-    top: 1695px;
+    top: 1685px;
+  }
+  @include _570 {
+    top: 2040px;
+  }
+  @include _528 {
+    top: 2062px;
+  }
+  @include _420 {
+    top: 2067px;
   }
 }
 
@@ -193,10 +223,10 @@
 
 .agree-inputs div.email-checkbox {
   @include _1170 {
-    margin-right: 61.5px;
+    margin-right: 82.5px;
   }
   @include _1080 {
-    margin-right: 8px;
+    margin-right: 27px;
   }
   @include _900 {
     margin-right: 102.5px;
@@ -210,17 +240,23 @@
   @include _600 {
     margin-right: 45px;
   }
+  @include _420 {
+    margin-right: 25px;
+  }
+  @include _380 {
+    margin-right: 15px;
+  }
   margin-bottom: 16px;
-  margin-right: 102.5px;
+  margin-right: 121.5px;
 }
 
 
 .agree-inputs div.policy-checkbox {
   @include _1170 {
-    margin-right: 172px;
+    margin-right: 193px;
   }
   @include _1080 {
-    margin-right: 110px;
+    margin-right: 129px;
   }
   @include _900 {
     margin-right: 221px;
@@ -235,7 +271,7 @@
     margin-right: 120.5px;
   }
   @include _570 {
-    margin-right: 90px;
+    margin-right: 90.5px;
   }
   @include _535 {
     margin-right: 55.5px;
@@ -243,7 +279,13 @@
   @include _450 {
     margin-right: 45px;
   }
-  margin-right: 221px;
+  @include _420 {
+    margin-right: 25px;
+  }
+  @include _380 {
+    margin-right: 15px;
+  }
+  margin-right: 240.5px;
 }
 
 
@@ -313,6 +355,9 @@ button[disabled] {
     margin: 0;
     padding: 15px;
   }
+  @include _380 {
+    padding: 10px;
+  }
   background: #FFFFFF;
   border: 1px solid #D1D1D1;
   border-radius: 12px;
@@ -356,6 +401,9 @@ button[disabled] {
   @include _450 {
     width: 75%;
   }
+  @include _380 {
+    width: 85%;
+  }
 }
 
 
@@ -371,6 +419,13 @@ button[disabled] {
 .add-remove div:last-child {
   @include _535 {
     margin-left: 20px;
+  }
+}
+
+
+.add-remove div span {
+  @include _535 {
+    font-size: 14px;
   }
 }
 
@@ -405,7 +460,10 @@ button[disabled] {
     height: 180px;
   }
   @include _450 {
-    height: 155px;
+    height: 165px;
+  }
+  @include _380 {
+    height: 180px;
   }
   width: 100px;
   height: 67px;
@@ -458,6 +516,9 @@ button[disabled] {
   @include _535 {
     font-size: 22px;
   }
+  @include _450 {
+    font-size: 20px;
+  }
   font-family: Poppins;
   font-weight: 500;
   font-size: 15px;
@@ -492,6 +553,9 @@ button[disabled] {
   }
   @include _535 {
     font-size: 14px;
+  }
+  @include _450 {
+    font-size: 13px;
   }
   margin: 0;
 }
@@ -690,6 +754,9 @@ button[disabled] {
 }
 
 .promo-code button {
+  @include _450 {
+    font-size: 14px;
+  }
   font-family: Poppins;
   font-weight: bold;
   font-size: 15px;
@@ -724,6 +791,12 @@ button[disabled] {
   @include _535 {
     font-size: 22px;
   }
+  @include _450 {
+    font-size: 20px;
+  }
+  @include _435 {
+    font-size: 17px;
+  }
   font-family: Poppins;
   font-weight: 600;
   font-size: 26px;
@@ -750,3 +823,12 @@ mat-error {
   border-radius: 9px;
   background-clip: content-box;
 }
+
+
+.summary-container input::placeholder {
+  color: #A9A9A9;
+  opacity: 0.6;
+  font-size: 14px;
+  line-height: 19px;
+}
+
