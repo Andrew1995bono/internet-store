@@ -1,0 +1,177 @@
+@import "src/mixins";
+
+
+.additional-information-header span:first-child, .confirmation-header span:first-child {
+  margin: 0;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 22px;
+  color: #151515;
+}
+
+
+.additional-information-header span:last-child, .confirmation-header span:last-child {
+  font-size: 12px;
+  color: #A9A9A9;
+  line-height: 16px;
+}
+
+
+.additional-information-input label {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #151515;
+  margin: 0;
+}
+
+
+.additional-information, .confirmation {
+  @include _900 {
+    width: 270%;
+  }
+  @include _815 {
+    width: 100%;
+  }
+  margin-top: 64px;
+}
+
+
+.additional-information-input {
+  margin-top: 32px;
+}
+
+
+.additional-information-input input {
+  padding: 11px 16px 82px 21px;
+  background: #F9F9F9;
+  border: 1px solid #D1D1D1;
+  border-radius: 12px;
+  width: 100%;
+}
+
+
+.agree-inputs div.email-checkbox {
+  @include _1170 {
+    margin-right: 47.5px;
+  }
+  @include _1080 {
+    margin-right: 0;
+  }
+  @include _900 {
+    margin-right: 103px;
+  }
+  @include _815 {
+    margin-right: 172px;
+  }
+  @include _700 {
+    margin-right: 57px;
+  }
+  @include _670 {
+    margin-right: 27px;
+  }
+  @include _600 {
+    margin-right: 0;
+  }
+  margin-bottom: 16px;
+  margin-right: 121.5px;
+}
+
+
+.email-checkbox label, .policy-checkbox label {
+  font-size: 14px;
+  line-height: 19px;
+  color: #151515;
+}
+
+
+.email-checkbox input[type='checkbox'], .policy-checkbox input[type='checkbox'] {
+  @include _1170 {
+    min-width: 18px;
+    height: 18px;
+  }
+  @include _900 {
+    min-width: 20px;
+    height: 20px;
+  }
+  min-width: 20px;
+  height: 20px;
+  margin: 0 10px 0 0;
+}
+
+
+.agree-inputs div.policy-checkbox {
+  @include _1170 {
+    margin-right: 166.5px;
+  }
+  @include _1080 {
+    margin-right: 76.5px;
+  }
+  @include _900 {
+    margin-right: 222px;
+  }
+  @include _815 {
+    margin-right: 290.5px;
+  }
+  @include _700 {
+    margin-right: 175.5px;
+  }
+  @include _670 {
+    margin-right: 145.5px;
+  }
+  @include _600 {
+    margin-right: 75.5px;
+  }
+  @include _570 {
+    margin-right: 45px;
+  }
+  @include _535 {
+    margin-right: 10.5px;
+  }
+  @include _450 {
+    margin-right: 0;
+  }
+  margin-right: 240.5px;
+}
+
+
+.agree-inputs, .complete-order {
+  margin-top: 32px;
+}
+
+
+.agree-inputs div {
+  @include _1170 {
+    padding: 10px;
+  }
+  @include _900 {
+    padding: 11.5px 16px 11.5px 18px;
+  }
+  background: #F9F9F9;
+  border: 1px solid #D1D1D1;
+  border-radius: 12px;
+  padding: 11.5px 16px 11.5px 18px;
+  display: flex;
+  align-items: center;
+}
+
+
+.additional-information .additional-information-input {
+  @include _900 {
+    margin-right: 12px;
+  }
+  @include _815 {
+    margin-right: 82px;
+  }
+  @include _700 {
+    margin-right: 0;
+  }
+}
+
+
+#order-notes::placeholder {
+  font-size: 14px;
+  line-height: 19px;
+  color: #A9A9A9;
+}

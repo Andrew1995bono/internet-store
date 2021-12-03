@@ -40,6 +40,7 @@ import { PagesTitleComponent } from './components/homepage-components/pages-titl
 import { OrderPageComponent } from './components/order-page-components/order-page/order-page.component';
 import { ProductDetailResolver } from './components/product-detail-components/product-detail-resolver';
 import { ProductDetailComponent } from './components/product-detail-components/product-detail.component';
+import { InformationConfirmationComponent } from './components/order-page-components/order-page/information-confirmation/information-confirmation.component';
 
 
 @NgModule({
@@ -64,7 +65,8 @@ import { ProductDetailComponent } from './components/product-detail-components/p
     SliderComponent,
     FooterComponent,
     ProductDetailComponent,
-    OrderPageComponent
+    OrderPageComponent,
+    InformationConfirmationComponent
   ],
   imports: [
     BrowserModule,

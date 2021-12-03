@@ -67,35 +67,9 @@
           </div>
         </div>
       </div>
-      <div class="additional-information">
-        <div class="additional-information-header">
-          <span>Additional information</span> <br>
-          <span>Need something else? We will make it for you!</span>
-        </div>
-        <div class="additional-information-input">
-          <label for="order-notes">Order notes</label>
-          <input id="order-notes" type="text" placeholder="Need a specific delivery day? Sending a gift? Let's say ..."
-                 formControlName="orderNotes">
-        </div>
-      </div>
-      <div class="confirmation">
-        <div class="confirmation-header">
-          <span>Confirmation</span><br>
-          <span>We are getting to the end. Just few clicks and your order is ready!</span>
-        </div>
-        <div class="agree-inputs">
-          <div class="email-checkbox">
-            <input id="emails" type="checkbox" formControlName="newsSending">
-            <label for="emails">I agree with sending Marketing and newsletter emails. No spam, promised!</label>
-          </div>
-          <div class="policy-checkbox">
-            <input id="policy" type="checkbox" formControlName="policyAgreement">
-            <label for="policy">I agree with our <u>terms and conditions</u> and <u>privacy policy.</u></label>
-          </div>
-        </div>
-        <div class="complete-order">
-          <button type="submit" [disabled]="!userForm.valid">Complete order</button>
-        </div>
+      <app-information-confirmation [userForm]="userForm"></app-information-confirmation>
+      <div class="complete-order">
+        <button type="submit" [disabled]="!userForm.valid">Complete order</button>
       </div>
     </form>
   </div>

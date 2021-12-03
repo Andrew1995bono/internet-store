@@ -17,6 +17,9 @@
 
 
 .forms-container {
+  @include _900 {
+    width: 30%;
+  }
   @include _815 {
     width: 100%;
   }
@@ -34,8 +37,7 @@
 }
 
 
-.billing-info-header span:first-child, .additional-information-header span:first-child,
-.confirmation-header span:first-child, .order-summary-header span:first-child {
+.billing-info-header span:first-child, .order-summary-header span:first-child {
   margin: 0;
   font-family: Poppins;
   font-weight: 600;
@@ -44,8 +46,7 @@
 }
 
 
-.billing-info-header span:last-child, .additional-information-header span:last-child,
-.confirmation-header span:last-child, .order-summary-header span:last-child,
+.billing-info-header span:last-child, .order-summary-header span:last-child,
 .image-wishlist-remove span, .property p {
   font-size: 12px;
   color: #A9A9A9;
@@ -66,7 +67,7 @@
 }
 
 
-.forms-field label, .additional-information-input label {
+.forms-field label {
   font-family: Poppins;
   font-weight: 600;
   font-size: 12px;
@@ -134,200 +135,8 @@
 }
 
 
-.additional-information {
-  @include _900 {
-    top: 1020px;
-    width: 75%;
-  }
-  @include _815 {
-    top: 1383px;
-  }
-  @include _600 {
-    top: 1324px;
-  }
-  @include _570 {
-    top: 1680px;
-  }
-  @include _528 {
-    top: 1702px;
-  }
-  @include _420 {
-    top: 1707px;
-  }
-  @include _380 {
-    top: 1697px;
-  }
-}
-
-
-.confirmation {
-  @include _900 {
-    top: 1290px;
-    padding-bottom: 50px;
-  }
-  @include _815 {
-    top: 1655px;
-  }
-  @include _600 {
-    top: 1596px;
-  }
-  @include _570 {
-    top: 1951px;
-  }
-  @include _528 {
-    top: 1973px;
-  }
-  @include _420 {
-    top: 1978px;
-  }
-  @include _380 {
-    top: 1968px;
-  }
-}
-
-
-.additional-information, .confirmation {
-  @include _900 {
-    position: absolute;
-  }
-  @include _815 {
-    margin: 0;
-  }
-  margin-top: 64px;
-}
-
-
-.additional-information-input {
-  margin-top: 32px;
-}
-
-
-.additional-information-input input {
-  padding: 11px 16px 82px 21px;
-  background: #F9F9F9;
-  border: 1px solid #D1D1D1;
-  border-radius: 12px;
-  width: 100%;
-}
-
-
-.agree-inputs, .complete-order {
-  margin-top: 32px;
-}
-
-
-.agree-inputs div {
-  @include _1170 {
-    padding: 10px;
-  }
-  @include _900 {
-    padding: 11.5px 16px 11.5px 18px;
-  }
-  background: #F9F9F9;
-  border: 1px solid #D1D1D1;
-  border-radius: 12px;
-  padding: 11.5px 16px 11.5px 18px;
-  display: flex;
-  align-items: center;
-}
-
-
-.agree-inputs div.email-checkbox {
-  @include _1170 {
-    margin-right: 65.5px;
-  }
-  @include _1080 {
-    margin-right: 10px;
-  }
-  @include _900 {
-    margin-right: 102.5px;
-  }
-  @include _700 {
-    margin-right: 102px;
-  }
-  @include _670 {
-    margin-right: 72px;
-  }
-  @include _600 {
-    margin-right: 45px;
-  }
-  @include _420 {
-    margin-right: 25px;
-  }
-  @include _380 {
-    margin-right: 15px;
-  }
-  margin-bottom: 16px;
-  margin-right: 104.5px;
-}
-
-
-.agree-inputs div.policy-checkbox {
-  @include _1170 {
-    margin-right: 176px;
-  }
-  @include _1080 {
-    margin-right: 112px;
-  }
-  @include _900 {
-    margin-right: 221px;
-  }
-  @include _700 {
-    margin-right: 220.5px;
-  }
-  @include _670 {
-    margin-right: 190.5px;
-  }
-  @include _600 {
-    margin-right: 120.5px;
-  }
-  @include _570 {
-    margin-right: 90.5px;
-  }
-  @include _535 {
-    margin-right: 55.5px;
-  }
-  @include _450 {
-    margin-right: 45px;
-  }
-  @include _420 {
-    margin-right: 25px;
-  }
-  @include _380 {
-    margin-right: 15px;
-  }
-  margin-right: 223.5px;
-}
-
-
-.email-checkbox label, .policy-checkbox label {
-  @include _1170 {
-    font-size: 13px;
-  }
-  @include _1080 {
-    font-size: 12px;
-  }
-  @include _900 {
-    font-size: 14px;
-  }
-  font-size: 14px;
-  line-height: 19px;
-  color: #151515;
-}
-
-
-.email-checkbox input[type='checkbox'], .policy-checkbox input[type='checkbox'] {
-  @include _1170 {
-    min-width: 18px;
-    height: 18px;
-  }
-  @include _900 {
-    min-width: 20px;
-    height: 20px;
-  }
-  min-width: 20px;
-  height: 20px;
-  margin: 0 10px 0 0;
+.complete-order {
+  margin: 32px 0;
 }
 
 
@@ -661,6 +470,16 @@ button[disabled] {
 }
 
 
+.wrapper {
+  @include _900 {
+    width: 70%;
+  }
+  @include _815 {
+    width: 100%;
+  }
+}
+
+
 .pcs-wrapper {
   @include _535 {
     display: flex;
@@ -685,7 +504,6 @@ button[disabled] {
   }
   @include _535 {
     margin-top: 15px;
-    //padding-right: 160px;
   }
   background: #F9F9F9;
   border: 1px solid #D1D1D1;
@@ -800,7 +618,7 @@ button[disabled] {
 
 .total-order div:last-child p:last-child {
   @include _535 {
-    font-size: 22px;
+    font-size: 21px;
   }
   @include _450 {
     font-size: 18px;
@@ -842,4 +660,5 @@ mat-error {
   font-size: 14px;
   line-height: 19px;
 }
+
 
