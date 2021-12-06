@@ -41,9 +41,6 @@
   color: #151515;
 }
 
-.none {
-  display: none;
-}
 
 .select-field > div > img {
   @include _600 {
@@ -51,6 +48,7 @@
   }
   margin-left: 5px;
 }
+
 
 .media-select .mat-form-field {
   @include _600 {

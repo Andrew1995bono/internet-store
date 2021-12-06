@@ -24,6 +24,8 @@
   <div class="add-item">
     <img src="../../assets/user.png" alt="user-logo">
     <img src="../../assets/shopping_basket.png" alt="basket">
-    <p class="cart-items">{{productDetailService.addToCartItems}}</p>
+    <p *ngIf="this.productDetailService.addToCartItems" class="cart-items">
+      {{this.productDetailService.addToCartItems}}
+    </p>
   </div>
 </div>

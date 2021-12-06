@@ -88,9 +88,11 @@
 }
 
 #sidebarMenu {
+  position: absolute;
   z-index: 100;
   transform: translateY(-171px);
 }
+
 
 .main-content-wrapper a {
   font-size: 7px;
@@ -214,3 +216,5 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   border-radius: 12px;
   padding: 0px 5px;
 }
+
+

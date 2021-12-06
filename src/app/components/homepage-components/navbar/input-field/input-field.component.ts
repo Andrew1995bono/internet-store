@@ -5,6 +5,7 @@ import { SelectByEnum } from '../../../../interfaces/select-by.enum';
 import { FiltersService } from '../../../../services/filters.service';
 import { ProductDetailService } from '../../../../services/product-detail.service';
 
+
 @Component({
   selector: 'app-input-field',
   templateUrl: './input-field.component.html',
@@ -22,8 +23,6 @@ export class InputFieldComponent implements OnInit {
     { value: SelectByEnum.NutsSorting, viewValue: 'Nuts' }
   ];
 
-  public some: number = this.productDetailService.addToCartItems;
-
   constructor(private filtersService: FiltersService, public productDetailService: ProductDetailService) { }
 
   ngOnInit(): void {
@@ -32,5 +31,6 @@ export class InputFieldComponent implements OnInit {
   public getCategoryValue(event: MatSelectChange): void {
     this.filtersService.getCategoryValue(event);
   }
+
 
 }

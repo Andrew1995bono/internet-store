@@ -1,0 +1,156 @@
+<div class="summary-container">
+  <div class="forms-container">
+    <div class="billing-info-header">
+      <span>Billing info</span><br>
+      <span>Please enter your billing info</span>
+    </div>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <div class="forms-field">
+        <div class="first-name-last-name">
+          <div class="name">
+            <label for="first-name">First name</label>
+            <input id="first-name" type="text" placeholder="First name" formControlName="firstName">
+            <mat-error *ngIf="form.firstName.invalid && form.firstName.touched">
+              <sup>*</sup>Please enter a first name
+            </mat-error>
+          </div>
+          <div class="surname">
+            <label for="last-name">Last name</label>
+            <input id="last-name" type="text" placeholder="Last name" formControlName="lastName">
+            <mat-error *ngIf="form.lastName.invalid && form.lastName.touched">
+              <sup>*</sup>Please enter a last name
+            </mat-error>
+          </div>
+        </div>
+        <div class="email-address-phone-number">
+          <div class="email-address">
+            <label for="email-address">Email address</label>
+            <input id="email-address" type="email" placeholder="Email address" formControlName="emailAddress">
+            <mat-error *ngIf="form.emailAddress.invalid && form.emailAddress.touched">
+              <sup>*</sup>Please enter a valid email address
+            </mat-error>
+          </div>
+          <div class="phone-number">
+            <label for="phone-number">Phone number</label>
+            <input id="phone-number" type="tel" placeholder="Phone number" formControlName="phoneNumber">
+            <mat-error *ngIf="form.phoneNumber.invalid && form.phoneNumber.touched">
+              <sup>*</sup>Please enter the phone number
+            </mat-error>
+          </div>
+        </div>
+        <div class="address-city">
+          <div class="address">
+            <label for="address">Address</label>
+            <input id="address" type="text" placeholder="Address" formControlName="address">
+          </div>
+          <div class="town-city">
+            <label for="town-city">Town / City</label>
+            <input id="town-city" type="text" name="city" list="cities" placeholder="Town or city"
+                   formControlName="city">
+            <datalist id="cities">
+              <option *ngFor="let city of countriesAndCitiesArray" value="{{city.city}}">
+            </datalist>
+          </div>
+        </div>
+        <div class="country-zip">
+          <div class="state-country">
+            <label for="state-country">State / Country</label>
+            <input id="state-country" type="text" name="country" list="countries" placeholder="Choose your country"
+                   formControlName="country">
+            <datalist id="countries">
+              <option *ngFor="let country of countriesAndCitiesArray" value="{{country.country}}">
+            </datalist>
+          </div>
+          <div class="zip-postal-code">
+            <label for="zip-postal-code">ZIP / Postal code</label>
+            <input id="zip-postal-code" type="text" placeholder="Postal code or ZIP" formControlName="zipPostalCode">
+          </div>
+        </div>
+      </div>
+      <app-information-confirmation [userForm]="userForm"></app-information-confirmation>
+      <div class="complete-order">
+        <button type="submit" [disabled]="!userForm.valid">Complete order</button>
+      </div>
+    </form>
+  </div>
+  <div class="wrapper">
+    <div class="order-summary">
+      <div class="order-summary-header">
+        <span>Order Summary</span><br>
+        <span>Price can change depending on shipping method and taxes of your state.</span>
+      </div>
+      <div class="ordered-products">
+        <div [class.indentation]="!last" class="summary-product"
+             *ngFor="let item of addedToCartProducts; last as last; index as i">
+          <div class="image-wishlist-remove">
+            <img class="product-image"
+                 src="{{item.imgUrl}}"
+                 alt="product-image">
+            <br>
+            <div class="add-remove">
+              <div>
+                <img src="../../assets/wishlist.png" alt="add-to-wishlist-img">
+                <span class="wish-list">Wishlist</span>
+              </div>
+              <div>
+                <img class="delete-item" src="../../assets/remove-item-icon.png" alt="add-to-wishlist-img">
+                <span class="remove">Remove</span>
+              </div>
+            </div>
+          </div>
+          <div class="summary-product-description">
+            <h3>{{item.name}}</h3>
+            <div class="farm-freshness">
+              <div class="property">
+                <p>Farm:</p>
+                <p>Freshness:</p>
+              </div>
+              <div class="value">
+                <p>{{item.farm}}</p>
+                <p>{{item.freshnessDay}}</p>
+              </div>
+            </div>
+            <div class="summary-rating">
+              <span [class.stars]="!last" *ngFor="let star of starArr[i];last as last">
+                <img src="{{star}}" alt="rating-star">
+              </span>
+            </div>
+            <h2>{{item.pricePromotional}} USD</h2>
+          </div>
+          <div class="pcs-wrapper">
+            <div class="pcs">
+              <span>1pcs</span>
+              <img class="vertical" src="../../assets/line.png" alt="arrow-down">
+              <span class="pcs-text">Pcs</span>
+              <img src="../../assets/arrow-down-black.png" alt="arrow-down">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="subtotal">
+        <h5>Subtotal</h5>
+        <p>{{subtotalPrice}} USD</p>
+      </div>
+      <div class="tax">
+        <h5>Tax</h5>
+        <p>17% {{tax}} USD</p>
+      </div>
+      <div class="promo-code">
+        <input id="apply-now" type="text" placeholder="Apply promo code">
+        <button (click)="onApplyDiscount()" [disabled]="disabledPromoButton">Apply now</button>
+      </div>
+      <div class="total-order">
+        <div>
+          <h5>Total Order</h5>
+          <p>Guaranteed delivery day: June 12, 2020</p>
+        </div>
+        <div>
+          <p *ngIf="discountTotalOrderState">
+            <del>{{discountTotalOrder}} USD</del>
+          </p>
+          <p>{{totalOrder}} USD</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
