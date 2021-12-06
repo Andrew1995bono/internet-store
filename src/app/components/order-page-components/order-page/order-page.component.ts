@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CountriesCities } from '../../../interfaces/countries-cities';
 import { ProductCard } from '../../../interfaces/product-card';
@@ -10,8 +10,6 @@ import { countriesAndCities } from './countries-cities-constant';
   templateUrl: './order-page.component.html',
   styleUrls: ['./order-page.component.scss']
 })
-
-@HostListener('window:resize', ['$event'])
 
 
 export class OrderPageComponent implements OnInit {
