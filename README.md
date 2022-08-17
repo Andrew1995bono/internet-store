@@ -11,12 +11,19 @@ out the form , also included adding to cart feature, pagination, slider with rel
 ## Screenshots
 
 ![Example screenshot](./src/project-pictures/image_1.png)
+
 ![Example screenshot](./src/project-pictures/image_2.png)
+
 ![Example screenshot](./src/project-pictures/image_3.png)
+
 ![Example screenshot](./src/project-pictures/image_4.png)
+
 ![Example screenshot](./src/project-pictures/image_5.png)
+
 ![Example screenshot](./src/project-pictures/image_6.png)
+
 ![Example screenshot](./src/project-pictures/image_7.png)
+
 ![Example screenshot](./src/project-pictures/image_8.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
 
