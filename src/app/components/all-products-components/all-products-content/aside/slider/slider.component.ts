@@ -1,6 +1,6 @@
-import { ChangeContext, Options } from '@angular-slider/ngx-slider';
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FiltersService } from '../../../../../services/filters.service';
+import {ChangeContext, Options} from '@angular-slider/ngx-slider';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {FiltersService} from '../../../../../services/filters.service';
 
 @Component({
   selector: 'app-slider',
@@ -18,7 +18,8 @@ export class SliderComponent implements OnInit {
     ceil: 100
   };
 
-  constructor(private filtersService: FiltersService) { }
+  constructor(private filtersService: FiltersService) {
+  }
 
   ngOnInit(): void {
 
@@ -30,7 +31,7 @@ export class SliderComponent implements OnInit {
   }
 
   public getSliderValue(event: ChangeContext): void {
-    this.filtersService.highPrice = event.highValue;
+    // this.filtersService.highPrice = event.highValue;
     this.filtersService.minPrice = event.value;
     this.filtersService.getSliderValue(event);
   }
