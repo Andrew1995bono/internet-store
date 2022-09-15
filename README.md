@@ -25,6 +25,8 @@ out the form , also included adding to cart feature, pagination, slider with rel
 ![Example screenshot](./src/project-pictures/image_7.png)
 
 ![Example screenshot](./src/project-pictures/image_8.png)
+
+![Example screenshot](./src/project-pictures/image_9.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 ## Features
